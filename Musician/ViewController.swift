@@ -1,0 +1,78 @@
+//
+//  ViewController.swift
+//  Musician
+//
+//  Created by John Detjen on 6/13/17.
+//  Copyright © 2017 FinleyKnight, Inc. All rights reserved.
+//
+
+import UIKit
+import MapKit
+import Parse
+
+class ViewController: UIViewController {
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var manageTour: UIButton!
+    
+    var tours = [PFObject]()
+
+    let regionRadius: CLLocationDistance = 1000
+    
+    override func viewDidLoad() {
+        manageTour.layer.cornerRadius = 5
+        manageTour.clipsToBounds = true
+        manageTour.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        manageTour.layer.shadowOpacity = 1.0
+        manageTour.layer.shadowRadius = 0.0
+        manageTour.layer.masksToBounds = false
+        manageTour.layer.cornerRadius = 4.0
+        manageTour.layer.shadowRadius = 5
+
+        super.viewDidLoad()
+        
+        let query = PFQuery(className: "Tour")
+        //filter query by user
+        query.whereKey("user", equalTo: PFUser.current()!)
+        //if something is a pointer, this gives all the information for that pfobject
+        query.includeKey("venue")
+        
+        
+        query.findObjectsInBackground { (objects, error) in
+            if let theObjects = objects {
+                self.tours = theObjects
+            }
+        }
+
+
+        let artwork = Artwork(title: "",
+                              locationName: "",
+                              discipline: "",
+                              coordinate: CLLocationCoordinate2D(latitude: 21.282778, longitude: -157.829444))
+
+        mapView.addAnnotation(artwork)
+        
+        mapView.delegate = self
+        
+        if let myVenues = PFUser.current()?.object(forKey: "venue") as? [PFObject] {
+            for aVenue in myVenues {
+                aVenue.fetchIfNeededInBackground(block: { (obj, error) in
+                    if let name = obj?.object(forKey: "name") as? String, let coordinate = obj?.object(forKey: "venueLocation") as? PFGeoPoint, let capacity = obj?.object(forKey: "capacity") as? Int {
+                        let aArtWork = Artwork(title: name, locationName: "Capacity \(capacity)", discipline: "hkadslhj", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
+                        self.mapView.addAnnotation(aArtWork)
+                    }
+                })
+            }
+        }
+    }
+
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 5000.0, regionRadius * 5000.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+}

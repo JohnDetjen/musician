@@ -7,14 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0392F2CF15D8CD0968DAF6F5 /* Pods_MusicianUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E66A49FD1C93688AB389FF /* Pods_MusicianUITests.framework */; };
 		432AE5251EEE1603004A315D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5241EEE1603004A315D /* AppDelegate.swift */; };
-		432AE5271EEE1603004A315D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5261EEE1603004A315D /* FirstViewController.swift */; };
-		432AE5291EEE1603004A315D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5281EEE1603004A315D /* SecondViewController.swift */; };
 		432AE52C1EEE1603004A315D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52A1EEE1603004A315D /* Main.storyboard */; };
 		432AE52E1EEE1604004A315D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52D1EEE1603004A315D /* Assets.xcassets */; };
 		432AE5311EEE1604004A315D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52F1EEE1604004A315D /* LaunchScreen.storyboard */; };
 		432AE53C1EEE1604004A315D /* MusicianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE53B1EEE1604004A315D /* MusicianTests.swift */; };
 		432AE5471EEE1604004A315D /* MusicianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5461EEE1604004A315D /* MusicianUITests.swift */; };
+		437D6ECD1EF096B000FD0A8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ECC1EF096B000FD0A8F /* ViewController.swift */; };
+		437D6ECF1EF0979300FD0A8F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ECE1EF0979300FD0A8F /* Artwork.swift */; };
+		437D6ED11EF0980300FD0A8F /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED01EF0980300FD0A8F /* VCMapView.swift */; };
+		437D6ED31EF1CFE200FD0A8F /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED21EF1CFE200FD0A8F /* ContactsTableViewController.swift */; };
+		437D6ED51EF1EDC800FD0A8F /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED41EF1EDC800FD0A8F /* City.swift */; };
+		437D6ED71EF381AB00FD0A8F /* AddVenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */; };
+		437D6ED91EF597FB00FD0A8F /* VenueDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */; };
+		437D6EDB1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */; };
+		437D6EDD1EF8561500FD0A8F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */; };
+		437D6EDF1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */; };
+		437D6EE11EF9DEC500FD0A8F /* StationDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */; };
+		437D6EE31EFAE2A400FD0A8F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */; };
+		437D6EE51EFAF01300FD0A8F /* ManageTourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */; };
+		437D6EE71EFC1DBA00FD0A8F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */; };
+		437D6EE91EFC234D00FD0A8F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */; };
+		43CB92001EFD7C1D000A2502 /* ShowDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */; };
+		43CB92031EFDAF46000A2502 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43CB92011EFD9535000A2502 /* Gilroy-Light.otf */; };
+		43CB92041EFDAF4E000A2502 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */; };
+		43CB92061F004430000A2502 /* SupportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB92051F004430000A2502 /* SupportTableViewController.swift */; };
+		43CB92081F014D02000A2502 /* AddStationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB92071F014D02000A2502 /* AddStationTableViewController.swift */; };
+		43CB920A1F03E88F000A2502 /* TourVenueDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB92091F03E88F000A2502 /* TourVenueDetailsTableViewController.swift */; };
+		43CB920C1F047675000A2502 /* BandInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB920B1F047675000A2502 /* BandInfoViewController.swift */; };
+		4EF3A5F8895307473FFE8241 /* Pods_Musician.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4D14653A1060E178B46240 /* Pods_Musician.framework */; };
+		9DDEE0B3A0820387025C46D5 /* Pods_MusicianTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556AD58A6F5E29E172EF54B3 /* Pods_MusicianTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BD255091B88741137ADC0B2 /* Pods-MusicianTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianTests/Pods-MusicianTests.release.xcconfig"; sourceTree = "<group>"; };
 		432AE5211EEE1603004A315D /* Musician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432AE5241EEE1603004A315D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		432AE5261EEE1603004A315D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		432AE5281EEE1603004A315D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		432AE52B1EEE1603004A315D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		432AE52D1EEE1603004A315D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432AE5301EEE1604004A315D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +71,36 @@
 		432AE5421EEE1604004A315D /* MusicianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432AE5461EEE1604004A315D /* MusicianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianUITests.swift; sourceTree = "<group>"; };
 		432AE5481EEE1604004A315D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		437D6ECC1EF096B000FD0A8F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		437D6ECE1EF0979300FD0A8F /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		437D6ED01EF0980300FD0A8F /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		437D6ED21EF1CFE200FD0A8F /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		437D6ED41EF1EDC800FD0A8F /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVenueTableViewController.swift; sourceTree = "<group>"; };
+		437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailsTableViewController.swift; sourceTree = "<group>"; };
+		437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingTemplatesTableViewController.swift; sourceTree = "<group>"; };
+		437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioContactsTableViewController.swift; sourceTree = "<group>"; };
+		437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDetailsTableViewController.swift; sourceTree = "<group>"; };
+		437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTourTableViewController.swift; sourceTree = "<group>"; };
+		437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDateViewController.swift; sourceTree = "<group>"; };
+		43CB92011EFD9535000A2502 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		43CB92051F004430000A2502 /* SupportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportTableViewController.swift; sourceTree = "<group>"; };
+		43CB92071F014D02000A2502 /* AddStationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStationTableViewController.swift; sourceTree = "<group>"; };
+		43CB92091F03E88F000A2502 /* TourVenueDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourVenueDetailsTableViewController.swift; sourceTree = "<group>"; };
+		43CB920B1F047675000A2502 /* BandInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandInfoViewController.swift; sourceTree = "<group>"; };
+		44F2824FC8B4D53EACED2C43 /* Pods-Musician.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musician.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musician/Pods-Musician.release.xcconfig"; sourceTree = "<group>"; };
+		556AD58A6F5E29E172EF54B3 /* Pods_MusicianTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicianTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAC581EC3F6BFBC42332772 /* Pods-MusicianUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianUITests/Pods-MusicianUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B4D14653A1060E178B46240 /* Pods_Musician.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musician.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2FE3F5B3542A09B7AD94896 /* Pods-Musician.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musician.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Musician/Pods-Musician.debug.xcconfig"; sourceTree = "<group>"; };
+		ACECEC7BC4BC2ED64F342246 /* Pods-MusicianTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianTests/Pods-MusicianTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8C1100D74BBA74D5324AF79 /* Pods-MusicianUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianUITests/Pods-MusicianUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7E66A49FD1C93688AB389FF /* Pods_MusicianUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicianUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF3A5F8895307473FFE8241 /* Pods_Musician.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DDEE0B3A0820387025C46D5 /* Pods_MusicianTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0392F2CF15D8CD0968DAF6F5 /* Pods_MusicianUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +138,8 @@
 				432AE53A1EEE1604004A315D /* MusicianTests */,
 				432AE5451EEE1604004A315D /* MusicianUITests */,
 				432AE5221EEE1603004A315D /* Products */,
+				F08933E965E98237B0261C02 /* Pods */,
+				F6978FCFDDDBD69514BC1C2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,11 +157,31 @@
 			isa = PBXGroup;
 			children = (
 				432AE5241EEE1603004A315D /* AppDelegate.swift */,
-				432AE5261EEE1603004A315D /* FirstViewController.swift */,
-				432AE5281EEE1603004A315D /* SecondViewController.swift */,
 				432AE52A1EEE1603004A315D /* Main.storyboard */,
+				437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */,
+				437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */,
+				437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */,
+				437D6ECC1EF096B000FD0A8F /* ViewController.swift */,
+				437D6ED41EF1EDC800FD0A8F /* City.swift */,
+				437D6ED21EF1CFE200FD0A8F /* ContactsTableViewController.swift */,
+				437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */,
+				43CB92071F014D02000A2502 /* AddStationTableViewController.swift */,
+				437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */,
+				437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */,
+				437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */,
+				437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */,
+				437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */,
+				43CB92091F03E88F000A2502 /* TourVenueDetailsTableViewController.swift */,
+				43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */,
+				43CB92051F004430000A2502 /* SupportTableViewController.swift */,
+				437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */,
+				43CB920B1F047675000A2502 /* BandInfoViewController.swift */,
+				437D6ECE1EF0979300FD0A8F /* Artwork.swift */,
+				437D6ED01EF0980300FD0A8F /* VCMapView.swift */,
 				432AE52D1EEE1603004A315D /* Assets.xcassets */,
 				432AE52F1EEE1604004A315D /* LaunchScreen.storyboard */,
+				43CB92011EFD9535000A2502 /* Gilroy-Light.otf */,
+				43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */,
 				432AE5321EEE1604004A315D /* Info.plist */,
 			);
 			path = Musician;
@@ -128,6 +205,29 @@
 			path = MusicianUITests;
 			sourceTree = "<group>";
 		};
+		F08933E965E98237B0261C02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2FE3F5B3542A09B7AD94896 /* Pods-Musician.debug.xcconfig */,
+				44F2824FC8B4D53EACED2C43 /* Pods-Musician.release.xcconfig */,
+				ACECEC7BC4BC2ED64F342246 /* Pods-MusicianTests.debug.xcconfig */,
+				2BD255091B88741137ADC0B2 /* Pods-MusicianTests.release.xcconfig */,
+				6BAC581EC3F6BFBC42332772 /* Pods-MusicianUITests.debug.xcconfig */,
+				E8C1100D74BBA74D5324AF79 /* Pods-MusicianUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6978FCFDDDBD69514BC1C2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D14653A1060E178B46240 /* Pods_Musician.framework */,
+				556AD58A6F5E29E172EF54B3 /* Pods_MusicianTests.framework */,
+				F7E66A49FD1C93688AB389FF /* Pods_MusicianUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 432AE54B1EEE1604004A315D /* Build configuration list for PBXNativeTarget "Musician" */;
 			buildPhases = (
+				DA578E3E19B151F020D151CF /* [CP] Check Pods Manifest.lock */,
 				432AE51D1EEE1603004A315D /* Sources */,
 				432AE51E1EEE1603004A315D /* Frameworks */,
 				432AE51F1EEE1603004A315D /* Resources */,
+				ABA52D31D3AD8D5D81EF34E5 /* [CP] Embed Pods Frameworks */,
+				D40C0631B33E4AA31B9E6D0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 432AE54E1EEE1604004A315D /* Build configuration list for PBXNativeTarget "MusicianTests" */;
 			buildPhases = (
+				F40D814FFD2A011BE8BEA014 /* [CP] Check Pods Manifest.lock */,
 				432AE5331EEE1604004A315D /* Sources */,
 				432AE5341EEE1604004A315D /* Frameworks */,
 				432AE5351EEE1604004A315D /* Resources */,
+				EFA611EACC85A9B655512BDE /* [CP] Embed Pods Frameworks */,
+				9A93EC6881F2A92C6DDB4D4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 432AE5511EEE1604004A315D /* Build configuration list for PBXNativeTarget "MusicianUITests" */;
 			buildPhases = (
+				ED9F59F81E906AFB922A41EC /* [CP] Check Pods Manifest.lock */,
 				432AE53E1EEE1604004A315D /* Sources */,
 				432AE53F1EEE1604004A315D /* Frameworks */,
 				432AE5401EEE1604004A315D /* Resources */,
+				010132112926094B47595623 /* [CP] Embed Pods Frameworks */,
+				305D7F3D45E69F17B07C5872 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +305,7 @@
 				TargetAttributes = {
 					432AE5201EEE1603004A315D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4ADXY8287M;
 						ProvisioningStyle = Automatic;
 					};
 					432AE5361EEE1604004A315D = {
@@ -235,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CB92041EFDAF4E000A2502 /* Gilroy-ExtraBold.otf in Resources */,
+				43CB92031EFDAF46000A2502 /* Gilroy-Light.otf in Resources */,
 				432AE5311EEE1604004A315D /* LaunchScreen.storyboard in Resources */,
 				432AE52E1EEE1604004A315D /* Assets.xcassets in Resources */,
 				432AE52C1EEE1603004A315D /* Main.storyboard in Resources */,
@@ -257,14 +369,170 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		010132112926094B47595623 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicianUITests/Pods-MusicianUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		305D7F3D45E69F17B07C5872 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicianUITests/Pods-MusicianUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A93EC6881F2A92C6DDB4D4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicianTests/Pods-MusicianTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABA52D31D3AD8D5D81EF34E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Musician/Pods-Musician-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D40C0631B33E4AA31B9E6D0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Musician/Pods-Musician-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA578E3E19B151F020D151CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED9F59F81E906AFB922A41EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA611EACC85A9B655512BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicianTests/Pods-MusicianTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F40D814FFD2A011BE8BEA014 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		432AE51D1EEE1603004A315D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				432AE5291EEE1603004A315D /* SecondViewController.swift in Sources */,
+				437D6ED91EF597FB00FD0A8F /* VenueDetailsTableViewController.swift in Sources */,
+				43CB92001EFD7C1D000A2502 /* ShowDateViewController.swift in Sources */,
+				437D6EE91EFC234D00FD0A8F /* WelcomeViewController.swift in Sources */,
+				437D6EDF1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift in Sources */,
+				43CB92081F014D02000A2502 /* AddStationTableViewController.swift in Sources */,
+				437D6ED71EF381AB00FD0A8F /* AddVenueTableViewController.swift in Sources */,
+				43CB920A1F03E88F000A2502 /* TourVenueDetailsTableViewController.swift in Sources */,
+				437D6ED11EF0980300FD0A8F /* VCMapView.swift in Sources */,
+				437D6ECD1EF096B000FD0A8F /* ViewController.swift in Sources */,
+				437D6EE11EF9DEC500FD0A8F /* StationDetailsTableViewController.swift in Sources */,
+				43CB920C1F047675000A2502 /* BandInfoViewController.swift in Sources */,
+				437D6EE31EFAE2A400FD0A8F /* LogInViewController.swift in Sources */,
+				437D6ED51EF1EDC800FD0A8F /* City.swift in Sources */,
+				437D6ED31EF1CFE200FD0A8F /* ContactsTableViewController.swift in Sources */,
+				437D6EE71EFC1DBA00FD0A8F /* SignUpViewController.swift in Sources */,
+				43CB92061F004430000A2502 /* SupportTableViewController.swift in Sources */,
+				437D6EDD1EF8561500FD0A8F /* SettingsTableViewController.swift in Sources */,
+				437D6EE51EFAF01300FD0A8F /* ManageTourTableViewController.swift in Sources */,
+				437D6ECF1EF0979300FD0A8F /* Artwork.swift in Sources */,
 				432AE5251EEE1603004A315D /* AppDelegate.swift in Sources */,
-				432AE5271EEE1603004A315D /* FirstViewController.swift in Sources */,
+				437D6EDB1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,8 +684,10 @@
 		};
 		432AE54C1EEE1604004A315D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2FE3F5B3542A09B7AD94896 /* Pods-Musician.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ADXY8287M;
 				INFOPLIST_FILE = Musician/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JohnDetjen.Musician;
@@ -428,8 +698,10 @@
 		};
 		432AE54D1EEE1604004A315D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F2824FC8B4D53EACED2C43 /* Pods-Musician.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ADXY8287M;
 				INFOPLIST_FILE = Musician/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JohnDetjen.Musician;
@@ -440,6 +712,7 @@
 		};
 		432AE54F1EEE1604004A315D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACECEC7BC4BC2ED64F342246 /* Pods-MusicianTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +727,7 @@
 		};
 		432AE5501EEE1604004A315D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BD255091B88741137ADC0B2 /* Pods-MusicianTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +742,7 @@
 		};
 		432AE5521EEE1604004A315D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BAC581EC3F6BFBC42332772 /* Pods-MusicianUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = MusicianUITests/Info.plist;
@@ -481,6 +756,7 @@
 		};
 		432AE5531EEE1604004A315D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C1100D74BBA74D5324AF79 /* Pods-MusicianUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = MusicianUITests/Info.plist;
@@ -511,6 +787,7 @@
 				432AE54D1EEE1604004A315D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		432AE54E1EEE1604004A315D /* Build configuration list for PBXNativeTarget "MusicianTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +796,7 @@
 				432AE5501EEE1604004A315D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		432AE5511EEE1604004A315D /* Build configuration list for PBXNativeTarget "MusicianUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +805,7 @@
 				432AE5531EEE1604004A315D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
