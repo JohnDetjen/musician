@@ -12,6 +12,8 @@ import Parse
 class ManageTourTableViewController: UITableViewController {
     
     var tours = [PFObject]()
+    var venues = [PFObject]()
+    var userVenues = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

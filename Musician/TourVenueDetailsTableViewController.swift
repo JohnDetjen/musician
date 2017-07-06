@@ -7,89 +7,161 @@
 //
 
 import UIKit
+import Parse
+import MessageUI
+import SafariServices
 
-class TourVenueDetailsTableViewController: UITableViewController {
+class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
 
+    var venues = [PFObject]()
+    var city: PFObject?
+    var userVenues = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadData()
+        
+        if let theVenues = PFUser.current()?.object(forKey: "venues") as? [PFObject] {
+            userVenues = theVenues
+        }
+        
     }
-
+    
+    func loadData() {
+        if let theCity = city {
+            let query = PFQuery(className: "Venue")
+            //filtering which city
+            query.whereKey("city", equalTo: theCity)
+            
+            query.includeKey("venue")
+            
+            query.findObjectsInBackground { (objects, error) in
+                if let theObjects = objects {
+                    self.venues = theObjects
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return venues.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
-
-    /*
+    
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let venue = venues[section]
+        return venue.object(forKey: "name") as? String
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        if indexPath.row == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddVenueCell", for: indexPath)
+            cell.textLabel?.text = "Add Venue To My Tour"
+            cell.textLabel?.textAlignment = .center
+            return cell
+            
+        }
+        
+        let venue = venues[indexPath.section]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VenueCell", for: indexPath)
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "Contact:"
+            cell.detailTextLabel?.text = venue.object(forKey: "contactEmail") as? String
+        case 1:
+            cell.textLabel?.text = "Phone:"
+            cell.detailTextLabel?.text = venue.object(forKey: "phoneNumber") as? String
+        case 2:
+            cell.textLabel?.text = "Website:"
+            cell.detailTextLabel?.text = venue.object(forKey: "website") as? String
+        case 3:
+            cell.textLabel?.text = "Capacity:"
+            var capacity = 0
+            if let theCapacity = venue.object(forKey: "capacity") as? Int {
+                capacity = theCapacity
+            }
+            cell.detailTextLabel?.text = String(capacity)
+        default:
+            print("Panic!!")
+        }
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let venue = venues[indexPath.section]
+        
+        switch indexPath.row {
+        case 0:
+            if let email = venue.object(forKey: "contactEmail") as? String {
+                if MFMailComposeViewController.canSendMail() {
+                    let mail = MFMailComposeViewController()
+                    let venue = venue.object(forKey: "name") as! String
+                    let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                    let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                    let website = PFUser.current()?.object(forKey: "website") as! String
+                    mail.mailComposeDelegate = self
+                    mail.setToRecipients([email])
+                    mail.setSubject("Hold Request: \(venue)")
+                    mail.setMessageBody("\(venue), I manage \(bandName). \(website). \nWe have a 15 date tour starting from \(hometown).  We would like to place a hold on \(venue) if you have availability this upcoming month. <b>I hope to talk further about setting something up. Thank you and take care. Cheers.</b>", isHTML: true)
+                    present(mail, animated: true, completion: nil)
+                } else {
+                    print("Cannot send mail")
+                }
+            }
+            //        case 1:
+            //            if let phoneCallURL = venue.object(forKey: "phoneNumber") as? String {
+            //
+            //                let application:UIApplication = UIApplication.shared
+            //                if (application.canOpenURL(phoneCallURL)) {
+            //                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+            //                }
+            //            }
+            //
+            //        case 2:
+            //            if let url = venue.object(forKey: "website") as? String {
+            //            let svc = SFSafariViewController(url: "", entersReaderIfAvailable: true)
+            //            self.present(svc, animated: true, completion: nil)
+            //        }
+            
+            //        case 3:
+            
+        case 4:
+            let venueInfo = PFObject(className: "Tour")
+            
+            venueInfo.setObject(venue, forKey: "venue")
+            if let currentUser = PFUser.current(){
+                venueInfo.setObject(currentUser, forKey: "user")
+            }
+            
+            venueInfo.saveInBackground()
+            
+            if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
+                venueDetailVC.showObject = venueInfo
+                navigationController?.pushViewController(venueDetailVC, animated: true)
+            }
+            
+        default:
+            print("Panic!!")
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
