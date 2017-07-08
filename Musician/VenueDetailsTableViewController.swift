@@ -20,11 +20,9 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-
         if let theVenues = PFUser.current()?.object(forKey: "venues") as? [PFObject] {
             userVenues = theVenues
         }
-        
     }
     
     func loadData() {
@@ -148,9 +146,7 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
             if let currentUser = PFUser.current(){
                 venueInfo.setObject(currentUser, forKey: "user")
             }
-        
-            venueInfo.saveInBackground()
-            
+
             if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
                 venueDetailVC.showObject = venueInfo
                 navigationController?.pushViewController(venueDetailVC, animated: true)

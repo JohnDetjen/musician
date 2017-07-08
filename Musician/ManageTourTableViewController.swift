@@ -12,8 +12,8 @@ import Parse
 class ManageTourTableViewController: UITableViewController {
     
     var tours = [PFObject]()
-    var venues = [PFObject]()
-    var userVenues = [PFObject]()
+//    var venues = [PFObject]()
+//    var userVenues = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class ManageTourTableViewController: UITableViewController {
         let individualTour = tours[indexPath.row]
         if let showDate = individualTour.object(forKey: "date") as? Date {
             let dateFormatMachine = DateFormatter()
-            dateFormatMachine.dateFormat = "MMM dd, yyyy"
+            dateFormatMachine.dateFormat = "MM/dd/yy"
             cell.detailTextLabel?.text = dateFormatMachine.string(from: showDate)
             // theVenue is a PFObject of class Venue
             if let theVenue = individualTour.object(forKey: "venue") as? PFObject {
@@ -63,5 +63,12 @@ class ManageTourTableViewController: UITableViewController {
             }
         }
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tour = tours[indexPath.row]
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
+            detailVC.venue = tour.object(forKey: "venue") as? PFObject
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }

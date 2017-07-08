@@ -166,32 +166,17 @@
 			children = (
 				432AE5241EEE1603004A315D /* AppDelegate.swift */,
 				432AE52A1EEE1603004A315D /* Main.storyboard */,
-				432AE52D1EEE1603004A315D /* Assets.xcassets */,
-				43CB92131F0E9FE7000A2502 /* StepByStepPreparationViewController.swift */,
-				43CB92111F0E9D2F000A2502 /* SamplePackagingViewController.swift */,
-				43CB920F1F0E98C9000A2502 /* SampleOneSheetViewController.swift */,
-				43CB920D1F0E969B000A2502 /* RadioCampaignOverviewViewController.swift */,
-				437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */,
-				437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */,
-				437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */,
-				437D6ECC1EF096B000FD0A8F /* ViewController.swift */,
-				437D6ED41EF1EDC800FD0A8F /* City.swift */,
-				437D6ED21EF1CFE200FD0A8F /* ContactsTableViewController.swift */,
-				437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */,
-				43CB92071F014D02000A2502 /* AddStationTableViewController.swift */,
-				437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */,
-				437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */,
-				437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */,
-				437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */,
-				437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */,
-				43CB92091F03E88F000A2502 /* TourVenueDetailsTableViewController.swift */,
-				43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */,
-				43CB92051F004430000A2502 /* SupportTableViewController.swift */,
-				437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */,
-				43CB920B1F047675000A2502 /* BandInfoViewController.swift */,
-				437D6ECE1EF0979300FD0A8F /* Artwork.swift */,
-				437D6ED01EF0980300FD0A8F /* VCMapView.swift */,
 				432AE52F1EEE1604004A315D /* LaunchScreen.storyboard */,
+				432AE52D1EEE1603004A315D /* Assets.xcassets */,
+				43F5CA391F0EE8C200DEE157 /* Log In */,
+				43F5CA381F0EE8A300DEE157 /* Home Tab */,
+				43F5CA3C1F0EE95900DEE157 /* Manage Tour */,
+				43F5CA3A1F0EE8F800DEE157 /* Venues Tab */,
+				43F5CA3B1F0EE92300DEE157 /* Radio Stations Tab */,
+				43F5CA3D1F0EE98500DEE157 /* Templates Tab */,
+				43F5CA3E1F0EE9D700DEE157 /* Support Tab */,
+				437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */,
+				437D6ED41EF1EDC800FD0A8F /* City.swift */,
 				43CB92011EFD9535000A2502 /* Gilroy-Light.otf */,
 				43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */,
 				432AE5321EEE1604004A315D /* Info.plist */,
@@ -215,6 +200,77 @@
 				432AE5481EEE1604004A315D /* Info.plist */,
 			);
 			path = MusicianUITests;
+			sourceTree = "<group>";
+		};
+		43F5CA381F0EE8A300DEE157 /* Home Tab */ = {
+			isa = PBXGroup;
+			children = (
+				437D6ECC1EF096B000FD0A8F /* ViewController.swift */,
+				43CB920B1F047675000A2502 /* BandInfoViewController.swift */,
+				437D6ECE1EF0979300FD0A8F /* Artwork.swift */,
+				437D6ED01EF0980300FD0A8F /* VCMapView.swift */,
+			);
+			name = "Home Tab";
+			sourceTree = "<group>";
+		};
+		43F5CA391F0EE8C200DEE157 /* Log In */ = {
+			isa = PBXGroup;
+			children = (
+				437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */,
+				437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */,
+				437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */,
+			);
+			name = "Log In";
+			sourceTree = "<group>";
+		};
+		43F5CA3A1F0EE8F800DEE157 /* Venues Tab */ = {
+			isa = PBXGroup;
+			children = (
+				437D6ED21EF1CFE200FD0A8F /* ContactsTableViewController.swift */,
+				437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */,
+				437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */,
+				43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */,
+			);
+			name = "Venues Tab";
+			sourceTree = "<group>";
+		};
+		43F5CA3B1F0EE92300DEE157 /* Radio Stations Tab */ = {
+			isa = PBXGroup;
+			children = (
+				437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */,
+				437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */,
+				43CB92071F014D02000A2502 /* AddStationTableViewController.swift */,
+			);
+			name = "Radio Stations Tab";
+			sourceTree = "<group>";
+		};
+		43F5CA3C1F0EE95900DEE157 /* Manage Tour */ = {
+			isa = PBXGroup;
+			children = (
+				437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */,
+				43CB92091F03E88F000A2502 /* TourVenueDetailsTableViewController.swift */,
+			);
+			name = "Manage Tour";
+			sourceTree = "<group>";
+		};
+		43F5CA3D1F0EE98500DEE157 /* Templates Tab */ = {
+			isa = PBXGroup;
+			children = (
+				437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */,
+				43CB92131F0E9FE7000A2502 /* StepByStepPreparationViewController.swift */,
+				43CB92111F0E9D2F000A2502 /* SamplePackagingViewController.swift */,
+				43CB920F1F0E98C9000A2502 /* SampleOneSheetViewController.swift */,
+				43CB920D1F0E969B000A2502 /* RadioCampaignOverviewViewController.swift */,
+			);
+			name = "Templates Tab";
+			sourceTree = "<group>";
+		};
+		43F5CA3E1F0EE9D700DEE157 /* Support Tab */ = {
+			isa = PBXGroup;
+			children = (
+				43CB92051F004430000A2502 /* SupportTableViewController.swift */,
+			);
+			name = "Support Tab";
 			sourceTree = "<group>";
 		};
 		F08933E965E98237B0261C02 /* Pods */ = {

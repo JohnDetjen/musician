@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dtW-Fg-AFB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -115,49 +115,53 @@
             <objects>
                 <tableViewController id="eAe-qy-rof" customClass="ManageTourTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="jkp-xe-k0N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="IrT-XL-Qko">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgL-4k-dGP">
-                                    <rect key="frame" x="97.5" y="13" width="179" height="32"/>
+                                    <rect key="frame" x="57.5" y="26.5" width="260" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="Gmv-JL-zIb"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
-                                    <state key="normal" title="Select Venues To Email">
-                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Click To Email A Group Of Venues">
+                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
                             </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="AgL-4k-dGP" firstAttribute="centerX" secondItem="IrT-XL-Qko" secondAttribute="centerX" id="KEa-i3-bvk"/>
                                 <constraint firstItem="AgL-4k-dGP" firstAttribute="centerY" secondItem="IrT-XL-Qko" secondAttribute="centerY" id="O4d-Y8-hUY"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zB-HY-sGO" detailTextLabel="G5E-zW-rOq" imageView="dN8-9L-lHS" style="IBUITableViewCellStyleValue1" id="YIn-2W-D5h">
-                                <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zB-HY-sGO" detailTextLabel="G5E-zW-rOq" imageView="dN8-9L-lHS" style="IBUITableViewCellStyleValue1" id="YIn-2W-D5h">
+                                <rect key="frame" x="0.0" y="168.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YIn-2W-D5h" id="X3W-oN-Hlx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zB-HY-sGO">
-                                            <rect key="frame" x="54" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="12" width="33" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5E-zW-rOq">
-                                            <rect key="frame" x="316.5" y="12" width="43.5" height="20"/>
+                                            <rect key="frame" x="324.5" y="16" width="35.5" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="selectIcon" highlightedImage="checkMark" id="dN8-9L-lHS">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dN8-9L-lHS">
                                             <rect key="frame" x="15" y="9" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -688,7 +692,7 @@
             <objects>
                 <tableViewController id="kJw-B8-3I2" customClass="RadioContactsTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dzQ-we-qep">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="BbB-lp-tlV">
@@ -745,7 +749,7 @@
             <objects>
                 <tableViewController id="0Eb-6Q-krO" customClass="AddStationTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dbB-zc-egg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1058,7 +1062,7 @@
             <objects>
                 <tableViewController id="a7E-Vu-7it" customClass="BookingTemplatesTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dhh-5O-tM5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1595,7 +1599,7 @@ Call station number, ask for station contact, and ask about recieving and playin
             <objects>
                 <tableViewController id="b2u-ZR-S0f" customClass="SupportTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="23L-dv-Q0L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1661,14 +1665,14 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <viewControllerLayoutGuide type="bottom" id="vtj-n0-9Gb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fEX-y0-woi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KIM-N5-pDp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vY-te-epH">
-                                <rect key="frame" x="320" y="35" width="45" height="45"/>
+                                <rect key="frame" x="320" y="79" width="45" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="0rX-UD-nNW"/>
@@ -1719,7 +1723,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <viewControllerLayoutGuide type="bottom" id="vr7-xA-EKS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5RN-Ge-FDU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tourBus" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-Lm-WBQ">
@@ -1733,32 +1737,32 @@ Call station number, ask for station contact, and ask about recieving and playin
                                 <rect key="frame" x="0.0" y="169" width="375" height="145"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Band Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-63-0Yj">
-                                        <rect key="frame" x="55" y="17.5" width="300" height="20"/>
+                                        <rect key="frame" x="55" y="18" width="300" height="19"/>
                                         <color key="textColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Band Website" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Gb-9N-y01">
-                                        <rect key="frame" x="55" y="62.5" width="305" height="20"/>
+                                        <rect key="frame" x="55" y="63" width="305" height="19"/>
                                         <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Band Hometown" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-lj-qFm">
-                                        <rect key="frame" x="55" y="107.5" width="305" height="20"/>
+                                        <rect key="frame" x="55" y="108" width="305" height="19"/>
                                         <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4T-Tv-FkI">
-                                        <rect key="frame" x="55" y="47.5" width="320" height="1"/>
+                                        <rect key="frame" x="55" y="47" width="320" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="vY7-gZ-57r"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-d3-6Kh">
-                                        <rect key="frame" x="55" y="92.5" width="320" height="1"/>
+                                        <rect key="frame" x="55" y="92" width="320" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="06y-nH-wnS"/>
@@ -1812,18 +1816,34 @@ Call station number, ask for station contact, and ask about recieving and playin
                                     <constraint firstAttribute="trailing" secondItem="VJQ-lj-qFm" secondAttribute="trailing" constant="15" id="zU6-es-Cge"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-yF-p9w">
+                                <rect key="frame" x="31" y="359" width="313" height="29"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                <state key="normal" title="Switch Accounts"/>
+                                <connections>
+                                    <action selector="switchAccountPressed:" destination="NdW-VD-HYV" eventType="touchUpInside" id="n2l-Dd-qXy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5uF-yF-p9w" secondAttribute="trailing" constant="15" id="1zR-uc-O03"/>
+                            <constraint firstItem="5uF-yF-p9w" firstAttribute="centerX" secondItem="5RN-Ge-FDU" secondAttribute="centerX" id="7ui-Qz-NGo"/>
                             <constraint firstItem="KGq-Lm-WBQ" firstAttribute="centerX" secondItem="5RN-Ge-FDU" secondAttribute="centerX" id="HbK-lP-fgj"/>
+                            <constraint firstItem="5uF-yF-p9w" firstAttribute="leading" secondItem="5RN-Ge-FDU" secondAttribute="leadingMargin" constant="15" id="Pt1-yg-c5w"/>
                             <constraint firstItem="srx-iK-cni" firstAttribute="top" secondItem="KGq-Lm-WBQ" secondAttribute="bottom" constant="15" id="eLA-3j-wgR"/>
                             <constraint firstAttribute="trailing" secondItem="srx-iK-cni" secondAttribute="trailing" id="jUK-nW-0v7"/>
                             <constraint firstItem="srx-iK-cni" firstAttribute="leading" secondItem="5RN-Ge-FDU" secondAttribute="leading" id="mID-jm-NKh"/>
                             <constraint firstItem="KGq-Lm-WBQ" firstAttribute="top" secondItem="6iU-B3-k2c" secondAttribute="bottom" constant="15" id="rmq-6d-gnZ"/>
+                            <constraint firstItem="5uF-yF-p9w" firstAttribute="top" secondItem="srx-iK-cni" secondAttribute="bottom" constant="45" id="tmX-sY-kzu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="iUK-cK-je2">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="wVx-5u-HSa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="wVx-5u-HSa">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="NdW-VD-HYV" id="7Hm-Vx-Rye"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bandHometownTextField" destination="VJQ-lj-qFm" id="f1f-ob-bP0"/>
@@ -1839,51 +1859,196 @@ Call station number, ask for station contact, and ask about recieving and playin
         <scene sceneID="Zdg-wi-cTf">
             <objects>
                 <tableViewController storyboardIdentifier="tourVenueDetail" id="3NZ-kH-ubM" customClass="TourVenueDetailsTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="eAp-1f-FPP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="eAp-1f-FPP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="yuO-l6-Nzj" detailTextLabel="Aky-O2-g6Y" style="IBUITableViewCellStyleValue2" id="2dI-Bb-bzx">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2dI-Bb-bzx" id="Bnp-yg-DQQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yuO-l6-Nzj">
-                                            <rect key="frame" x="15" y="14" width="91" height="16"/>
+                        <sections>
+                            <tableViewSection headerTitle="Show Status" id="ifI-ID-sRe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nhl-d5-ADe" style="IBUITableViewCellStyleDefault" id="7sG-et-9l3">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sG-et-9l3" id="nRU-5x-Rka">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aky-O2-g6Y">
-                                            <rect key="frame" x="112" y="14" width="35" height="16"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Not Booked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nhl-d5-ADe">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PGE-uJ-aNJ" style="IBUITableViewCellStyleDefault" id="Qpe-2E-EYq">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qpe-2E-EYq" id="fxu-XC-R6B">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="07/11/17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PGE-uJ-aNJ">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Venue Details" id="38B-75-cJc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="h7G-JG-ypa" detailTextLabel="PEb-tM-vks" style="IBUITableViewCellStyleValue2" id="6Ex-bV-QTL">
+                                        <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ex-bV-QTL" id="wD1-hA-uXo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h7G-JG-ypa">
+                                                    <rect key="frame" x="15" y="13" width="91" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PEb-tM-vks">
+                                                    <rect key="frame" x="112" y="13" width="40.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NAu-Io-hsd" detailTextLabel="EbM-rz-mbV" style="IBUITableViewCellStyleValue2" id="leV-vh-nZI">
+                                        <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="leV-vh-nZI" id="Ue5-PQ-xfy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Phone:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NAu-Io-hsd">
+                                                    <rect key="frame" x="15" y="13" width="91" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EbM-rz-mbV">
+                                                    <rect key="frame" x="112" y="13" width="40.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JCF-03-8IR" detailTextLabel="VC4-5f-NEA" style="IBUITableViewCellStyleValue2" id="Gri-9x-Syi">
+                                        <rect key="frame" x="0.0" y="287.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gri-9x-Syi" id="oW9-Ah-jfj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCF-03-8IR">
+                                                    <rect key="frame" x="15" y="13" width="91" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VC4-5f-NEA">
+                                                    <rect key="frame" x="112" y="13" width="40.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="KXb-ob-xSD" detailTextLabel="ZTq-xn-j6Z" style="IBUITableViewCellStyleValue2" id="Dft-7C-Ou4">
+                                        <rect key="frame" x="0.0" y="331.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dft-7C-Ou4" id="2et-f7-hBY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Capacity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KXb-ob-xSD">
+                                                    <rect key="frame" x="15" y="13" width="91" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZTq-xn-j6Z">
+                                                    <rect key="frame" x="112" y="13" width="40.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
+                                                    <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="xRo-qe-CUz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eWa-qz-Kc7" style="IBUITableViewCellStyleDefault" id="1Gs-v2-CyS">
+                                        <rect key="frame" x="0.0" y="411.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Gs-v2-CyS" id="sDv-9T-MPd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Remove From Tour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eWa-qz-Kc7">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="3NZ-kH-ubM" id="doE-Gh-uI3"/>
                             <outlet property="delegate" destination="3NZ-kH-ubM" id="dRn-3E-QeS"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tour Venue Details" id="26X-pG-ELU"/>
+                    <connections>
+                        <outlet property="bookingLabel" destination="Nhl-d5-ADe" id="B63-rh-plB"/>
+                        <outlet property="capacityLabel" destination="ZTq-xn-j6Z" id="rvX-3Z-WNB"/>
+                        <outlet property="contactLabel" destination="PEb-tM-vks" id="KBw-oq-TIr"/>
+                        <outlet property="phoneLabel" destination="EbM-rz-mbV" id="okg-GQ-HxH"/>
+                        <outlet property="websiteLabel" destination="VC4-5f-NEA" id="s6A-JH-ABY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeY-Xp-S9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3748" y="-1755"/>
+            <point key="canvasLocation" x="3748" y="-1755.4722638680662"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="pMi-SK-5Ru">
             <objects>
-                <viewController id="dtW-Fg-AFB" customClass="WelcomeViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="dtW-Fg-AFB" customClass="WelcomeViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GpT-2q-z4n"/>
                         <viewControllerLayoutGuide type="bottom" id="nso-6p-fsy"/>
@@ -2274,7 +2439,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Zf-uHT">
-                                                <rect key="frame" x="50.5" y="553" width="274.5" height="50"/>
+                                                <rect key="frame" x="51" y="553" width="274.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-e4-mTo">
                                                         <rect key="frame" x="20" y="0.0" width="183.5" height="50"/>
@@ -2710,21 +2875,19 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="Support Icon" width="25" height="25"/>
         <image name="Templates Icon" width="25" height="25"/>
         <image name="bandProfile" width="25" height="25"/>
-        <image name="checkMark" width="37" height="37"/>
         <image name="hometownProfile" width="25" height="25"/>
         <image name="infoProfile" width="25" height="25"/>
         <image name="manageTourIcon" width="100" height="100"/>
         <image name="oneSheetSample" width="891" height="891"/>
         <image name="packagingSample" width="800" height="500"/>
-        <image name="selectIcon" width="24" height="24"/>
         <image name="settingsImage" width="1364" height="943"/>
         <image name="tourBus" width="295" height="245"/>
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AKA-0x-pmC"/>
-        <segue reference="ujZ-uf-FGN"/>
+        <segue reference="xzi-Bm-Ijx"/>
         <segue reference="Rsx-P5-cKu"/>
+        <segue reference="PSs-WV-jes"/>
         <segue reference="mRG-av-uP1"/>
         <segue reference="Vcg-WT-ZBu"/>
         <segue reference="2UN-ze-PUE"/>

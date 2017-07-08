@@ -21,29 +21,31 @@ class BandInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let bandName = bandNameTextField.text, let website = bandWebsiteTextField.text, let hometown = bandHometownTextField.text {
-            
-            // Defining the user object
-            let user = PFUser()
-            user["bandName"] = bandName
-            user["website"] = website
-            user["hometown"] = hometown
-            
-        }
+        // Pupulate
+        bandNameTextField.text = PFUser.current()?.object(forKey: "bandName") as? String
+        bandWebsiteTextField.text = PFUser.current()?.object(forKey: "website") as? String
+        bandHometownTextField.text = PFUser.current()?.object(forKey: "hometown") as? String
         
-        //        let query = PFQuery(className: "User")
-        //        query.whereKey("user", equalTo: PFUser.current()!)
-        //
-        //        query.findObjectsInBackground { (objects, error) in
-        //            if let theObjects = objects {
-        //                self.bandInfo = theObjects
-        ////                self.view.reloadData()
-        //            }
-        //    }
     }
     
-    //    override func didReceiveMemoryWarning() {
-    //        super.didReceiveMemoryWarning()
-    //        // Dispose of any resources that can be recreated.
-    //    }
+    @IBAction func switchAccountPressed(_ sender: Any) {
+    }
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        if let bandName = bandNameTextField.text {
+            PFUser.current()?.setValue(bandName, forKey: "bandName")
+        }
+        if let website = bandWebsiteTextField.text {
+            PFUser.current()?.setValue(website, forKey: "website")
+        }
+        if let hometown = bandHometownTextField.text {
+            PFUser.current()?.setValue(hometown, forKey: "hometown")
+        }
+        PFUser.current()?.saveInBackground(block: { (success, error) in
+            if success {
+                self.navigationController?.popViewController(animated: true)
+            }
+        })
+        
+    }
 }

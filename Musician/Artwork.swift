@@ -16,6 +16,9 @@ class Artwork: NSObject, MKAnnotation {
     let discipline: String
     let coordinate: CLLocationCoordinate2D
     
+    var isBooked = false
+    
+    
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.locationName = locationName
@@ -34,14 +37,10 @@ class Artwork: NSObject, MKAnnotation {
     
     // pinTintColor for disciplines: Sculpture, Plaque, Mural, Monument, other
     func pinTintColor() -> UIColor  {
-        switch discipline {
-        case "Sculpture", "Plaque":
+        if isBooked {
             return MKPinAnnotationView.purplePinColor()
-        case "Mural", "Monument":
-            return MKPinAnnotationView.purplePinColor()
-        default:
-            return MKPinAnnotationView.greenPinColor()
         }
+        return MKPinAnnotationView.greenPinColor()
     }
     
     // annotation callout opens this mapItem in Maps app

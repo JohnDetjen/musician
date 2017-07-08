@@ -30,41 +30,56 @@ class ViewController: UIViewController {
 
         super.viewDidLoad()
         
-        let query = PFQuery(className: "Tour")
-        //filter query by user
-        query.whereKey("user", equalTo: PFUser.current()!)
-        //if something is a pointer, this gives all the information for that pfobject
-        query.includeKey("venue")
-        
-        
-        query.findObjectsInBackground { (objects, error) in
-            if let theObjects = objects {
-                self.tours = theObjects
-            }
-        }
-
-
         let artwork = Artwork(title: "",
                               locationName: "",
                               discipline: "",
                               coordinate: CLLocationCoordinate2D(latitude: 21.282778, longitude: -157.829444))
-
-        mapView.addAnnotation(artwork)
         
         mapView.delegate = self
         
-        if let myVenues = PFUser.current()?.object(forKey: "venue") as? [PFObject] {
-            for aVenue in myVenues {
-                aVenue.fetchIfNeededInBackground(block: { (obj, error) in
-                    if let name = obj?.object(forKey: "name") as? String, let coordinate = obj?.object(forKey: "venueLocation") as? PFGeoPoint, let capacity = obj?.object(forKey: "capacity") as? Int {
-                        let aArtWork = Artwork(title: name, locationName: "Capacity \(capacity)", discipline: "hkadslhj", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
-                        self.mapView.addAnnotation(aArtWork)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+        
+        
+        
+        if let currentUser = PFUser.current() {
+            let query = PFQuery(className: "Tour")
+            //filter query by user
+            query.whereKey("user", equalTo: currentUser)
+            //if something is a pointer, this gives all the information for that pfobject
+            query.includeKey("venue")
+            
+            query.findObjectsInBackground { (objects, error) in
+                if let theObjects = objects {
+                    self.tours = theObjects
+                    self.mapView.removeAnnotations(self.mapView.annotations)
+                    for aVenue in theObjects {
+                        let obj = aVenue.object(forKey: "venue") as? PFObject
+                        if let name = obj?.object(forKey: "name") as? String, let coordinate = obj?.object(forKey: "venueLocation") as? PFGeoPoint, let capacity = obj?.object(forKey: "capacity") as? Int {
+                            let aArtWork = Artwork(title: name, locationName: "Capacity \(capacity)", discipline: "", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
+                            self.mapView.addAnnotation(aArtWork)
+                        }
                     }
-                })
+                }
             }
         }
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if PFUser.current() == nil {
+            if let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeViewController {
+                self.present(welcomeVC, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 5000.0, regionRadius * 5000.0)
