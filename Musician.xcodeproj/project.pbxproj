@@ -14,6 +14,7 @@
 		432AE5311EEE1604004A315D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52F1EEE1604004A315D /* LaunchScreen.storyboard */; };
 		432AE53C1EEE1604004A315D /* MusicianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE53B1EEE1604004A315D /* MusicianTests.swift */; };
 		432AE5471EEE1604004A315D /* MusicianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5461EEE1604004A315D /* MusicianUITests.swift */; };
+		4349363C1F107D710086C240 /* MusicianBookingPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349363B1F107D700086C240 /* MusicianBookingPlusViewController.swift */; };
 		437D6ECD1EF096B000FD0A8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ECC1EF096B000FD0A8F /* ViewController.swift */; };
 		437D6ECF1EF0979300FD0A8F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ECE1EF0979300FD0A8F /* Artwork.swift */; };
 		437D6ED11EF0980300FD0A8F /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED01EF0980300FD0A8F /* VCMapView.swift */; };
@@ -22,7 +23,6 @@
 		437D6ED71EF381AB00FD0A8F /* AddVenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */; };
 		437D6ED91EF597FB00FD0A8F /* VenueDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */; };
 		437D6EDB1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */; };
-		437D6EDD1EF8561500FD0A8F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */; };
 		437D6EDF1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */; };
 		437D6EE11EF9DEC500FD0A8F /* StationDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */; };
 		437D6EE31EFAE2A400FD0A8F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */; };
@@ -75,6 +75,7 @@
 		432AE5421EEE1604004A315D /* MusicianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432AE5461EEE1604004A315D /* MusicianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianUITests.swift; sourceTree = "<group>"; };
 		432AE5481EEE1604004A315D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4349363B1F107D700086C240 /* MusicianBookingPlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicianBookingPlusViewController.swift; sourceTree = "<group>"; };
 		437D6ECC1EF096B000FD0A8F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		437D6ECE1EF0979300FD0A8F /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		437D6ED01EF0980300FD0A8F /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVenueTableViewController.swift; sourceTree = "<group>"; };
 		437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailsTableViewController.swift; sourceTree = "<group>"; };
 		437D6EDA1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingTemplatesTableViewController.swift; sourceTree = "<group>"; };
-		437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		437D6EDE1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioContactsTableViewController.swift; sourceTree = "<group>"; };
 		437D6EE01EF9DEC500FD0A8F /* StationDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDetailsTableViewController.swift; sourceTree = "<group>"; };
 		437D6EE21EFAE2A400FD0A8F /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 				43F5CA3B1F0EE92300DEE157 /* Radio Stations Tab */,
 				43F5CA3D1F0EE98500DEE157 /* Templates Tab */,
 				43F5CA3E1F0EE9D700DEE157 /* Support Tab */,
-				437D6EDC1EF8561400FD0A8F /* SettingsTableViewController.swift */,
+				4349363D1F107D840086C240 /* In App Purchase */,
 				437D6ED41EF1EDC800FD0A8F /* City.swift */,
 				43CB92011EFD9535000A2502 /* Gilroy-Light.otf */,
 				43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */,
@@ -200,6 +200,14 @@
 				432AE5481EEE1604004A315D /* Info.plist */,
 			);
 			path = MusicianUITests;
+			sourceTree = "<group>";
+		};
+		4349363D1F107D840086C240 /* In App Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				4349363B1F107D700086C240 /* MusicianBookingPlusViewController.swift */,
+			);
+			name = "In App Purchase";
 			sourceTree = "<group>";
 		};
 		43F5CA381F0EE8A300DEE157 /* Home Tab */ = {
@@ -585,6 +593,7 @@
 				43CB92001EFD7C1D000A2502 /* ShowDateViewController.swift in Sources */,
 				437D6EE91EFC234D00FD0A8F /* WelcomeViewController.swift in Sources */,
 				437D6EDF1EF9D85C00FD0A8F /* RadioContactsTableViewController.swift in Sources */,
+				4349363C1F107D710086C240 /* MusicianBookingPlusViewController.swift in Sources */,
 				43CB92081F014D02000A2502 /* AddStationTableViewController.swift in Sources */,
 				437D6ED71EF381AB00FD0A8F /* AddVenueTableViewController.swift in Sources */,
 				43CB920A1F03E88F000A2502 /* TourVenueDetailsTableViewController.swift in Sources */,
@@ -598,7 +607,6 @@
 				437D6ED31EF1CFE200FD0A8F /* ContactsTableViewController.swift in Sources */,
 				437D6EE71EFC1DBA00FD0A8F /* SignUpViewController.swift in Sources */,
 				43CB92061F004430000A2502 /* SupportTableViewController.swift in Sources */,
-				437D6EDD1EF8561500FD0A8F /* SettingsTableViewController.swift in Sources */,
 				437D6EE51EFAF01300FD0A8F /* ManageTourTableViewController.swift in Sources */,
 				43CB92101F0E98C9000A2502 /* SampleOneSheetViewController.swift in Sources */,
 				43CB92121F0E9D2F000A2502 /* SamplePackagingViewController.swift in Sources */,

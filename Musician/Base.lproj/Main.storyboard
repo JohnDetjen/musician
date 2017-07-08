@@ -180,80 +180,6 @@
             </objects>
             <point key="canvasLocation" x="2072.8000000000002" y="-1755.4722638680662"/>
         </scene>
-        <!--Tour Venue Details Table View Controller-->
-        <scene sceneID="6jx-2b-cih">
-            <objects>
-                <tableViewController id="lzP-XD-TZz" customClass="TourVenueDetailsTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="j4Z-Kw-ZQI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="a9w-WJ-UmT" detailTextLabel="vHC-YJ-ehE" style="IBUITableViewCellStyleValue2" id="u8i-w9-K2P">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8i-w9-K2P" id="wGs-1b-bbD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a9w-WJ-UmT">
-                                            <rect key="frame" x="15" y="12" width="91" height="20"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vHC-YJ-ehE">
-                                            <rect key="frame" x="112" y="12" width="46" height="20"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lzP-XD-TZz" id="wxc-3l-vmJ"/>
-                            <outlet property="delegate" destination="lzP-XD-TZz" id="GV4-R2-UcY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="3j2-km-w59"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mod-HT-rkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6340" y="-1755.4722638680662"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="Ie4-1f-2bQ">
-            <objects>
-                <tableViewController id="muY-Q3-a9l" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lEE-Mt-286">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kCN-mA-MXU">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kCN-mA-MXU" id="w8A-L5-cKN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="muY-Q3-a9l" id="mrt-WC-heg"/>
-                            <outlet property="delegate" destination="muY-Q3-a9l" id="BC8-2J-7g8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Ayo-n6-OKa"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DpD-BU-i89" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7872.8000000000002" y="-1755.4722638680662"/>
-        </scene>
         <!--Add Venue-->
         <scene sceneID="lNe-DX-Mtw">
             <objects>
@@ -686,6 +612,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWK-hM-0m2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3461.5999999999999" y="-394.45277361319341"/>
+        </scene>
+        <!--Musician Booking Plus View Controller-->
+        <scene sceneID="6QB-1f-Eyg">
+            <objects>
+                <viewController id="I0W-cH-Dag" customClass="MusicianBookingPlusViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W9T-gr-Yco"/>
+                        <viewControllerLayoutGuide type="bottom" id="sP5-k9-HxG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rVM-EP-nEA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHG-Wf-cXa">
+                                <rect key="frame" x="0.0" y="95" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QHG-Wf-cXa" secondAttribute="height" multiplier="1:1" id="Wp2-eO-g4E"/>
+                                </constraints>
+                                <state key="normal" image="Musician Booking Plus"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-Ma-xTz">
+                                <rect key="frame" x="31" y="475" width="313" height="24"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="10"/>
+                                <state key="normal" title="Click here to restore purchase">
+                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w82-es-bMv">
+                                <rect key="frame" x="102" y="519" width="170" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nou-fh-TVf">
+                                        <rect key="frame" x="5" y="15.5" width="104" height="9.5"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="8"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-Go-2M9">
+                                        <rect key="frame" x="114" y="8" width="51" height="24"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="9"/>
+                                        <state key="normal" title="terms of use">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AxE-Hc-Mzy"/>
+                                    <constraint firstItem="PYD-Go-2M9" firstAttribute="leading" secondItem="nou-fh-TVf" secondAttribute="trailing" constant="5" id="SOi-m6-84R"/>
+                                    <constraint firstItem="PYD-Go-2M9" firstAttribute="centerY" secondItem="w82-es-bMv" secondAttribute="centerY" id="j4I-Dl-vNa"/>
+                                    <constraint firstItem="nou-fh-TVf" firstAttribute="centerY" secondItem="w82-es-bMv" secondAttribute="centerY" id="qhG-kZ-YKH"/>
+                                    <constraint firstItem="nou-fh-TVf" firstAttribute="leading" secondItem="w82-es-bMv" secondAttribute="leading" constant="5" id="u5H-vx-SQ5"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYD-Go-2M9" secondAttribute="trailing" constant="5" id="uzB-wu-uIc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086439311504364014" green="0.090317144989967346" blue="0.090320974588394165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="w82-es-bMv" firstAttribute="top" secondItem="VaG-Ma-xTz" secondAttribute="bottom" constant="20" id="2y6-wL-hDi"/>
+                            <constraint firstItem="w82-es-bMv" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="3Ed-Pd-Za6"/>
+                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="cy3-zN-IUK"/>
+                            <constraint firstItem="QHG-Wf-cXa" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="dm3-Xv-ktO"/>
+                            <constraint firstItem="QHG-Wf-cXa" firstAttribute="top" secondItem="W9T-gr-Yco" secondAttribute="bottom" constant="75" id="g2B-VR-w7f"/>
+                            <constraint firstAttribute="trailing" secondItem="QHG-Wf-cXa" secondAttribute="trailing" id="gn2-gU-VPG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VaG-Ma-xTz" secondAttribute="trailing" constant="15" id="iwb-CG-eYQ"/>
+                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="top" secondItem="QHG-Wf-cXa" secondAttribute="bottom" constant="5" id="oLS-lr-f1H"/>
+                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leadingMargin" constant="15" id="qTp-iX-LcG"/>
+                            <constraint firstItem="QHG-Wf-cXa" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leading" id="uec-8m-HrU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="om8-ik-Vry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="1701"/>
         </scene>
         <!--Radio Stations-->
         <scene sceneID="7rR-ca-Z0v">
@@ -2723,24 +2721,6 @@ Call station number, ask for station contact, and ask about recieving and playin
             <point key="canvasLocation" x="2790" y="-394"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="egC-Sd-diH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1cc-kO-lqe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zdc-Wh-bcO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lzP-XD-TZz" kind="relationship" relationship="rootViewController" id="Ubm-Sv-GWU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xfq-dR-wFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5584.8000000000002" y="-1755.4722638680662"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="Eks-1Q-vvF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S0v-CO-xqK" sceneMemberID="viewController">
@@ -2757,24 +2737,6 @@ Call station number, ask for station contact, and ask about recieving and playin
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1o-XB-DVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1366" y="-2437"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wEi-ci-ddL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nQD-cO-TkX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RHw-Gr-ZfA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="muY-Q3-a9l" kind="relationship" relationship="rootViewController" id="1lY-2g-WIV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbF-CR-sxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7156" y="-1755.4722638680662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ijx-dG-tjs">
@@ -2872,6 +2834,7 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="BackButton" width="50" height="50"/>
         <image name="Contacts Icon" width="25" height="25"/>
         <image name="Map Icon" width="25" height="25"/>
+        <image name="Musician Booking Plus" width="375" height="375"/>
         <image name="Support Icon" width="25" height="25"/>
         <image name="Templates Icon" width="25" height="25"/>
         <image name="bandProfile" width="25" height="25"/>
