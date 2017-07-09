@@ -48,15 +48,15 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
             self.present(alert, animated: true, completion: nil)
         }
         if indexPath.row == 1 {
-            let venueInfo = PFObject(className: "Tour")
-            
-            venueInfo.setObject(venue, forKey: "venue")
-            if let currentUser = PFUser.current(){
-                venueInfo.setObject(currentUser, forKey: "user")
-            }
+//            let venueInfo = PFObject(className: "Tour")
+//            
+//            venueInfo.setObject(venue, forKey: "venue")
+//            if let currentUser = PFUser.current(){
+//                venueInfo.setObject(currentUser, forKey: "user")
+//            }
             
             if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
-                venueDetailVC.showObject = venueInfo
+                venueDetailVC.venue = venue
                 navigationController?.pushViewController(venueDetailVC, animated: true)
             }
             
