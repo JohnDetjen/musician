@@ -64,18 +64,22 @@ class ContactsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let state = states[indexPath.section]
-        let cityArray = cities.filter { (city) -> Bool in
-            return city.object(forKey: "stateName") as? String == state
+        if indexPath.section < states.count {
+            let state = states[indexPath.section]
+            let cityArray = cities.filter { (city) -> Bool in
+                return city.object(forKey: "stateName") as? String == state
+            }
+            if indexPath.row < cityArray.count {
+                let city = cityArray[indexPath.row]
+                // Configure the cell...
+                cell.textLabel?.text = city.object(forKey: "cityName") as? String
+                var numberOfVenues = 0
+                if let number = city.object(forKey: "venueNumber") as? Int {
+                    numberOfVenues = number
+                }
+                cell.detailTextLabel?.text = "\(numberOfVenues) venues"
+            }
         }
-        let city = cityArray[indexPath.row]
-        // Configure the cell...
-        cell.textLabel?.text = city.object(forKey: "cityName") as? String
-        var numberOfVenues = 0
-        if let number = city.object(forKey: "venueNumber") as? Int {
-            numberOfVenues = number
-        }
-        cell.detailTextLabel?.text = "\(numberOfVenues) venues"
         
         return cell
     }
@@ -101,7 +105,6 @@ class ContactsTableViewController: UITableViewController {
 
 extension ContactsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchQuery.cancel()
         if searchText.isEmpty {
             cities = allCities
             filterStatesFromCities()
@@ -110,10 +113,17 @@ extension ContactsTableViewController: UISearchBarDelegate {
         else {
             cities = allCities.filter({ (city) -> Bool in
                 if let cityName = city.object(forKey: "cityName") as? String {
-                    
                     let cityNameArray = cityName.components(separatedBy: " ")
                     for name in cityNameArray {
-                        if name.substring(to: searchText.endIndex).lowercased() == searchText.lowercased() {
+                        if name.substring(to: min(searchText.endIndex, name.endIndex)).lowercased() == searchText.lowercased() {
+                            return true
+                        }
+                    }
+                }
+                if let stateName = city.object(forKey: "stateName") as? String {
+                    let stateNameArray = stateName.components(separatedBy: " ")
+                    for name in stateNameArray {
+                        if name.substring(to: min(searchText.endIndex, name.endIndex)).lowercased() == searchText.lowercased() {
                             return true
                         }
                     }
