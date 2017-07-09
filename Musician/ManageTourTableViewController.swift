@@ -27,7 +27,15 @@ class ManageTourTableViewController: UITableViewController {
         
         query.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
-                self.tours = theObjects
+                self.tours = theObjects.sorted(by: { (o1, o2) -> Bool in
+                    guard let date1 = o1.object(forKey: "date") as? Date else {
+                        return false
+                    }
+                    guard let date2 = o2.object(forKey: "date") as? Date else {
+                        return true
+                    }
+                    return date1.compare(date2) == .orderedAscending
+                })
                 self.tableView.reloadData()
             }
         }
