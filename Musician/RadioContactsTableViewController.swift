@@ -27,7 +27,7 @@ class RadioContactsTableViewController: UITableViewController {
         query.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
                 self.cities = theObjects
-                self.allCities = theObjects
+                self.allCities = self.cities
                 self.filterStatesFromCities()
                 self.tableView.reloadData()
                 
@@ -43,7 +43,7 @@ class RadioContactsTableViewController: UITableViewController {
             }
             return ""
         })
-        self.states = Array(Set(self.states))
+        self.states = Array(Set(self.states)).sorted(by: {$0.lowercased() < $1.lowercased()})
     }
     
     
@@ -68,7 +68,7 @@ class RadioContactsTableViewController: UITableViewController {
         let state = states[indexPath.section]
         let cityArray = cities.filter { (city) -> Bool in
             return city.object(forKey: "stateName") as? String == state
-        }
+            }.sorted(by: {$0.object(forKey: "cityName") as? String ?? "" < $1.object(forKey: "cityName") as? String ?? ""})
         let city = cityArray[indexPath.row]
         // Configure the cell...
         cell.textLabel?.text = city.object(forKey: "cityName") as? String
