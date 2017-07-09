@@ -6,38 +6,43 @@
 	<dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Musician.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-MusicianTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-MusicianUITests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SCLAlertView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Sparrow.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,27 +52,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>51CB0AF616C6306147B99C320EB6D3ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C90497EF38D537BE889FB9CF6292AA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>941151228713EAF7D7B439CDD0A3F147</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9779A731570CD16AA764A5AE379583D9</key>
+		<key>B69793CD8191A1C08A3D8853C5E4FD42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C69C139EDACF0FDF4E1936C2CE09FAB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB9B747D46543D3D11DE94CF172CAE9A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD72869D98111E4190DC88518E36CFCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

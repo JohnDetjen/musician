@@ -9,6 +9,7 @@ target 'Musician' do
   pod 'Parse'
   pod 'SCLAlertView'
   pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
+  pod 'MBProgressHUD'
 
   target 'MusicianTests' do
     inherit! :search_paths

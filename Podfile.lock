@@ -1,11 +1,13 @@
 PODS:
   - Bolts/Tasks (1.8.4)
+  - MBProgressHUD (1.0.0)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
   - SCLAlertView (0.7.0)
   - Sparrow/LaunchAnimation (1.1.0)
 
 DEPENDENCIES:
+  - MBProgressHUD
   - Parse
   - SCLAlertView
   - Sparrow/LaunchAnimation (from `https://github.com/IvanVorobei/Sparrow.git`)
@@ -21,10 +23,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   Sparrow: fcf807766c4288a978e32be8e492c5001e551838
 
-PODFILE CHECKSUM: 7add881238bb1d3e9f22e0d05003d28d16e096e9
+PODFILE CHECKSUM: 72aea2f5bc9b315c72b3f5e5f17640588cc93967
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
