@@ -65,6 +65,7 @@ class ViewController: UIViewController {
                             self.mapView.addAnnotation(aArtWork)
                         }
                     }
+                    self.mapView.showAnnotations(self.mapView.annotations, animated: true)
                 }
             }
         }
