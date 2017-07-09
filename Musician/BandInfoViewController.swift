@@ -29,9 +29,14 @@ class BandInfoViewController: UIViewController {
     }
     
     @IBAction func switchAccountPressed(_ sender: Any) {
-//        PFUser.logOutInBackground { (<#Error?#>) in
-//            <#code#>
-//        }
+        PFUser.logOutInBackground { (error) in
+            if let theError = error {
+                // There was an error logging you out
+            }
+            else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
