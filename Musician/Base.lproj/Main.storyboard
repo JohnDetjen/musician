@@ -703,6 +703,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="kJw-B8-3I2" id="63i-l4-UJp"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="V6c-5L-hAq" detailTextLabel="5Sw-w7-fzf" style="IBUITableViewCellStyleValue1" id="wwd-mW-ahC">

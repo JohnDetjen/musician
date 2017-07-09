@@ -12,7 +12,7 @@ import Parse
 class RadioContactsTableViewController: UITableViewController {
 
     var cities = [PFObject]()
-    
+    var allCities = [PFObject]()
     var states = [String]()
     
     override func viewDidLoad() {
@@ -27,23 +27,25 @@ class RadioContactsTableViewController: UITableViewController {
         query.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
                 self.cities = theObjects
-                
-                self.states = theObjects.map({ (object) -> String in
-                    if let state = object.object(forKey: "stateName") as? String {
-                        return state
-                    }
-                    return ""
-                })
-                self.states = Array(Set(self.states))
+                self.allCities = theObjects
+                self.filterStatesFromCities()
                 self.tableView.reloadData()
+                
             }
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func filterStatesFromCities() {
+        self.states = cities.map({ (object) -> String in
+            if let state = object.object(forKey: "stateName") as? String {
+                return state
+            }
+            return ""
+        })
+        self.states = Array(Set(self.states))
     }
+    
     
     // MARK: - Table view data source
     
@@ -93,3 +95,77 @@ class RadioContactsTableViewController: UITableViewController {
         }
     }
 }
+
+
+extension RadioContactsTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            cities = allCities
+            filterStatesFromCities()
+            self.tableView.reloadData()
+        }
+        else {
+            cities = allCities.filter({ (city) -> Bool in
+                if let cityName = city.object(forKey: "cityName") as? String {
+                    let cityNameArray = cityName.components(separatedBy: " ")
+                    for name in cityNameArray {
+                        if name.substring(to: min(searchText.endIndex, name.endIndex)).lowercased() == searchText.lowercased() {
+                            return true
+                        }
+                    }
+                }
+                if let stateName = city.object(forKey: "stateName") as? String {
+                    let stateNameArray = stateName.components(separatedBy: " ")
+                    for name in stateNameArray {
+                        if name.substring(to: min(searchText.endIndex, name.endIndex)).lowercased() == searchText.lowercased() {
+                            return true
+                        }
+                    }
+                }
+                
+                if let station = city.object(forKey: "radioStation") as? String {
+                    let sstationArray = station.components(separatedBy: " ")
+                    for name in sstationArray {
+                        if name.substring(to: min(searchText.endIndex, name.endIndex)).lowercased() == searchText.lowercased() {
+                            return true
+                        }
+                    }
+                }
+                
+                
+                return false
+            })
+            self.filterStatesFromCities()
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        cities = allCities
+        filterStatesFromCities()
+        self.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
