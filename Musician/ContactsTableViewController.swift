@@ -42,7 +42,8 @@ class ContactsTableViewController: UITableViewController {
             }
             return ""
         })
-        states = Array(Set(states))
+//        states = Array(Set(states))
+        self.states = Array(Set(self.states)).sorted(by: {$0.lowercased() < $1.lowercased()})
     }
 
     
@@ -68,7 +69,7 @@ class ContactsTableViewController: UITableViewController {
             let state = states[indexPath.section]
             let cityArray = cities.filter { (city) -> Bool in
                 return city.object(forKey: "stateName") as? String == state
-            }
+            }.sorted(by: {$0.object(forKey: "cityName") as? String ?? "" < $1.object(forKey: "cityName") as? String ?? ""})
             if indexPath.row < cityArray.count {
                 let city = cityArray[indexPath.row]
                 // Configure the cell...
