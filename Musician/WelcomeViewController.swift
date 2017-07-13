@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class WelcomeViewController: UIViewController {
 
@@ -27,5 +28,10 @@ class WelcomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func privacyPolicyButtonPressed(_ sender: Any) {
+        let svc = SFSafariViewController(url: ("www.finleyknight.com" as? URL)!, entersReaderIfAvailable: true)
+        self.present(svc, animated: true, completion: nil)
+        
     }
 }

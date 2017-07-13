@@ -2071,7 +2071,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj6-9s-a0D">
-                                <rect key="frame" x="41" y="527" width="293" height="50"/>
+                                <rect key="frame" x="41" y="507" width="293" height="50"/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Pag-DL-2rP"/>
@@ -2085,7 +2085,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCI-HW-Y9K">
-                                <rect key="frame" x="41" y="597" width="293" height="50"/>
+                                <rect key="frame" x="41" y="577" width="293" height="50"/>
                                 <color key="backgroundColor" red="0.47843137250000001" green="0.48627450979999998" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QVk-Dm-bGf"/>
@@ -2113,11 +2113,22 @@ Call station number, ask for station contact, and ask about recieving and playin
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVT-At-rH3">
+                                <rect key="frame" x="134.5" y="637" width="107" height="25"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="11"/>
+                                <state key="normal" title="Musician and Privacy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyPolicyButtonPressed:" destination="dtW-Fg-AFB" eventType="touchUpInside" id="M9Q-tX-8zp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803921568626" green="0.078431372549019607" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a2h-XQ-fSz" firstAttribute="top" secondItem="GpT-2q-z4n" secondAttribute="bottom" constant="15" id="2sP-ck-jza"/>
                             <constraint firstItem="eCz-WS-nmC" firstAttribute="leading" secondItem="DWe-2D-Ky1" secondAttribute="leading" id="7OD-iw-ZLz"/>
+                            <constraint firstItem="nso-6p-fsy" firstAttribute="top" secondItem="pVT-At-rH3" secondAttribute="bottom" constant="5" id="7kU-nn-rAe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KCI-HW-Y9K" secondAttribute="trailing" constant="25" id="B03-RF-GhL"/>
                             <constraint firstItem="KCI-HW-Y9K" firstAttribute="top" secondItem="gj6-9s-a0D" secondAttribute="bottom" constant="20" id="COn-Sx-Ylm"/>
                             <constraint firstItem="gj6-9s-a0D" firstAttribute="centerX" secondItem="DWe-2D-Ky1" secondAttribute="centerX" id="H0z-Vy-K6g"/>
@@ -2130,7 +2141,8 @@ Call station number, ask for station contact, and ask about recieving and playin
                             <constraint firstAttribute="trailing" secondItem="eCz-WS-nmC" secondAttribute="trailing" id="eyI-1L-j63"/>
                             <constraint firstItem="gj6-9s-a0D" firstAttribute="leading" secondItem="DWe-2D-Ky1" secondAttribute="leadingMargin" constant="25" id="ftC-gh-Rne"/>
                             <constraint firstItem="KCI-HW-Y9K" firstAttribute="leading" secondItem="DWe-2D-Ky1" secondAttribute="leadingMargin" constant="25" id="oq1-In-jG3"/>
-                            <constraint firstItem="nso-6p-fsy" firstAttribute="top" secondItem="KCI-HW-Y9K" secondAttribute="bottom" constant="20" id="r9U-vf-nsB"/>
+                            <constraint firstItem="pVT-At-rH3" firstAttribute="top" secondItem="KCI-HW-Y9K" secondAttribute="bottom" constant="10" id="vDs-sb-iCz"/>
+                            <constraint firstItem="pVT-At-rH3" firstAttribute="centerX" secondItem="DWe-2D-Ky1" secondAttribute="centerX" id="xMj-Xx-SPX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2858,10 +2870,10 @@ Call station number, ask for station contact, and ask about recieving and playin
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xzi-Bm-Ijx"/>
-        <segue reference="Rsx-P5-cKu"/>
+        <segue reference="VFG-rE-3S7"/>
         <segue reference="PSs-WV-jes"/>
-        <segue reference="mRG-av-uP1"/>
         <segue reference="Vcg-WT-ZBu"/>
+        <segue reference="mRG-av-uP1"/>
         <segue reference="2UN-ze-PUE"/>
         <segue reference="HgL-7E-fg4"/>
     </inferredMetricsTieBreakers>
