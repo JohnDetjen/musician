@@ -2205,7 +2205,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iko-6K-GJO">
                                                         <rect key="frame" x="15" y="75" width="305" height="50"/>
@@ -2375,7 +2375,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please provide correct information below so we can populate your emails correctly." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-BF-jId">
                                                         <rect key="frame" x="40" y="195" width="255" height="40"/>
@@ -2869,9 +2869,9 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xzi-Bm-Ijx"/>
+        <segue reference="AKA-0x-pmC"/>
+        <segue reference="ujZ-uf-FGN"/>
         <segue reference="VFG-rE-3S7"/>
-        <segue reference="PSs-WV-jes"/>
         <segue reference="Vcg-WT-ZBu"/>
         <segue reference="mRG-av-uP1"/>
         <segue reference="2UN-ze-PUE"/>

@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func privacyPolicyButtonPressed(_ sender: Any) {
-        let svc = SFSafariViewController(url: ("www.finleyknight.com" as? URL)!, entersReaderIfAvailable: true)
+        let svc = SFSafariViewController(url: ("www.joinmusician.com/privacypolicy" as? URL)!, entersReaderIfAvailable: true)
         self.present(svc, animated: true, completion: nil)
         
     }
