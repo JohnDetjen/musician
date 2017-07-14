@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 class ManageTourTableViewController: UITableViewController {
+    @IBOutlet weak var emailVenuesButton: UIButton!
     
     var tours = [PFObject]()
 //    var venues = [PFObject]()
@@ -17,6 +18,9 @@ class ManageTourTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        emailVenuesButton.layer.cornerRadius = 5
+//        emailVenuesButton.clipsToBounds = true
+        
         
         let query = PFQuery(className: "Tour")
         //filter query by user

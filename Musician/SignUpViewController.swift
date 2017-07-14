@@ -29,6 +29,9 @@ class SignUpViewController: UIViewController {
         loginView.clipsToBounds = true
         doneButton.layer.cornerRadius = 5
         doneButton.clipsToBounds = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
         
         setupViewResizerOnKeyboardShown()
     }
@@ -62,6 +65,11 @@ class SignUpViewController: UIViewController {
     
     func keyboardWillHideForResizing(notification: Notification) {
         scrollViewBottomConstraint.constant = 0
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     

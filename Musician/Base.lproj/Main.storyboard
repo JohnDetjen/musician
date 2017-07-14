@@ -124,30 +124,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="IrT-XL-Qko">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgL-4k-dGP">
-                                    <rect key="frame" x="57.5" y="26.5" width="260" height="60"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="Gmv-JL-zIb"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
-                                    <state key="normal" title="Click To Email A Group Of Venues">
-                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="AgL-4k-dGP" firstAttribute="centerX" secondItem="IrT-XL-Qko" secondAttribute="centerX" id="KEa-i3-bvk"/>
-                                <constraint firstItem="AgL-4k-dGP" firstAttribute="centerY" secondItem="IrT-XL-Qko" secondAttribute="centerY" id="O4d-Y8-hUY"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zB-HY-sGO" detailTextLabel="G5E-zW-rOq" imageView="dN8-9L-lHS" style="IBUITableViewCellStyleValue1" id="YIn-2W-D5h">
-                                <rect key="frame" x="0.0" y="168.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YIn-2W-D5h" id="X3W-oN-Hlx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -173,6 +152,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -180,7 +160,9 @@
                             <outlet property="delegate" destination="eAe-qy-rof" id="XtM-2s-dQ0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Manage Tour" id="QZ7-6o-YCY"/>
+                    <navigationItem key="navigationItem" title="Manage Tour" id="QZ7-6o-YCY">
+                        <barButtonItem key="rightBarButtonItem" title="Book" id="9VA-bg-Ly7"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2n-aQ-PKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="om8-ik-Vry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1154" y="1701"/>
+            <point key="canvasLocation" x="-878" y="1756"/>
         </scene>
         <!--Radio Stations-->
         <scene sceneID="7rR-ca-Z0v">
@@ -1680,7 +1662,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vY-te-epH">
                                 <rect key="frame" x="320" y="79" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="0rX-UD-nNW"/>
                                     <constraint firstAttribute="width" secondItem="7vY-te-epH" secondAttribute="height" multiplier="1:1" id="ZHJ-HC-5PV"/>
@@ -1730,7 +1712,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <viewControllerLayoutGuide type="bottom" id="vr7-xA-EKS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5RN-Ge-FDU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tourBus" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-Lm-WBQ">
@@ -2276,7 +2258,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.074509803921568626" green="0.078431372549019607" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="LUZ-pc-ujM" firstAttribute="leading" secondItem="wny-ih-DBo" secondAttribute="leading" constant="20" id="Dm2-Xh-O8O"/>
                                             <constraint firstItem="LUZ-pc-ujM" firstAttribute="top" secondItem="wny-ih-DBo" secondAttribute="top" constant="70" id="EHt-zc-fX4"/>
@@ -2415,7 +2397,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-oT-eLg">
                                                         <rect key="frame" x="15" y="405" width="305" height="50"/>
-                                                        <color key="backgroundColor" red="0.18173268149999999" green="0.20972218640000001" blue="0.28442258879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.1803921568627451" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="uBk-V1-lPS"/>
                                                         </constraints>
@@ -2489,7 +2471,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.074509803921568626" green="0.078431372549019607" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="EPZ-Zf-uHT" secondAttribute="bottom" constant="20" id="2mU-aQ-wZF"/>
                                             <constraint firstItem="EMa-px-7LE" firstAttribute="top" secondItem="52X-Y6-5UX" secondAttribute="top" constant="70" id="5nC-Ji-Qdh"/>
@@ -2871,10 +2853,10 @@ Call station number, ask for station contact, and ask about recieving and playin
     <inferredMetricsTieBreakers>
         <segue reference="AKA-0x-pmC"/>
         <segue reference="ujZ-uf-FGN"/>
-        <segue reference="VFG-rE-3S7"/>
-        <segue reference="Vcg-WT-ZBu"/>
+        <segue reference="Rsx-P5-cKu"/>
         <segue reference="mRG-av-uP1"/>
         <segue reference="2UN-ze-PUE"/>
         <segue reference="HgL-7E-fg4"/>
+        <segue reference="Vtn-Eo-omV"/>
     </inferredMetricsTieBreakers>
 </document>

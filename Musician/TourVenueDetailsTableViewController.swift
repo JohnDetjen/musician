@@ -41,7 +41,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let alert = UIAlertController(title: "" as String, message: "Show Status" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alert = UIAlertController(title: "Select Show Status" as String, message: "" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
             alert.addAction(UIAlertAction(title: "Not Booked", style: UIAlertActionStyle.default, handler: nil))
             alert.addAction(UIAlertAction(title: "Hold", style: UIAlertActionStyle.default, handler: nil))
             alert.addAction(UIAlertAction(title: "Booked", style: UIAlertActionStyle.default, handler: nil))

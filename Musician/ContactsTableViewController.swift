@@ -45,6 +45,11 @@ class ContactsTableViewController: UITableViewController {
 //        states = Array(Set(states))
         self.states = Array(Set(self.states)).sorted(by: {$0.lowercased() < $1.lowercased()})
     }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
 
     
     // MARK: - Table view data source
