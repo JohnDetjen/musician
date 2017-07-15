@@ -2026,6 +2026,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <outlet property="bookingLabel" destination="Nhl-d5-ADe" id="B63-rh-plB"/>
                         <outlet property="capacityLabel" destination="ZTq-xn-j6Z" id="rvX-3Z-WNB"/>
                         <outlet property="contactLabel" destination="PEb-tM-vks" id="KBw-oq-TIr"/>
+                        <outlet property="dateLabel" destination="PGE-uJ-aNJ" id="g8h-DW-BS8"/>
                         <outlet property="phoneLabel" destination="EbM-rz-mbV" id="okg-GQ-HxH"/>
                         <outlet property="websiteLabel" destination="VC4-5f-NEA" id="s6A-JH-ABY"/>
                     </connections>

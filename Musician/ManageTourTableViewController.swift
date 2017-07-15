@@ -79,7 +79,7 @@ class ManageTourTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tour = tours[indexPath.row]
         if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
-            detailVC.venue = tour.object(forKey: "venue") as? PFObject
+            detailVC.tour = tour
             navigationController?.pushViewController(detailVC, animated: true)
         }
     }

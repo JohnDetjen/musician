@@ -16,6 +16,7 @@ extension ViewController: MKMapViewDelegate {
         if let annotation = annotation as? Artwork {
             let identifier = "pin"
             var view: MKPinAnnotationView
+            
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
                 as? MKPinAnnotationView { // 2
                 dequeuedView.annotation = annotation
@@ -26,6 +27,13 @@ extension ViewController: MKMapViewDelegate {
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            }
+            view.pinTintColor = UIColor.gray
+            if annotation.tour?.object(forKey: "status") as? String == "Booked" {
+                view.pinTintColor = UIColor.green
+            }
+            else if annotation.tour?.object(forKey: "status") as? String == "Hold" {
+                view.pinTintColor = UIColor.purple
             }
             return view
         }

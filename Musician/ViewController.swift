@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                         let obj = aVenue.object(forKey: "venue") as? PFObject
                         if let name = obj?.object(forKey: "name") as? String, let coordinate = obj?.object(forKey: "venueLocation") as? PFGeoPoint, let capacity = obj?.object(forKey: "capacity") as? Int {
                             let aArtWork = Artwork(title: name, locationName: "Capacity \(capacity)", discipline: "", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
-                            aArtWork.venue = obj
+                            aArtWork.tour = aVenue
                             self.mapView.addAnnotation(aArtWork)
                         }
                     }
@@ -90,14 +90,15 @@ class ViewController: UIViewController {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let venue = (view.annotation as? Artwork)?.venue {
+        if let tour = (view.annotation as? Artwork)?.tour {
             if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
-                detailVC.venue = venue
+                detailVC.tour = tour
                 navigationController?.pushViewController(detailVC, animated: true)
             }
 
         }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

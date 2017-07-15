@@ -19,7 +19,7 @@ class Artwork: NSObject, MKAnnotation {
     
     var isBooked = false
     
-    var venue: PFObject?
+    var tour: PFObject?
     
     
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
