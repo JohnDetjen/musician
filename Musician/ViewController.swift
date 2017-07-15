@@ -62,6 +62,7 @@ class ViewController: UIViewController {
                         let obj = aVenue.object(forKey: "venue") as? PFObject
                         if let name = obj?.object(forKey: "name") as? String, let coordinate = obj?.object(forKey: "venueLocation") as? PFGeoPoint, let capacity = obj?.object(forKey: "capacity") as? Int {
                             let aArtWork = Artwork(title: name, locationName: "Capacity \(capacity)", discipline: "", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
+                            aArtWork.venue = obj
                             self.mapView.addAnnotation(aArtWork)
                         }
                     }
@@ -75,7 +76,8 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         if PFUser.current() == nil {
             if let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeViewController {
-                self.present(welcomeVC, animated: true, completion: nil)
+                let loginNavigation = UINavigationController(rootViewController: welcomeVC)
+                self.present(loginNavigation, animated: true, completion: nil)
             }
         }
     }
@@ -87,8 +89,20 @@ class ViewController: UIViewController {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let venue = (view.annotation as? Artwork)?.venue {
+            if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
+                detailVC.venue = venue
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
+
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
 }
+
+

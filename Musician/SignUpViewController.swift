@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import SCLAlertView
+import MBProgressHUD
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var loginView: UIView!
@@ -74,37 +75,49 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-
-        // Retrieving the info from the text fields
-        let password = textPassword.text
-        let username = textUsername.text
-        if let bandName = textBandName.text, let website = textBandWebsite.text, let hometown = textBandHometown.text {
-            
-            // Defining the user object
-            let user = PFUser()
-            user.username = username
-            user.password = password
+        
+        guard let username = textUsername.text, let password = textPassword.text else {
+            self.alert(message: "Please enter an email and password", title: "Fail")
+            return
+        }
+        
+        let user = PFUser()
+        user.username = username
+        user.password = password
+        
+        // Retrieving the info from the text field
+        if let bandName = textBandName.text {
             user["bandName"] = bandName
+        }
+        if let website = textBandWebsite.text {
             user["website"] = website
+        }
+        if let hometown = textBandHometown.text {
             user["hometown"] = hometown
-            
-            // We won't set the email for this example;
-            // Just for simplicity
-            
-            // Signing up using the Parse API
-            user.signUpInBackground {
-                (success, error) -> Void in
-                if let error = error as NSError? {
-                    let errorString = error.userInfo["error"] as? NSString
-                    self.alert(message: errorString!, title: "Error")
-                    
-                } else {
-                    self.alert(message: "Registered successfully", title: "Registering")
-                }
+        }
+        
+        // Defining the user object
+        
+        
+        // We won't set the email for this example;
+        // Just for simplicity
+        
+        // Signing up using the Parse API
+        MBProgressHUD.showAdded(to: view, animated: true)
+        user.signUpInBackground {
+            (success, error) -> Void in
+            if let error = error as NSError? {
+                let errorString = error.userInfo["error"] as? NSString
+                self.alert(message: errorString!, title: "Error")
+                
+            } else {
+                self.alert(message: "Registered successfully", title: "Registering")
+                self.navigationController?.dismiss(animated: true, completion: nil)
             }
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
-
-
-
+    
+    
+    
 }

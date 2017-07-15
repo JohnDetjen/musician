@@ -122,20 +122,24 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
                     print("Cannot send mail")
                 }
             }
-//        case 1:
-//            if let phoneCallURL = venue.object(forKey: "phoneNumber") as? String {
-//                
-//                let application:UIApplication = UIApplication.shared
-//                if (application.canOpenURL(phoneCallURL)) {
-//                    application.open(phoneCallURL, options: [:], completionHandler: nil)
-//                }
-//            }
-//
-//        case 2:
-//            if let url = venue.object(forKey: "website") as? String {
-//            let svc = SFSafariViewController(url: "", entersReaderIfAvailable: true)
-//            self.present(svc, animated: true, completion: nil)
-//        }
+        case 1:
+            if let phoneNumber = venue.object(forKey: "phoneNumber") as? String {
+                
+                if let phoneNumberURL = URL(string: "tel://\(phoneNumber.replacingOccurrences(of: ".", with: ""))") {
+                    UIApplication.shared.open(phoneNumberURL, options: [:], completionHandler: nil)
+                }
+            }
+
+        case 2:
+            if var website = venue.object(forKey: "website") as? String {
+                if !(website.contains("http://") || website.contains("https://")) {
+                    website = "http://" + website
+                }
+                if let url = URL(string: website) {
+                    let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+                    self.present(svc, animated: true, completion: nil)
+                }
+            }
 
 //        case 3:
            

@@ -24,6 +24,7 @@ class RadioContactsTableViewController: UITableViewController {
     
     func loadData() {
         let query = PFQuery(className: "RadioStationCity")
+        query.limit = 1000
         query.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
                 self.cities = theObjects
@@ -145,6 +146,7 @@ extension RadioContactsTableViewController: UISearchBarDelegate {
         cities = allCities
         filterStatesFromCities()
         self.tableView.reloadData()
+        searchBar.text = nil
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

@@ -25,6 +25,7 @@ class ContactsTableViewController: UITableViewController {
     
     func loadData() {
         let query = PFQuery(className: "City")
+        query.limit = 1000
         query.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
                 self.cities = theObjects
@@ -107,6 +108,7 @@ class ContactsTableViewController: UITableViewController {
             navigationController?.pushViewController(venueDetailVC, animated: true)
         }
     }
+    
 }
 
 extension ContactsTableViewController: UISearchBarDelegate {
@@ -143,6 +145,7 @@ extension ContactsTableViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        searchBar.text = nil
         cities = allCities
         filterStatesFromCities()
         self.tableView.reloadData()

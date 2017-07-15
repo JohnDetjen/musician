@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 import Contacts
+import Parse
 
 class Artwork: NSObject, MKAnnotation {
     let title: String?
@@ -17,6 +18,8 @@ class Artwork: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
     
     var isBooked = false
+    
+    var venue: PFObject?
     
     
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {

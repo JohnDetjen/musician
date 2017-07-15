@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
 
 class LogInViewController: UIViewController {
     @IBOutlet weak var textUsername: UITextField!
@@ -70,19 +71,23 @@ class LogInViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         // Retrieving the info from the text fields
-        let username = textUsername.text
-        let password = textPassword.text
+        if let username = textUsername.text,
+            let password = textPassword.text {
         
-        // Defining the user object
-        PFUser.logInWithUsername(inBackground: username!, password: password!, block: {(user, error) -> Void in
-            if let error = error as NSError? {
-                let errorString = error.userInfo["error"] as? NSString
-                self.alert(message: errorString!, title: "Error")
-            }
-            else {
-                self.alert(message: "Welcome back!", title: "Login")
-            }
-        })
+            // Defining the user object
+            MBProgressHUD.showAdded(to: view, animated: true)
+            PFUser.logInWithUsername(inBackground: username, password: password, block: {(user, error) -> Void in
+                if let errorString = (error as NSError?)?.userInfo["error"] as? NSString {
+                    self.alert(message: errorString, title: "Error")
+                }
+                else {
+                    self.navigationController?.dismiss(animated: true, completion: nil)
+                    self.alert(message: "Welcome back!", title: "Login")
+                    
+                }
+                MBProgressHUD.hide(for: self.view, animated: true)
+            })
+        }
     }
     
 }

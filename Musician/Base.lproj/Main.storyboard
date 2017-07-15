@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="eqy-s6-HrQ">
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="eqy-s6-HrQ">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -681,7 +681,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="BbB-lp-tlV">
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="BbB-lp-tlV">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -2222,9 +2222,6 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                     <constraint firstAttribute="width" secondItem="bML-67-nY9" secondAttribute="height" multiplier="1:1" id="jF0-et-qlG"/>
                                                 </constraints>
                                                 <state key="normal" image="BackButton"/>
-                                                <connections>
-                                                    <segue destination="dtW-Fg-AFB" kind="show" id="VFG-rE-3S7"/>
-                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQQ-Hm-i4T">
                                                 <rect key="frame" x="101" y="348" width="174" height="50"/>
@@ -2299,7 +2296,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDr-70-cfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3610.4000000000001" y="1126.6866566716642"/>
+            <point key="canvasLocation" x="-2982" y="1237"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="OIe-s3-BkK">
@@ -2326,9 +2323,6 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                     <constraint firstAttribute="width" secondItem="Y8B-Q9-fhl" secondAttribute="height" multiplier="1:1" id="ZWT-nl-AyN"/>
                                                 </constraints>
                                                 <state key="normal" image="BackButton"/>
-                                                <connections>
-                                                    <segue destination="dtW-Fg-AFB" kind="show" id="Rsx-P5-cKu"/>
-                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-px-7LE">
                                                 <rect key="frame" x="20" y="70" width="335" height="475"/>
@@ -2407,7 +2401,6 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                         </state>
                                                         <connections>
                                                             <action selector="doneButtonPressed:" destination="y8F-Ss-dry" eventType="touchUpInside" id="r9z-Lh-ahX"/>
-                                                            <segue destination="49e-Tb-3d3" kind="show" id="z8D-Hz-rSm"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2440,7 +2433,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Zf-uHT">
-                                                <rect key="frame" x="51" y="553" width="274.5" height="50"/>
+                                                <rect key="frame" x="50.5" y="553" width="274.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-e4-mTo">
                                                         <rect key="frame" x="20" y="0.0" width="183.5" height="50"/>
@@ -2851,12 +2844,11 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AKA-0x-pmC"/>
-        <segue reference="ujZ-uf-FGN"/>
-        <segue reference="Rsx-P5-cKu"/>
-        <segue reference="mRG-av-uP1"/>
+        <segue reference="Vtn-Eo-omV"/>
         <segue reference="2UN-ze-PUE"/>
         <segue reference="HgL-7E-fg4"/>
-        <segue reference="Vtn-Eo-omV"/>
+        <segue reference="mRG-av-uP1"/>
+        <segue reference="PSs-WV-jes"/>
+        <segue reference="xzi-Bm-Ijx"/>
     </inferredMetricsTieBreakers>
 </document>
