@@ -144,12 +144,6 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
 //        case 3:
            
         case 4:
-//            let venueInfo = PFObject(className: "Tour")
-//            
-//            venueInfo.setObject(venue, forKey: "venue")
-//            if let currentUser = PFUser.current(){
-//                venueInfo.setObject(currentUser, forKey: "user")
-//            }
 
             if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
                 venueDetailVC.venue = venue

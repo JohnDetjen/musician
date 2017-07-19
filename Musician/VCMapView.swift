@@ -32,8 +32,9 @@ extension ViewController: MKMapViewDelegate {
             if annotation.tour?.object(forKey: "status") as? String == "Booked" {
                 view.pinTintColor = UIColor.green
             }
+                
             else if annotation.tour?.object(forKey: "status") as? String == "Hold" {
-                view.pinTintColor = UIColor.purple
+                view.pinTintColor = UIColor.magenta
             }
             return view
         }

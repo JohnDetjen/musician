@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -124,30 +124,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="uQv-T9-9RM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahP-mg-mxu">
+                                    <rect key="frame" x="26" y="17" width="322.5" height="107"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-iH-8hD">
+                                            <rect key="frame" x="170" y="12" width="137.5" height="83.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">1. add venue to tour
+2. choose show date
+3. email booking contact
+4. add radio station
+5. start radio campaign</string>
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tourBus" translatesAutoresizingMaskIntoConstraints="NO" id="g41-Hg-3j2">
+                                            <rect key="frame" x="35" y="12" width="100" height="83"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="g41-Hg-3j2" secondAttribute="height" multiplier="95:79" id="KL6-VR-3Yo"/>
+                                                <constraint firstAttribute="width" constant="100" id="UE3-wP-2Hd"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="g41-Hg-3j2" firstAttribute="centerY" secondItem="ahP-mg-mxu" secondAttribute="centerY" id="02t-rG-Mu9"/>
+                                        <constraint firstAttribute="trailing" secondItem="tdj-iH-8hD" secondAttribute="trailing" constant="15" id="BjT-ME-1Tb"/>
+                                        <constraint firstItem="tdj-iH-8hD" firstAttribute="centerY" secondItem="ahP-mg-mxu" secondAttribute="centerY" id="DNj-6Y-lyE"/>
+                                        <constraint firstAttribute="height" constant="107" id="Xw0-h6-ReP"/>
+                                        <constraint firstItem="tdj-iH-8hD" firstAttribute="leading" secondItem="g41-Hg-3j2" secondAttribute="trailing" constant="35" id="cyG-bZ-Zd7"/>
+                                        <constraint firstItem="g41-Hg-3j2" firstAttribute="leading" secondItem="ahP-mg-mxu" secondAttribute="leading" constant="35" id="ywK-V6-iNw"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="ahP-mg-mxu" firstAttribute="centerY" secondItem="uQv-T9-9RM" secondAttribute="centerY" id="6s9-JB-918"/>
+                                <constraint firstItem="ahP-mg-mxu" firstAttribute="centerX" secondItem="uQv-T9-9RM" secondAttribute="centerX" id="7c4-d7-DJR"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zB-HY-sGO" detailTextLabel="G5E-zW-rOq" imageView="dN8-9L-lHS" style="IBUITableViewCellStyleValue1" id="YIn-2W-D5h">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="196.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YIn-2W-D5h" id="X3W-oN-Hlx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zB-HY-sGO">
-                                            <rect key="frame" x="15" y="12" width="33" height="20"/>
+                                            <rect key="frame" x="55" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5E-zW-rOq">
-                                            <rect key="frame" x="324.5" y="16" width="35.5" height="15"/>
+                                            <rect key="frame" x="327" y="16" width="33" height="15.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dN8-9L-lHS">
-                                            <rect key="frame" x="15" y="9" width="24" height="24"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unbooked" id="dN8-9L-lHS">
+                                            <rect key="frame" x="15" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -161,12 +211,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Manage Tour" id="QZ7-6o-YCY">
-                        <barButtonItem key="rightBarButtonItem" title="Book" id="9VA-bg-Ly7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Email All.." id="9VA-bg-Ly7"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2n-aQ-PKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072.8000000000002" y="-1755.4722638680662"/>
+            <point key="canvasLocation" x="1365.5999999999999" y="-1755.4722638680662"/>
         </scene>
         <!--Add Venue-->
         <scene sceneID="lNe-DX-Mtw">
@@ -585,7 +635,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Date" id="XVW-o0-HaH">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="nVK-NT-Nwa">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nVK-NT-Nwa">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="haN-fQ-h7X" id="xuk-xo-vlK"/>
                             </connections>
@@ -619,6 +669,9 @@
                                     <constraint firstAttribute="width" secondItem="QHG-Wf-cXa" secondAttribute="height" multiplier="1:1" id="Wp2-eO-g4E"/>
                                 </constraints>
                                 <state key="normal" image="Musician Booking Plus"/>
+                                <connections>
+                                    <action selector="musicianBookingPlusPressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="vGg-br-SJf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-Ma-xTz">
                                 <rect key="frame" x="31" y="475" width="313" height="24"/>
@@ -626,6 +679,9 @@
                                 <state key="normal" title="Click here to restore purchase">
                                     <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="restorePurchasePressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="Wn5-OR-pL9"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w82-es-bMv">
                                 <rect key="frame" x="102" y="519" width="170" height="40"/>
@@ -642,6 +698,9 @@
                                         <state key="normal" title="terms of use">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="termsOfUsePressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="1LC-8E-dWA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -668,10 +727,14 @@
                             <constraint firstItem="QHG-Wf-cXa" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leading" id="uec-8m-HrU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="musicianBookingPlus" destination="QHG-Wf-cXa" id="6cO-Ew-ccZ"/>
+                        <outlet property="restoreButton" destination="VaG-Ma-xTz" id="UP9-Zg-ygv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="om8-ik-Vry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-878" y="1756"/>
+            <point key="canvasLocation" x="-2354" y="1764"/>
         </scene>
         <!--Radio Stations-->
         <scene sceneID="7rR-ca-Z0v">
@@ -982,7 +1045,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbN-5v-w9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2073" y="324"/>
+            <point key="canvasLocation" x="1366" y="347"/>
         </scene>
         <!--Station Details Table View Controller-->
         <scene sceneID="hp8-fC-uJA">
@@ -1493,7 +1556,7 @@ Santa Monica CA 90405
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R87-cD-3kt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5120.8000000000002" y="1700.5997001499252"/>
+            <point key="canvasLocation" x="4985" y="1701"/>
         </scene>
         <!--Preparation-->
         <scene sceneID="vxc-wI-VZL">
@@ -1581,7 +1644,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fc2-Lk-7Cs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6761" y="1701"/>
+            <point key="canvasLocation" x="6498" y="1701"/>
         </scene>
         <!--Support-->
         <scene sceneID="bOa-A6-q9l">
@@ -1703,7 +1766,7 @@ Call station number, ask for station contact, and ask about recieving and playin
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="-1755.4722638680662"/>
         </scene>
-        <!--Edit Profile-->
+        <!--Profile-->
         <scene sceneID="Fdq-oi-BSz">
             <objects>
                 <viewController id="NdW-VD-HYV" customClass="BandInfoViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
@@ -1712,32 +1775,25 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <viewControllerLayoutGuide type="bottom" id="vr7-xA-EKS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5RN-Ge-FDU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tourBus" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-Lm-WBQ">
-                                <rect key="frame" x="149.5" y="79" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KGq-Lm-WBQ" secondAttribute="height" multiplier="1:1" id="HLj-eE-udV"/>
-                                    <constraint firstAttribute="width" constant="75" id="Mph-Fl-7aN"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srx-iK-cni">
-                                <rect key="frame" x="0.0" y="169" width="375" height="145"/>
+                                <rect key="frame" x="0.0" y="194" width="375" height="145"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Band Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-63-0Yj">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="musician name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-63-0Yj">
                                         <rect key="frame" x="55" y="18" width="300" height="19"/>
                                         <color key="textColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Band Website" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Gb-9N-y01">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="musician website" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Gb-9N-y01">
                                         <rect key="frame" x="55" y="63" width="305" height="19"/>
                                         <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Band Hometown" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-lj-qFm">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="musician hometown" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-lj-qFm">
                                         <rect key="frame" x="55" y="108" width="305" height="19"/>
                                         <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
@@ -1806,29 +1862,47 @@ Call station number, ask for station contact, and ask about recieving and playin
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-yF-p9w">
-                                <rect key="frame" x="31" y="359" width="313" height="29"/>
+                                <rect key="frame" x="0.0" y="384" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mc7-1F-DR8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="switchAccountPressed:" destination="NdW-VD-HYV" eventType="touchUpInside" id="n2l-Dd-qXy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4Q-xQ-r3z">
+                                <rect key="frame" x="66" y="114" width="243" height="50"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Use this information to auto fill your template emails.  This will help you quickly send booking emails out to venues.">
+                                        <attributes>
+                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="5uF-yF-p9w" secondAttribute="trailing" constant="15" id="1zR-uc-O03"/>
+                            <constraint firstItem="N4Q-xQ-r3z" firstAttribute="leading" secondItem="5RN-Ge-FDU" secondAttribute="leadingMargin" constant="50" id="3CN-VB-gID"/>
                             <constraint firstItem="5uF-yF-p9w" firstAttribute="centerX" secondItem="5RN-Ge-FDU" secondAttribute="centerX" id="7ui-Qz-NGo"/>
-                            <constraint firstItem="KGq-Lm-WBQ" firstAttribute="centerX" secondItem="5RN-Ge-FDU" secondAttribute="centerX" id="HbK-lP-fgj"/>
-                            <constraint firstItem="5uF-yF-p9w" firstAttribute="leading" secondItem="5RN-Ge-FDU" secondAttribute="leadingMargin" constant="15" id="Pt1-yg-c5w"/>
-                            <constraint firstItem="srx-iK-cni" firstAttribute="top" secondItem="KGq-Lm-WBQ" secondAttribute="bottom" constant="15" id="eLA-3j-wgR"/>
+                            <constraint firstItem="5uF-yF-p9w" firstAttribute="leading" secondItem="5RN-Ge-FDU" secondAttribute="leading" id="Fwf-QY-6qx"/>
+                            <constraint firstItem="N4Q-xQ-r3z" firstAttribute="top" secondItem="6iU-B3-k2c" secondAttribute="bottom" constant="50" id="QBK-vI-45f"/>
+                            <constraint firstItem="srx-iK-cni" firstAttribute="top" secondItem="N4Q-xQ-r3z" secondAttribute="bottom" constant="30" id="Yui-5p-deS"/>
+                            <constraint firstAttribute="trailing" secondItem="5uF-yF-p9w" secondAttribute="trailing" id="eAi-TW-caP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N4Q-xQ-r3z" secondAttribute="trailing" constant="50" id="fY0-Gc-iMM"/>
                             <constraint firstAttribute="trailing" secondItem="srx-iK-cni" secondAttribute="trailing" id="jUK-nW-0v7"/>
                             <constraint firstItem="srx-iK-cni" firstAttribute="leading" secondItem="5RN-Ge-FDU" secondAttribute="leading" id="mID-jm-NKh"/>
-                            <constraint firstItem="KGq-Lm-WBQ" firstAttribute="top" secondItem="6iU-B3-k2c" secondAttribute="bottom" constant="15" id="rmq-6d-gnZ"/>
                             <constraint firstItem="5uF-yF-p9w" firstAttribute="top" secondItem="srx-iK-cni" secondAttribute="bottom" constant="45" id="tmX-sY-kzu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="iUK-cK-je2">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="wVx-5u-HSa">
+                    <navigationItem key="navigationItem" title="Profile" id="iUK-cK-je2">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="wVx-5u-HSa">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="NdW-VD-HYV" id="7Hm-Vx-Rye"/>
                             </connections>
@@ -1842,9 +1916,9 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHY-Je-ufB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2040.8" y="-2437.3313343328336"/>
+            <point key="canvasLocation" x="1366" y="-2437"/>
         </scene>
-        <!--Tour Venue Details-->
+        <!--Venue Details-->
         <scene sceneID="Zdg-wi-cTf">
             <objects>
                 <tableViewController storyboardIdentifier="tourVenueDetail" id="3NZ-kH-ubM" customClass="TourVenueDetailsTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
@@ -1853,39 +1927,47 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Show Status" id="ifI-ID-sRe">
+                            <tableViewSection headerTitle="Booking Details" id="ifI-ID-sRe">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nhl-d5-ADe" style="IBUITableViewCellStyleDefault" id="7sG-et-9l3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nhl-d5-ADe" imageView="X8f-pQ-Ydb" style="IBUITableViewCellStyleDefault" id="7sG-et-9l3">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sG-et-9l3" id="nRU-5x-Rka">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Not Booked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nhl-d5-ADe">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="55" y="0.0" width="285" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                                    <color key="textColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unbooked" id="X8f-pQ-Ydb">
+                                                    <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PGE-uJ-aNJ" style="IBUITableViewCellStyleDefault" id="Qpe-2E-EYq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PGE-uJ-aNJ" imageView="ZRS-Gi-6zs" style="IBUITableViewCellStyleDefault" id="Qpe-2E-EYq">
                                         <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qpe-2E-EYq" id="fxu-XC-R6B">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="07/11/17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PGE-uJ-aNJ">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="55" y="0.0" width="285" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="calendarIcon" id="ZRS-Gi-6zs">
+                                                    <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2003,15 +2085,14 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Remove From Tour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eWa-qz-Kc7">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2021,19 +2102,20 @@ Call station number, ask for station contact, and ask about recieving and playin
                             <outlet property="delegate" destination="3NZ-kH-ubM" id="dRn-3E-QeS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tour Venue Details" id="26X-pG-ELU"/>
+                    <navigationItem key="navigationItem" title="Venue Details" id="26X-pG-ELU"/>
                     <connections>
                         <outlet property="bookingLabel" destination="Nhl-d5-ADe" id="B63-rh-plB"/>
                         <outlet property="capacityLabel" destination="ZTq-xn-j6Z" id="rvX-3Z-WNB"/>
                         <outlet property="contactLabel" destination="PEb-tM-vks" id="KBw-oq-TIr"/>
                         <outlet property="dateLabel" destination="PGE-uJ-aNJ" id="g8h-DW-BS8"/>
                         <outlet property="phoneLabel" destination="EbM-rz-mbV" id="okg-GQ-HxH"/>
+                        <outlet property="statusImage" destination="X8f-pQ-Ydb" id="ooq-6u-5L0"/>
                         <outlet property="websiteLabel" destination="VC4-5f-NEA" id="s6A-JH-ABY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeY-Xp-S9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3748" y="-1755.4722638680662"/>
+            <point key="canvasLocation" x="2790" y="-1755"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="pMi-SK-5Ru">
@@ -2297,7 +2379,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDr-70-cfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2982" y="1237"/>
+            <point key="canvasLocation" x="-3610" y="1181"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="OIe-s3-BkK">
@@ -2363,7 +2445,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="band name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpj-w9-yaT">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="musician name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpj-w9-yaT">
                                                         <rect key="frame" x="15" y="240" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Ol6-XS-m1Q"/>
@@ -2372,7 +2454,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="band website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpb-JN-0yt">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="musician website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpb-JN-0yt">
                                                         <rect key="frame" x="15" y="290" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="PZl-hr-Dbc"/>
@@ -2381,7 +2463,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="band hometown" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rok-em-uhB">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="musician hometown" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rok-em-uhB">
                                                         <rect key="frame" x="15" y="340" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Daf-PG-4dP"/>
@@ -2434,7 +2516,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Zf-uHT">
-                                                <rect key="frame" x="50.5" y="553" width="274.5" height="50"/>
+                                                <rect key="frame" x="51" y="553" width="274.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-e4-mTo">
                                                         <rect key="frame" x="20" y="0.0" width="183.5" height="50"/>
@@ -2553,26 +2635,9 @@ Call station number, ask for station contact, and ask about recieving and playin
             <point key="canvasLocation" x="-47" y="-393"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Orf-8c-wE4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pwl-bU-R9x" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ygq-85-Nt0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="AXm-ax-YRE" kind="relationship" relationship="rootViewController" id="hK0-e3-TbH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bJU-K4-XWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1366" y="-1056"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="SpO-PS-Ddp">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nad-Xc-C5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XeY-Xk-j1K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oJq-N3-JaN">
@@ -2584,7 +2649,6 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <segue destination="g3I-rJ-4Eh" kind="relationship" relationship="rootViewController" id="q5y-Fj-1PN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nad-Xc-C5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1366" y="-394"/>
         </scene>
@@ -2664,42 +2728,6 @@ Call station number, ask for station contact, and ask about recieving and playin
             <point key="canvasLocation" x="1366" y="1015"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="GFo-QT-w30">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oG8-ZW-e8s" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dAn-Ch-cdn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0Eb-6Q-krO" kind="relationship" relationship="rootViewController" id="F3B-WC-PAL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eiw-Gu-TvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1366" y="324"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FLA-id-cDp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bHt-Ev-Zep" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eUS-19-cHw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eAe-qy-rof" kind="relationship" relationship="rootViewController" id="Vg2-bg-WLF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w1W-FP-clD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1366" y="-1755"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="mHw-u6-d3l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uXX-lB-i50" sceneMemberID="viewController">
@@ -2718,24 +2746,6 @@ Call station number, ask for station contact, and ask about recieving and playin
             <point key="canvasLocation" x="2790" y="-394"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Eks-1Q-vvF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S0v-CO-xqK" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7cl-tf-H7B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NdW-VD-HYV" kind="relationship" relationship="rootViewController" id="Vtn-Eo-omV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L1o-XB-DVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1366" y="-2437"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="Ijx-dG-tjs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9CX-tT-NFZ" sceneMemberID="viewController">
@@ -2751,7 +2761,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tft-JJ-TFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3046" y="-1755"/>
+            <point key="canvasLocation" x="2073" y="-1755"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uRc-zH-Ayb">
@@ -2805,7 +2815,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsh-a8-Fmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4375" y="1701"/>
+            <point key="canvasLocation" x="4266" y="1701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cm8-yj-GoV">
@@ -2823,7 +2833,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfH-fH-lBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6084" y="1701"/>
+            <point key="canvasLocation" x="5742" y="1701"/>
         </scene>
     </scenes>
     <resources>
@@ -2835,6 +2845,7 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="Support Icon" width="25" height="25"/>
         <image name="Templates Icon" width="25" height="25"/>
         <image name="bandProfile" width="25" height="25"/>
+        <image name="calendarIcon" width="25" height="25"/>
         <image name="hometownProfile" width="25" height="25"/>
         <image name="infoProfile" width="25" height="25"/>
         <image name="manageTourIcon" width="100" height="100"/>
@@ -2842,14 +2853,11 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="packagingSample" width="800" height="500"/>
         <image name="settingsImage" width="1364" height="943"/>
         <image name="tourBus" width="295" height="245"/>
+        <image name="unbooked" width="25" height="25"/>
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vtn-Eo-omV"/>
-        <segue reference="2UN-ze-PUE"/>
-        <segue reference="HgL-7E-fg4"/>
-        <segue reference="mRG-av-uP1"/>
-        <segue reference="PSs-WV-jes"/>
+        <segue reference="ujZ-uf-FGN"/>
         <segue reference="xzi-Bm-Ijx"/>
     </inferredMetricsTieBreakers>
 </document>

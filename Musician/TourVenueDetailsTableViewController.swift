@@ -25,6 +25,8 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
     
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var statusImage: UIImageView!
+    
     var tour: PFObject?
     
     override func viewDidLoad() {
@@ -50,25 +52,40 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         
     }
     
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if bookingLabel.text == "Not Booked" {
+            self.statusImage.image = #imageLiteral(resourceName: "unbooked")
+        }
+        if bookingLabel.text == "Booked" {
+            self.statusImage.image = #imageLiteral(resourceName: "booked")
+        }
+        if bookingLabel.text == "Hold" {
+            self.statusImage.image = #imageLiteral(resourceName: "hold")
+        }
+    }
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.row == 0 && indexPath.section == 0 {
             let alert = UIAlertController(title: "Select Show Status" as String, message: "" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
             let notBookedAction = UIAlertAction(title: "Not Booked", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Not Booked", forKey: "status")
+                self.statusImage.image = #imageLiteral(resourceName: "unbooked")
                 self.tour?.saveInBackground()
             })
             let holdAction = UIAlertAction(title: "Hold", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Hold", forKey: "status")
+                self.statusImage.image = #imageLiteral(resourceName: "hold")
                 self.tour?.saveInBackground()
             })
             let bookedAction = UIAlertAction(title: "Booked", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Booked", forKey: "status")
+                self.statusImage.image = #imageLiteral(resourceName: "booked")
                 self.tour?.saveInBackground()
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -91,20 +108,24 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         }
         
         
-        else if indexPath.row == 1 && indexPath.section == 0  {
-//            let venueInfo = PFObject(className: "Tour")
-//            
-//            venueInfo.setObject(venue, forKey: "venue")
-//            if let currentUser = PFUser.current(){
-//                venueInfo.setObject(currentUser, forKey: "user")
+//        if indexPath.row == 1 && indexPath.section == 0  {
+//            if let email = venue.object(forKey: "contactEmail") as? String {
+//                if MFMailComposeViewController.canSendMail() {
+//                    let mail = MFMailComposeViewController()
+//                    let venue = venue.object(forKey: "name") as! String
+//                    let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+//                    let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+//                    let website = PFUser.current()?.object(forKey: "website") as! String
+//                    mail.mailComposeDelegate = self
+//                    mail.setToRecipients([email])
+//                    mail.setSubject("Hold Request: \(venue)")
+//                    mail.setMessageBody("\(venue), I manage \(bandName). \(website). \nWe have a 15 date tour starting from \(hometown).  We would like to place a hold on \(venue) if you have availability this upcoming month. <b>I hope to talk further about setting something up. Thank you and take care. Cheers.</b>", isHTML: true)
+//                    present(mail, animated: true, completion: nil)
+//                } else {
+//                    print("Cannot send mail")
+//                }
 //            }
-            
-//            if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
-//                venueDetailVC.venue = venue
-//                navigationController?.pushViewController(venueDetailVC, animated: true)
-//            }
-            
-        }
+//        }
         
     }
     //
