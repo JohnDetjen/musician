@@ -28,6 +28,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
     @IBOutlet weak var statusImage: UIImageView!
     
     var tour: PFObject?
+    var venues = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +42,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         }
         bookingLabel.text = tour?.object(forKey: "status") as? String ?? "Not Booked"
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "mm/dd/yyyy"
-        
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         
         let datePicker = UIDatePicker()
         if let date = tour?.object(forKey: "date") as? Date {
@@ -58,7 +58,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         if bookingLabel.text == "Not Booked" {
             self.statusImage.image = #imageLiteral(resourceName: "unbooked")
         }
-        if bookingLabel.text == "Booked" {
+        if bookingLabel.text ==  "Booked" {
             self.statusImage.image = #imageLiteral(resourceName: "booked")
         }
         if bookingLabel.text == "Hold" {
@@ -68,6 +68,50 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let venue = tour?.object(forKey: "venue") as? PFObject
+        
+        if indexPath.row == 0 && indexPath.section == 1 {
+            if let email = venue?.object(forKey: "contactEmail") as? String {
+                if MFMailComposeViewController.canSendMail() {
+                    let mail = MFMailComposeViewController()
+                    let venue = venue?.object(forKey: "name") as! String
+                    let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                    let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                    let website = PFUser.current()?.object(forKey: "website") as! String
+                    mail.mailComposeDelegate = self
+                    mail.setToRecipients([email])
+                    mail.setSubject("Hold Request: \(venue)")
+                    mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care. </br>Cheers.</br></br>\(bandName)", isHTML: true)
+                    present(mail, animated: true, completion: nil)
+                } else {
+                    print("Cannot send mail")
+                }
+            }
+            
+        }
+        
+        if indexPath.row == 1 && indexPath.section == 1 {
+            if let phoneNumber = venue?.object(forKey: "phoneNumber") as? String {
+                if let phoneNumberURL = URL(string: "tel://\(phoneNumber.replacingOccurrences(of: ".", with: ""))") {
+                    UIApplication.shared.open(phoneNumberURL, options: [:], completionHandler: nil)
+                    tableView.deselectRow(at: indexPath, animated: true)
+                }
+            }
+        }
+        
+        if indexPath.row == 2 && indexPath.section == 1 {
+            if var website = venue?.object(forKey: "website") as? String {
+                if !(website.contains("http://") || website.contains("https://")) {
+                    website = "http://" + website
+                }
+                if let url = URL(string: website) {
+                    let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+                    self.present(svc, animated: true, completion: nil)
+                }
+            }
+        }
+
+        
         if indexPath.row == 0 && indexPath.section == 0 {
             let alert = UIAlertController(title: "Select Show Status" as String, message: "" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
             let notBookedAction = UIAlertAction(title: "Not Booked", style: .default, handler: { (action) in
@@ -75,28 +119,32 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
                 self.tour?.setObject("Not Booked", forKey: "status")
                 self.statusImage.image = #imageLiteral(resourceName: "unbooked")
                 self.tour?.saveInBackground()
+                tableView.deselectRow(at: indexPath, animated: true)
             })
             let holdAction = UIAlertAction(title: "Hold", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Hold", forKey: "status")
                 self.statusImage.image = #imageLiteral(resourceName: "hold")
                 self.tour?.saveInBackground()
+                tableView.deselectRow(at: indexPath, animated: true)
             })
             let bookedAction = UIAlertAction(title: "Booked", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Booked", forKey: "status")
                 self.statusImage.image = #imageLiteral(resourceName: "booked")
                 self.tour?.saveInBackground()
+                tableView.deselectRow(at: indexPath, animated: true)
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alert.addAction(notBookedAction)
             alert.addAction(holdAction)
             alert.addAction(bookedAction)
             alert.addAction(cancelAction)
+            tableView.deselectRow(at: indexPath, animated: true)
             
             self.present(alert, animated: true, completion: nil)
         }
-        
+            
         else if indexPath.row == 0 && indexPath.section == 2 {
             MBProgressHUD.showAdded(to: view, animated: true)
             tour?.deleteInBackground(block: { (success, error) in
@@ -104,32 +152,21 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
                 if success {
                     self.navigationController?.popViewController(animated: true)
                 }
+                tableView.deselectRow(at: indexPath, animated: true)
             })
         }
         
+        else if indexPath.row == 1 && indexPath.section == 0 {
+            if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
+//                venueDetailVC.venue = venue
+                navigationController?.pushViewController(venueDetailVC, animated: true)
+            }
+        }
         
-//        if indexPath.row == 1 && indexPath.section == 0  {
-//            if let email = venue.object(forKey: "contactEmail") as? String {
-//                if MFMailComposeViewController.canSendMail() {
-//                    let mail = MFMailComposeViewController()
-//                    let venue = venue.object(forKey: "name") as! String
-//                    let bandName = PFUser.current()?.object(forKey: "bandName") as! String
-//                    let hometown = PFUser.current()?.object(forKey: "hometown") as! String
-//                    let website = PFUser.current()?.object(forKey: "website") as! String
-//                    mail.mailComposeDelegate = self
-//                    mail.setToRecipients([email])
-//                    mail.setSubject("Hold Request: \(venue)")
-//                    mail.setMessageBody("\(venue), I manage \(bandName). \(website). \nWe have a 15 date tour starting from \(hometown).  We would like to place a hold on \(venue) if you have availability this upcoming month. <b>I hope to talk further about setting something up. Thank you and take care. Cheers.</b>", isHTML: true)
-//                    present(mail, animated: true, completion: nil)
-//                } else {
-//                    print("Cannot send mail")
-//                }
-//            }
-//        }
         
     }
-    //
-    //    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-    //        controller.dismiss(animated: true)
-    //    }
+    
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true)
+        }
 }

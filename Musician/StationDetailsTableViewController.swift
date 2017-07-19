@@ -19,7 +19,7 @@ class StationDetailsTableViewController: UITableViewController, MFMailComposeVie
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        
+                
     }
     
     func loadData() {
@@ -70,12 +70,14 @@ class StationDetailsTableViewController: UITableViewController, MFMailComposeVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath)
         switch indexPath.row {
         case 0:
+            cell.selectionStyle = .none
             cell.textLabel?.text = "Contact:"
             cell.detailTextLabel?.text = venue.object(forKey: "contact") as? String
         case 1:
             cell.textLabel?.text = "Phone:"
             cell.detailTextLabel?.text = venue.object(forKey: "phoneNumber") as? String
         case 2:
+            cell.selectionStyle = .none
             cell.textLabel?.text = "Address:"
             cell.detailTextLabel?.text = venue.object(forKey: "address") as? String
 //        case 3:
@@ -97,21 +99,29 @@ class StationDetailsTableViewController: UITableViewController, MFMailComposeVie
         let venue = venues[indexPath.section]
         
         switch indexPath.row {
-        case 0:
-            if let email = venue.object(forKey: "contactEmail") as? String {
-                if MFMailComposeViewController.canSendMail() {
-                    let mail = MFMailComposeViewController()
-                    let venue = venue.object(forKey: "name") as! String
-                    mail.mailComposeDelegate = self
-                    mail.setToRecipients([email])
-                    mail.setSubject("Booking Request: \(venue)")
-                    mail.setMessageBody("\(venue), I manage (BAND NAME). (WEBSITE TO HEAR BAND'S MUSIC). \nWe have a 15 date tour starting from (HOMETOWN) this (DATE).  We are hoping for the opportunity to show (VENUE NAME) that we can bring a great crowd, and play a great set of music. \nWe have a strong following in (VENUE CITY), along with friends and family. <b>I hope to talk further about setting something up. Thank you and take care. Cheers.</b>", isHTML: true)
-                    present(mail, animated: true, completion: nil)
-                } else {
-                    print("Cannot send mail")
-                }
+//        case 0:
+//            if let email = venue.object(forKey: "contactEmail") as? String {
+//                if MFMailComposeViewController.canSendMail() {
+//                    let mail = MFMailComposeViewController()
+//                    let venue = venue.object(forKey: "name") as! String
+//                    mail.mailComposeDelegate = self
+//                    mail.setToRecipients([email])
+//                    mail.setSubject("Booking Request: \(venue)")
+//                    mail.setMessageBody("\(venue), I manage (BAND NAME). (WEBSITE TO HEAR BAND'S MUSIC). \nWe have a 15 date tour starting from (HOMETOWN) this (DATE).  We are hoping for the opportunity to show (VENUE NAME) that we can bring a great crowd, and play a great set of music. \nWe have a strong following in (VENUE CITY), along with friends and family. <b>I hope to talk further about setting something up. Thank you and take care. Cheers.</b>", isHTML: true)
+//                    present(mail, animated: true, completion: nil)
+//                } else {
+//                    print("Cannot send mail")
+//                }
+//            }
+                    case 1:
+                        if let phoneNumber = venue.object(forKey: "phoneNumber") as? String {
+                            
+                            if let phoneNumberURL = URL(string: "tel://\(phoneNumber.replacingOccurrences(of: ".", with: ""))") {
+                                UIApplication.shared.open(phoneNumberURL, options: [:], completionHandler: nil)
+                            }
+                            tableView.deselectRow(at: indexPath, animated: true)
             }
-            //        case 1:
+
             //
             //        case 2:
             //            if let url = venue.object(forKey: "website") as? String {

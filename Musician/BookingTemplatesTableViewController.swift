@@ -36,8 +36,8 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
-                    mail.setSubject("Hold Request:")
-                    mail.setMessageBody("I manage \(bandName). \(website). \n We have a 15 date tour starting from \(hometown).  We would like to place a hold if you have availability this upcoming month. <b>Thank you and take care. Cheers.</b>", isHTML: true)
+                    mail.setSubject("Hold Request: \(bandName)")
+                    mail.setMessageBody("I manage \(bandName).</br>\(website)</br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care.</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")
@@ -48,8 +48,8 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
-                    mail.setSubject("Hold Request:")
-                    mail.setMessageBody("Checking back. \(website). We would like to place a hold if you have availability this upcoming month. A 2nd or 3rd hold would work as well.<b>Thanks.</b>", isHTML: true)
+                    mail.setSubject("Hold Request: \(bandName)")
+                    mail.setMessageBody("Checking back for \(bandName).</br>\(website)</br></br>We would like to place a hold if you have availability this upcoming month. A 2nd or 3rd hold would work as well.</br></br>Thanks.</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                     present(mail, animated: true, completion: nil)
                 } else {
@@ -62,8 +62,8 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
-                    mail.setSubject("Hold Request:")
-                    mail.setMessageBody("Checking back. \(website). Please let me know if there is availabilty this month. A 2nd or 3rd hold would work as well.<b>Thanks.", isHTML: true)
+                    mail.setSubject("Hold Request: \(bandName)")
+                    mail.setMessageBody("Checking back for \(bandName).</br>\(website)</br></br>Please let me know if there is availabilty this month.</br></br>A 2nd or 3rd hold would work as well.</br></br>Thanks.</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")
@@ -76,8 +76,8 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
-                    mail.setSubject("Confirmed")
-                    mail.setMessageBody("That works great. Ticket Price, Support, Door Time, Bill Payout? Is there any info you need at the moment? Thank you. Cheers", isHTML: true)
+                    mail.setSubject("Confirmed: \(bandName)")
+                    mail.setMessageBody("That works great.</br></br>Let me know what you have in mind for ticket price, support, door time, and bill payout.</br></br>Is there any additional info you need at the moment? </br></br>Thank you.</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")
@@ -90,8 +90,8 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
-                    mail.setSubject("Trade Show:")
-                    mail.setMessageBody("How are you?  I was looking through bands in (TRADE CITY) to find a match for our band (BAND NAME) to set up a show together.  Your band, (TRADE BAND NAME) definitely matches up with our style of music.  We are very interested in trading a show.  We play regularly at (VENUE YOU PLAY IN HOMETOWN) and (ANOTHER HOMETOWN VENUE), two very respected venues in (HOMETOWN).  It would be very easy for us to set up a show with very little time in advance. If you are interested, we can have the show in (HOMETOWN) before we come to (TRADE CITY). Let us know!Cheers", isHTML: true)
+                    mail.setSubject("Trade Show: \(bandName)")
+                    mail.setMessageBody("I manage \(bandName)</br>\(website)</br></br>We are very interested in trading a show with you.  We play regularly in \(hometown).</br></br>Let me know if you are planning on coming to \(hometown), and would like to discuss further.</br></br>Thanks!</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")
@@ -104,8 +104,8 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
-                    mail.setSubject("Input List:")
-                    mail.setMessageBody("Here is the input list for (BAND NAME) (3) Band Members:(2) Vocal mics- SM 58 betaElectric Guitar, Fender Twin-Reverb Amp Keyboards:Kurzweil PC2x,MOOG Lil phatty,Kaossilator (Korg)Drums:Yamaha Pro V Stroke Kit, Ludwig 5x14 black beauty Snare, Paiste high-hat, regular, Sabian Crash, Zidian Splash, Zidian China, Inputs needed: Approximately 9 inputs plus drum mics (house drum mics if available), Also, we would like to record the show through our own computer and pro tools software.  We hope that we will be able to feed a stereo quarter inch out from the main mixer to our ProTools Rack.  Thank you, Cheers", isHTML: true)
+                    mail.setSubject("Input List: \(bandName)")
+                    mail.setMessageBody("Here is the input list for \(bandName):</br></br>Band Members: 3</br>Vocals: SM 58 beta</br>Guitar: Electric Guitar, Fender Twin-Reverb Amp </br>Keyboards: Kurzweil PC2x, MOOG lil Phatty, Kaossilator (Korg)</br>Drums: Yamaha Pro V Stroke Kit, Ludwig 5x14 black beauty Snare, Paiste high-hat, Sabian Crash</br></br>Inputs needed: Approximately 9 inputs plus drum mics (house drum mics if available)</br></br>Also, if possible, we would like to record the show through our own computer and pro tools software.  We hope that we will be able to feed a stereo quarter inch out from the main mixer to our ProTools Rack.  </br></br>Thank you</br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")

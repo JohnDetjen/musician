@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+
         if let currentUser = PFUser.current() {
             let query = PFQuery(className: "Tour")
             //filter query by user

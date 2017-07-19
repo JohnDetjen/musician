@@ -105,7 +105,7 @@ class ShowDateViewController: UIViewController {
                     )
                     let alertView = SCLAlertView(appearance: appearance)
                     let alertViewIcon = UIImage(named: "HereNowAlertController") //Replace the IconImage text with the image name
-                    alertView.showInfo("Venue Added", subTitle: "\nGo to your tour page and start booking venues!", circleIconImage: alertViewIcon)
+                    alertView.showInfo("Venue Added", subTitle: "\nGo to your tour map and start booking venues!", circleIconImage: alertViewIcon)
                     let _ = self.navigationController?.popViewController(animated: true)
                 }
                 else {

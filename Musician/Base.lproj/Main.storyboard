@@ -22,7 +22,7 @@
         <!--Venues-->
         <scene sceneID="c4w-Qf-UR4">
             <objects>
-                <tableViewController id="U8w-tT-E72" customClass="ContactsTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="venueContacts" id="U8w-tT-E72" customClass="ContactsTableViewController" customModule="Musician" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DsI-aI-qqE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,16 +44,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nYl-50-kJq">
-                                            <rect key="frame" x="15" y="12" width="33" height="20"/>
+                                            <rect key="frame" x="15" y="13" width="29" height="17.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                             <color key="textColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kVI-RW-f7g">
-                                            <rect key="frame" x="314" y="12" width="46" height="20"/>
+                                            <rect key="frame" x="319.5" y="13" width="40.5" height="17.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                             <color key="textColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -125,21 +125,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="uQv-T9-9RM">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahP-mg-mxu">
-                                    <rect key="frame" x="26" y="17" width="322.5" height="107"/>
+                                    <rect key="frame" x="29.5" y="24.5" width="315.5" height="107"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-iH-8hD">
-                                            <rect key="frame" x="170" y="12" width="137.5" height="83.5"/>
+                                            <rect key="frame" x="170" y="12" width="130.5" height="83.5"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
-                                                    <string key="content">1. add venue to tour
-2. choose show date
-3. email booking contact
-4. add radio station
-5. start radio campaign</string>
+                                                    <string key="content">1. add new venue
+2. set show date
+3. send booking email
+4. start radio </string>
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="campaign">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.40782000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">
+5. start your tour!</string>
                                                     <attributes>
                                                         <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <font key="NSFont" size="12" name="Gilroy-Light"/>
@@ -170,33 +185,55 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="ahP-mg-mxu" firstAttribute="centerY" secondItem="uQv-T9-9RM" secondAttribute="centerY" id="6s9-JB-918"/>
                                 <constraint firstItem="ahP-mg-mxu" firstAttribute="centerX" secondItem="uQv-T9-9RM" secondAttribute="centerX" id="7c4-d7-DJR"/>
+                                <constraint firstItem="ahP-mg-mxu" firstAttribute="centerY" secondItem="uQv-T9-9RM" secondAttribute="centerY" id="Ifh-OU-o1B"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zB-HY-sGO" detailTextLabel="G5E-zW-rOq" imageView="dN8-9L-lHS" style="IBUITableViewCellStyleValue1" id="YIn-2W-D5h">
-                                <rect key="frame" x="0.0" y="196.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddVenueCell" textLabel="0zB-HY-sGO" imageView="dN8-9L-lHS" style="IBUITableViewCellStyleDefault" id="YIn-2W-D5h">
+                                <rect key="frame" x="0.0" y="211.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YIn-2W-D5h" id="X3W-oN-Hlx">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Add New Venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zB-HY-sGO">
+                                            <rect key="frame" x="55" y="0.0" width="285" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="plusSign" id="dN8-9L-lHS">
+                                            <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="ZOt-wI-n1s" detailTextLabel="Vzl-GV-crT" imageView="AlP-s5-c5E" style="IBUITableViewCellStyleValue1" id="OZ4-w1-IHI">
+                                <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OZ4-w1-IHI" id="2aS-Um-SBn">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zB-HY-sGO">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZOt-wI-n1s">
                                             <rect key="frame" x="55" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5E-zW-rOq">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vzl-GV-crT">
                                             <rect key="frame" x="327" y="16" width="33" height="15.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unbooked" id="dN8-9L-lHS">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unbooked" id="AlP-s5-c5E">
                                             <rect key="frame" x="15" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -229,7 +266,7 @@
                         <sections>
                             <tableViewSection id="C8h-xe-uoe">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="myI-gz-1bF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="myI-gz-1bF">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="myI-gz-1bF" id="Xdj-Qa-Hpx">
@@ -241,7 +278,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="mVg-Oa-byt"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -265,7 +302,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BHK-Yb-lk2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="BHK-Yb-lk2">
                                         <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BHK-Yb-lk2" id="wuN-9n-Qcx">
@@ -277,7 +314,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="f79-3V-Kpd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -300,7 +337,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BTF-0D-CCj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="BTF-0D-CCj">
                                         <rect key="frame" x="0.0" y="123" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BTF-0D-CCj" id="djG-3t-pJf">
@@ -312,7 +349,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="33r-fb-hoc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -335,7 +372,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zMd-gf-0sC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="zMd-gf-0sC">
                                         <rect key="frame" x="0.0" y="167" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zMd-gf-0sC" id="r6n-ZF-G5V">
@@ -347,7 +384,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="BYs-Iy-orm"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -370,7 +407,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="E9k-O4-trY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="E9k-O4-trY">
                                         <rect key="frame" x="0.0" y="211" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9k-O4-trY" id="pTF-y2-zqW">
@@ -382,7 +419,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="lMB-F3-7U7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -409,7 +446,7 @@
                             </tableViewSection>
                             <tableViewSection id="tUT-1e-VmW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tc3-sg-2mo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="tc3-sg-2mo">
                                         <rect key="frame" x="0.0" y="291" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tc3-sg-2mo" id="IZg-Bi-2s6">
@@ -421,7 +458,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="iFj-Ss-CvG"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -444,7 +481,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TJE-l3-ehw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="TJE-l3-ehw">
                                         <rect key="frame" x="0.0" y="335" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TJE-l3-ehw" id="0Hr-L2-7Bf">
@@ -456,7 +493,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="e3X-EK-Hc1"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -568,20 +605,24 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddVenueCell" textLabel="92l-f8-QzO" style="IBUITableViewCellStyleDefault" id="Zug-HO-ehP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddVenueCell" textLabel="92l-f8-QzO" imageView="Etp-s2-Kmh" style="IBUITableViewCellStyleDefault" id="Zug-HO-ehP">
                                 <rect key="frame" x="0.0" y="110.5" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zug-HO-ehP" id="rHV-2M-hbe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="54.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="92l-f8-QzO">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
+                                            <rect key="frame" x="55" y="0.0" width="285" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                            <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="plusSign" id="Etp-s2-Kmh">
+                                            <rect key="frame" x="15" y="14" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -761,16 +802,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V6c-5L-hAq">
-                                            <rect key="frame" x="15" y="12" width="33" height="20"/>
+                                            <rect key="frame" x="15" y="13" width="29" height="17.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                             <color key="textColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Sw-w7-fzf">
-                                            <rect key="frame" x="314" y="12" width="46" height="20"/>
+                                            <rect key="frame" x="319.5" y="13" width="40.5" height="17.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                             <color key="textColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -807,7 +848,7 @@
                         <sections>
                             <tableViewSection id="zsT-oq-vCb">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3dT-WX-PIN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="3dT-WX-PIN">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3dT-WX-PIN" id="PjR-Lu-tbg">
@@ -819,7 +860,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="prT-Mz-naI"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -843,7 +884,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e2i-8B-9rr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="e2i-8B-9rr">
                                         <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e2i-8B-9rr" id="Pqi-ON-RWT">
@@ -855,7 +896,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="INB-jz-vBr"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -875,7 +916,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5TO-3x-NhW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="5TO-3x-NhW">
                                         <rect key="frame" x="0.0" y="123" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TO-3x-NhW" id="IYK-LA-2qA">
@@ -888,7 +929,7 @@
                                                         <constraint firstAttribute="width" constant="70" id="em0-39-c6U"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="weR-WJ-IUN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -911,7 +952,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W4m-pu-KIA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="W4m-pu-KIA">
                                         <rect key="frame" x="0.0" y="167" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W4m-pu-KIA" id="Q92-iO-RdU">
@@ -925,7 +966,7 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Crs-9L-35U"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="iu6-f1-zd4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -951,7 +992,7 @@
                             </tableViewSection>
                             <tableViewSection id="8BF-VK-7oK">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nW2-Wm-x0z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="nW2-Wm-x0z">
                                         <rect key="frame" x="0.0" y="247" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nW2-Wm-x0z" id="rxv-mO-e9h">
@@ -963,7 +1004,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Qrz-NF-2oY"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -987,7 +1028,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SRk-BE-4fs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="SRk-BE-4fs">
                                         <rect key="frame" x="0.0" y="291" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRk-BE-4fs" id="GPS-r0-upG">
@@ -999,7 +1040,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Hs6-zN-bc8"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1070,7 +1111,7 @@
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="UXR-wO-eew">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="UXR-wO-eew">
                                             <rect key="frame" x="112" y="13" width="40.5" height="17.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
@@ -1080,20 +1121,24 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStationCell" textLabel="qfc-iH-XBJ" style="IBUITableViewCellStyleDefault" id="jrY-9Q-hBe">
+                            <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddStationCell" textLabel="qfc-iH-XBJ" imageView="HSG-mY-rgM" style="IBUITableViewCellStyleDefault" id="jrY-9Q-hBe">
                                 <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jrY-9Q-hBe" id="U8V-bk-gKq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qfc-iH-XBJ">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="55" y="0.0" width="285" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
+                                            <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="plusSign" id="HSG-mY-rgM">
+                                            <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1130,7 +1175,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="First Booking Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IOm-EU-kPQ">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1147,7 +1192,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Second Booking Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eQH-Z1-b1e">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1164,7 +1209,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Third Booking Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E3m-Uk-69b">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1181,7 +1226,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Show Confirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ny-aA-3TX">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1198,7 +1243,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Trading Shows Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PBc-Ix-YME">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1215,7 +1260,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Input List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j8y-gs-kzz">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1236,7 +1281,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Radio Campaign Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cel-l6-lrC">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1253,7 +1298,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sample One Sheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kGp-Xa-tIX">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1270,7 +1315,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sample Packaging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cry-53-ZDl">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1287,7 +1332,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Step by Step Preparation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Psi-uF-Obp">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1331,13 +1376,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="61" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-T4-0CZ">
                                                 <rect key="frame" x="20" y="75" width="335" height="435"/>
-                                                <string key="text">Radio exposure is the nexus for all other platforms for drawing attention to new music.  Radio promotion campaign relates to attracting industry connections, increasing media traffic, and getting gigs.
+                                                <mutableString key="text">Radio exposure is the nexus for all other platforms for drawing attention to new music.  Radio promotion campaign relates to attracting industry connections, increasing media traffic, and getting gigs.
 
-Despite all the changes in the technical/digital landscape, CDs are still the preferred presentation for new artists at the radio formats.  There are Internet delivery systems (both streaming and downloads) that you can use to supplement the mailing of the CD, but CD is the requested format by numbers of stations; for a new artist it is particularly helpful presentation because it creates a physical presence.  The cover art is effective part of the process of building an image. 
+Despite all the changes in the technical/digital landscape, CDs are still the preferred presentation for new artists at the radio formats.  There are internet delivery systems (both streaming and downloads) that you can use to supplement the mailing of the CD, but CD is the requested format by numbers of stations; for a new artist it is a particularly helpful presentation because it creates a physical presence.  The cover art is effective part of the process of building an image. 
 
-The mailing is made up of one CD and a one sheet.  The CD and all materials should look as good as anything on a major label.  Presentation is a first and lasting impression.  It is also good that the packaging is compatible with the music in terms of image.  
+The mailing is made up of one CD and a One Sheet.  The CD and all materials should look as good as anything on a major label.  Presentation is a first and lasting impression.  It is also good that the packaging is compatible with the music in terms of image.  
 
-A good one sheet replaces the press kit.  A radio one sheet has obvious features like bio material and quotes along with references to the artist's website (which is essential).  And it also has a number of bullet points specifically pertinent to radio programmers.  A "Radio Contact" being foremost.  When they see it is being "worked" (as they term the process) by an established promoter, they will prioritize it.</string>
+A good One Sheet replaces the press kit.  A radio One Sheet has obvious features like bio material and quotes along with references to the artist's website (which is essential).  And it also has a number of bullet points specifically pertinent to radio programmers.  A "Radio Contact" being foremost.  When they see it is being "worked" (as they term the process) by an established promoter, they will prioritize it.</mutableString>
                                                 <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                                 <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -1416,7 +1461,7 @@ A good one sheet replaces the press kit.  A radio one sheet has obvious features
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPl-xA-ASm">
                                                 <rect key="frame" x="20" y="475" width="335" height="255"/>
                                                 <string key="text">1. ADD DATE
-This will be the first Mondsay three weeks after the CDs are mailed
+This will be the first Monday three weeks after the CDs are mailed
 
 2. FOCUS TRACKS
 Pick 3-4 songs
@@ -1428,7 +1473,7 @@ If there is language to alert the station about, then let them know
 Include name, email, website and phone number so station can reach you if need be
 
 5.  SEND A ONE SHEET WITH EACH CD INSIDE PACKAGE
-Include a One Sheet with eacH radio campaign mailing</string>
+Include a One Sheet with each radio campaign mailing</string>
                                                 <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1578,7 +1623,7 @@ Santa Monica CA 90405
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5iL-Pk-pqA">
                                                 <rect key="frame" x="20" y="75" width="335" height="360"/>
-                                                <string key="text">1. FINISH RECORD
+                                                <mutableString key="text">1. FINISH RECORD
 Record, Master, and Print 250 CDs
 
 2. CREATE ONE SHEET DESIGN
@@ -1598,9 +1643,9 @@ Santa Monica CA 90405
 Include a CD and One Sheet with each radio mailing
 
 6. FOLLOW UP ONCE A WEEK TO PUSH RECORD
-Call station number, ask for station contact, and ask about recieving and playing record
+Call station number, ask for station contact, and ask about receiving and playing record
 
-7.  LISTEN FOR YOUR MUSIC ON THE AIRWAVES!</string>
+7.  LISTEN FOR YOUR MUSIC ON THE AIRWAVES!</mutableString>
                                                 <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1667,7 +1712,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Email Tour Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FZk-3w-noK">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1684,7 +1729,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Email Radio Campaign Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5YB-gS-4Km">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1794,7 +1839,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="musician hometown" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-lj-qFm">
-                                        <rect key="frame" x="55" y="108" width="305" height="19"/>
+                                        <rect key="frame" x="55" y="100" width="305" height="35"/>
                                         <color key="textColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1839,6 +1884,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                 <constraints>
                                     <constraint firstItem="hkD-Rk-vaJ" firstAttribute="top" secondItem="srx-iK-cni" secondAttribute="top" constant="15" id="0l5-Lm-Dgh"/>
                                     <constraint firstItem="O4T-Tv-FkI" firstAttribute="top" secondItem="Da5-63-0Yj" secondAttribute="bottom" constant="10" id="216-ly-atc"/>
+                                    <constraint firstAttribute="bottom" secondItem="VJQ-lj-qFm" secondAttribute="bottom" constant="10" id="5uJ-Sj-5hx"/>
                                     <constraint firstItem="PlW-aD-oDr" firstAttribute="top" secondItem="hkD-Rk-vaJ" secondAttribute="bottom" constant="20" id="6t1-lj-Qca"/>
                                     <constraint firstItem="0Gb-9N-y01" firstAttribute="centerY" secondItem="PlW-aD-oDr" secondAttribute="centerY" id="72G-Qq-ce7"/>
                                     <constraint firstItem="hkD-Rk-vaJ" firstAttribute="leading" secondItem="srx-iK-cni" secondAttribute="leading" constant="15" id="C4C-l0-gXO"/>
@@ -1929,7 +1975,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <sections>
                             <tableViewSection headerTitle="Booking Details" id="ifI-ID-sRe">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nhl-d5-ADe" imageView="X8f-pQ-Ydb" style="IBUITableViewCellStyleDefault" id="7sG-et-9l3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nhl-d5-ADe" imageView="X8f-pQ-Ydb" style="IBUITableViewCellStyleDefault" id="7sG-et-9l3">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sG-et-9l3" id="nRU-5x-Rka">
@@ -1950,7 +1996,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PGE-uJ-aNJ" imageView="ZRS-Gi-6zs" style="IBUITableViewCellStyleDefault" id="Qpe-2E-EYq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PGE-uJ-aNJ" imageView="ZRS-Gi-6zs" style="IBUITableViewCellStyleDefault" id="Qpe-2E-EYq">
                                         <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qpe-2E-EYq" id="fxu-XC-R6B">
@@ -1975,11 +2021,11 @@ Call station number, ask for station contact, and ask about recieving and playin
                             </tableViewSection>
                             <tableViewSection headerTitle="Venue Details" id="38B-75-cJc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="h7G-JG-ypa" detailTextLabel="PEb-tM-vks" style="IBUITableViewCellStyleValue2" id="6Ex-bV-QTL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="h7G-JG-ypa" detailTextLabel="PEb-tM-vks" style="IBUITableViewCellStyleValue2" id="6Ex-bV-QTL">
                                         <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ex-bV-QTL" id="wD1-hA-uXo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h7G-JG-ypa">
@@ -1999,11 +2045,11 @@ Call station number, ask for station contact, and ask about recieving and playin
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NAu-Io-hsd" detailTextLabel="EbM-rz-mbV" style="IBUITableViewCellStyleValue2" id="leV-vh-nZI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NAu-Io-hsd" detailTextLabel="EbM-rz-mbV" style="IBUITableViewCellStyleValue2" id="leV-vh-nZI">
                                         <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="leV-vh-nZI" id="Ue5-PQ-xfy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Phone:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NAu-Io-hsd">
@@ -2023,11 +2069,11 @@ Call station number, ask for station contact, and ask about recieving and playin
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JCF-03-8IR" detailTextLabel="VC4-5f-NEA" style="IBUITableViewCellStyleValue2" id="Gri-9x-Syi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JCF-03-8IR" detailTextLabel="VC4-5f-NEA" style="IBUITableViewCellStyleValue2" id="Gri-9x-Syi">
                                         <rect key="frame" x="0.0" y="287.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gri-9x-Syi" id="oW9-Ah-jfj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCF-03-8IR">
@@ -2075,7 +2121,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="xRo-qe-CUz">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eWa-qz-Kc7" style="IBUITableViewCellStyleDefault" id="1Gs-v2-CyS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eWa-qz-Kc7" style="IBUITableViewCellStyleDefault" id="1Gs-v2-CyS">
                                         <rect key="frame" x="0.0" y="411.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Gs-v2-CyS" id="sDv-9T-MPd">
@@ -2129,7 +2175,7 @@ Call station number, ask for station contact, and ask about recieving and playin
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsImage" translatesAutoresizingMaskIntoConstraints="NO" id="eCz-WS-nmC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="eCz-WS-nmC">
                                 <rect key="frame" x="0.0" y="204" width="375" height="259"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="259" id="JOB-V6-0hU"/>
@@ -2842,6 +2888,7 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="Contacts Icon" width="25" height="25"/>
         <image name="Map Icon" width="25" height="25"/>
         <image name="Musician Booking Plus" width="375" height="375"/>
+        <image name="Splash Screen" width="1364" height="943"/>
         <image name="Support Icon" width="25" height="25"/>
         <image name="Templates Icon" width="25" height="25"/>
         <image name="bandProfile" width="25" height="25"/>
@@ -2851,13 +2898,13 @@ Call station number, ask for station contact, and ask about recieving and playin
         <image name="manageTourIcon" width="100" height="100"/>
         <image name="oneSheetSample" width="891" height="891"/>
         <image name="packagingSample" width="800" height="500"/>
-        <image name="settingsImage" width="1364" height="943"/>
+        <image name="plusSign" width="25" height="25"/>
         <image name="tourBus" width="295" height="245"/>
         <image name="unbooked" width="25" height="25"/>
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ujZ-uf-FGN"/>
+        <segue reference="PSs-WV-jes"/>
         <segue reference="xzi-Bm-Ijx"/>
     </inferredMetricsTieBreakers>
 </document>
