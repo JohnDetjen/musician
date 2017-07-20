@@ -32,6 +32,22 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if bookingLabel.text == "Not Booked" {
+            self.statusImage.image = #imageLiteral(resourceName: "unbooked")
+        }
+        if bookingLabel.text ==  "Booked" {
+            self.statusImage.image = #imageLiteral(resourceName: "booked")
+        }
+        if bookingLabel.text == "Hold" {
+            self.statusImage.image = #imageLiteral(resourceName: "hold")
+        }
+        
         let venue = tour?.object(forKey: "venue") as? PFObject
         contactLabel.text = venue?.object(forKey: "contactEmail") as? String
         phoneLabel.text = venue?.object(forKey: "phoneNumber") as? String
@@ -49,21 +65,8 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
             dateLabel.text = dateFormatter.string(from: date)
             datePicker.date = date
         }
+
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if bookingLabel.text == "Not Booked" {
-            self.statusImage.image = #imageLiteral(resourceName: "unbooked")
-        }
-        if bookingLabel.text ==  "Booked" {
-            self.statusImage.image = #imageLiteral(resourceName: "booked")
-        }
-        if bookingLabel.text == "Hold" {
-            self.statusImage.image = #imageLiteral(resourceName: "hold")
-        }
     }
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -113,7 +116,8 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
 
         
         if indexPath.row == 0 && indexPath.section == 0 {
-            let alert = UIAlertController(title: "Select Show Status" as String, message: "" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
+
+            let alert = UIAlertController(title: "Booking Status" as String, message: "Select Your Booking Status" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
             let notBookedAction = UIAlertAction(title: "Not Booked", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Not Booked", forKey: "status")
@@ -142,6 +146,11 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
             alert.addAction(cancelAction)
             tableView.deselectRow(at: indexPath, animated: true)
             
+            
+            bookedAction.setValue(UIImage(named: "booked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), forKey: "image")
+            notBookedAction.setValue(UIImage(named: "unbooked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), forKey: "image")
+            holdAction.setValue(UIImage(named: "hold")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), forKey: "image")
+
             self.present(alert, animated: true, completion: nil)
         }
             
@@ -158,7 +167,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         
         else if indexPath.row == 1 && indexPath.section == 0 {
             if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
-//                venueDetailVC.venue = venue
+                venueDetailVC.tour = tour
                 navigationController?.pushViewController(venueDetailVC, animated: true)
             }
         }

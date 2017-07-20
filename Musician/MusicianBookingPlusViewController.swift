@@ -12,6 +12,8 @@ import StoreKit
 class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     @IBOutlet weak var musicianBookingPlus: UIButton!
     @IBOutlet weak var restoreButton: UIButton!
+    
+    var delegate: MusicianBookingPlusViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,18 +122,33 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
                     print("IAP not found")
                 }
                 queue.finishTransaction(trans)
+                UserDefaults.standard.set(true, forKey: "purchased")
+                self.dismiss(animated: true, completion: {
+                    self.delegate?.musicianBookingViewControllerDidPurchase()
+                })
             case .failed:
                 print("buy error")
                 queue.finishTransaction(trans)
+                
+                // USe this code for cancel button as well
+                self.dismiss(animated: true, completion: {
+                    self.delegate?.musicianBookingViewControllerDidCancel()
+                })
                 break
             default:
                 print("Default")
+                
                 break
             }
         }
     }
     
     
+}
+
+protocol MusicianBookingPlusViewControllerDelegate {
+    func musicianBookingViewControllerDidCancel()
+    func musicianBookingViewControllerDidPurchase()
 }
 
 
