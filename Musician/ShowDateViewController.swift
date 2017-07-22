@@ -18,9 +18,7 @@ class ShowDateViewController: UIViewController {
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-//    var showObject: PFObject?
-//    var tours = [PFObject]()
-    
+    var tour: PFObject?
     var venue: PFObject?
     
     let regionRadius: CLLocationDistance = 1000
@@ -28,40 +26,19 @@ class ShowDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let artwork = Artwork(title: "",
-//                              locationName: "",
-//                              discipline: "",
-//                              coordinate: CLLocationCoordinate2D())
-//        
-//        mapView.addAnnotation(artwork)
+        venue = tour?.object(forKey: "venue") as? PFObject
+        if let date = tour?.object(forKey: "date") as? Date {
+            datePicker.date = date
+        }
+        if tour == nil {
+            tour = PFObject(className: "Tour")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         centerMap()
-//        if let currentUser = PFUser.current() {
-//            let query = PFQuery(className: "Tour")
-//            //filter query by user
-//            query.whereKey("user", equalTo: currentUser)
-//            //if something is a pointer, this gives all the information for that pfobject
-//            query.includeKey("venue")
-//            
-//            query.findObjectsInBackground { (objects, error) in
-//                if let theObjects = objects {
-//                    self.tours = theObjects
-//                    self.mapView.removeAnnotations(self.mapView.annotations)
-//                    for aVenue in theObjects {
-//                        let obj = aVenue.object(forKey: "venue") as? PFObject
-//                        if let name = obj?.object(forKey: "name") as? String, let coordinate = obj?.object(forKey: "venueLocation") as? PFGeoPoint, let capacity = obj?.object(forKey: "capacity") as? Int {
-//                            let aArtWork = Artwork(title: name, locationName: "Capacity \(capacity)", discipline: "hkadslhj", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
-//                            self.mapView.addAnnotation(aArtWork)
-//                        }
-//                    }
-//                }
-//            }
-//        }
     }
 
     
@@ -89,15 +66,12 @@ class ShowDateViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         
-//        showObject?.setObject(datePicker.date, forKey: "date")
-//        showObject?.saveInBackground()
         if let theVenue = venue, let user = PFUser.current() {
-            let venueInfo = PFObject(className: "Tour")
-            venueInfo.setObject(theVenue, forKey: "venue")
-            venueInfo.setObject(user, forKey: "user")
-            venueInfo.setObject(datePicker.date, forKey: "date")
+            tour?.setObject(theVenue, forKey: "venue")
+            tour?.setObject(user, forKey: "user")
+            tour?.setObject(datePicker.date, forKey: "date")
             MBProgressHUD.showAdded(to: view, animated: true)
-            venueInfo.saveInBackground(block: { (success, error) in
+            tour?.saveInBackground(block: { (success, error) in
                 MBProgressHUD.hide(for: self.view, animated: true)
                 if success {
                     let appearance = SCLAlertView.SCLAppearance(
@@ -105,7 +79,7 @@ class ShowDateViewController: UIViewController {
                     )
                     let alertView = SCLAlertView(appearance: appearance)
                     let alertViewIcon = UIImage(named: "HereNowAlertController") //Replace the IconImage text with the image name
-                    alertView.showInfo("Venue Added", subTitle: "\nGo to your tour page and start booking venues!", circleIconImage: alertViewIcon)
+                    alertView.showInfo("Tour Updated", subTitle: "\nGo to your tour map and start booking venues!", circleIconImage: alertViewIcon)
                     let _ = self.navigationController?.popViewController(animated: true)
                 }
                 else {

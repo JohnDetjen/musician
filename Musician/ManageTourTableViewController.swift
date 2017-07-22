@@ -10,17 +10,16 @@ import UIKit
 import Parse
 
 class ManageTourTableViewController: UITableViewController {
-    @IBOutlet weak var emailVenuesButton: UIButton!
     
     var tours = [PFObject]()
-//    var venues = [PFObject]()
-//    var userVenues = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        emailVenuesButton.layer.cornerRadius = 5
-//        emailVenuesButton.clipsToBounds = true
-        
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let query = PFQuery(className: "Tour")
         //filter query by user
@@ -43,8 +42,8 @@ class ManageTourTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,14 +54,32 @@ class ManageTourTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tours.count
+        return tours.count + 1
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddVenueCell", for: indexPath)
+            cell.textLabel?.text = "Add New Venue"
+            cell.textLabel?.textAlignment = .center
+            return cell
+            
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let individualTour = tours[indexPath.row]
+        let individualTour = tours[indexPath.row - 1]
+        
+        if let showStatus = individualTour.object(forKey: "status") as? String {
+            if individualTour.object(forKey: "status") as? String == "Booked" {
+                cell.imageView?.image = #imageLiteral(resourceName: "booked")
+            }
+            if individualTour.object(forKey: "status") as? String == "Hold" {
+                cell.imageView?.image = #imageLiteral(resourceName: "hold")
+            }
+        }
+        
         if let showDate = individualTour.object(forKey: "date") as? Date {
             let dateFormatMachine = DateFormatter()
             dateFormatMachine.dateFormat = "MM/dd/yy"
@@ -77,10 +94,21 @@ class ManageTourTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let tour = tours[indexPath.row]
-        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
-            detailVC.tour = tour
-            navigationController?.pushViewController(detailVC, animated: true)
+        
+        if indexPath.row == 0 {
+            if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "venueContacts") as? ContactsTableViewController {
+                navigationController?.pushViewController(venueDetailVC, animated: true)
+            }
         }
+            
+        else {
+            let tour = tours[indexPath.row - 1]
+            if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
+                detailVC.tour = tour
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
+            
+        }
+        
     }
 }

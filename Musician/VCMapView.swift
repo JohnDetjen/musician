@@ -28,12 +28,13 @@ extension ViewController: MKMapViewDelegate {
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
             }
-            view.pinTintColor = UIColor.gray
+            view.pinTintColor = UIColor(red: 153.0/255.0 , green:  153.0/255.0 , blue :  153.0/255.0 , alpha: 1.0)
             if annotation.tour?.object(forKey: "status") as? String == "Booked" {
-                view.pinTintColor = UIColor.green
+                view.pinTintColor = UIColor(red: 81.0/255.0 , green:  214.0/255.0 , blue :  103.0/255.0 , alpha: 1.0)
             }
+                
             else if annotation.tour?.object(forKey: "status") as? String == "Hold" {
-                view.pinTintColor = UIColor.purple
+                view.pinTintColor = UIColor(red: 214.0/255.0 , green:  81.0/255.0 , blue :  191.0/255.0 , alpha: 1.0)
             }
             return view
         }

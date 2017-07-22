@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
+
+        
         manageTour.layer.cornerRadius = 5
         manageTour.clipsToBounds = true
         manageTour.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
@@ -42,11 +46,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        
-        
-        
-        
+
         if let currentUser = PFUser.current() {
             let query = PFQuery(className: "Tour")
             //filter query by user
@@ -71,6 +71,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

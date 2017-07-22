@@ -23,6 +23,7 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
         if let theVenues = PFUser.current()?.object(forKey: "venues") as? [PFObject] {
             userVenues = theVenues
         }
+        self.title = city?.object(forKey: "cityName") as? String
     }
     
     func loadData() {
@@ -69,6 +70,7 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddVenueCell", for: indexPath)
             cell.textLabel?.text = "Add Venue To My Tour"
             cell.textLabel?.textAlignment = .center
+            cell.accessoryType = .disclosureIndicator
             return cell
 
         }
@@ -86,6 +88,7 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
             cell.textLabel?.text = "Website:"
             cell.detailTextLabel?.text = venue.object(forKey: "website") as? String
         case 3:
+            cell.selectionStyle = .none
             cell.textLabel?.text = "Capacity:"
             var capacity = 0
             if let theCapacity = venue.object(forKey: "capacity") as? Int {
@@ -116,7 +119,7 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([email])
                     mail.setSubject("Hold Request: \(venue)")
-                    mail.setMessageBody("\(venue), I manage \(bandName). \(website). \nWe have a 15 date tour starting from \(hometown).  We would like to place a hold on \(venue) if you have availability this upcoming month. <b>I hope to talk further about setting something up. Thank you and take care. Cheers.</b>", isHTML: true)
+                    mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care. </br>Cheers.</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")
@@ -124,10 +127,10 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
             }
         case 1:
             if let phoneNumber = venue.object(forKey: "phoneNumber") as? String {
-                
                 if let phoneNumberURL = URL(string: "tel://\(phoneNumber.replacingOccurrences(of: ".", with: ""))") {
                     UIApplication.shared.open(phoneNumberURL, options: [:], completionHandler: nil)
                 }
+                tableView.deselectRow(at: indexPath, animated: true)
             }
 
         case 2:
@@ -141,16 +144,10 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
                 }
             }
 
-//        case 3:
+        case 3:
+            tableView.deselectRow(at: indexPath, animated: true)
            
         case 4:
-//            let venueInfo = PFObject(className: "Tour")
-//            
-//            venueInfo.setObject(venue, forKey: "venue")
-//            if let currentUser = PFUser.current(){
-//                venueInfo.setObject(currentUser, forKey: "user")
-//            }
-
             if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
                 venueDetailVC.venue = venue
                 navigationController?.pushViewController(venueDetailVC, animated: true)

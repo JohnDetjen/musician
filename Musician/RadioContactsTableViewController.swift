@@ -17,8 +17,13 @@ class RadioContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadData()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
     
@@ -31,7 +36,13 @@ class RadioContactsTableViewController: UITableViewController {
                 self.allCities = self.cities
                 self.filterStatesFromCities()
                 self.tableView.reloadData()
-                
+                if !UserDefaults.standard.bool(forKey: "purchased") {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                        if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
+                            self.present(buyVC, animated: true, completion: nil)
+                        }
+                    })
+                }
             }
         }
     }
@@ -89,7 +100,7 @@ class RadioContactsTableViewController: UITableViewController {
             let state = states[indexPath.section]
             let cityArray = cities.filter { (city) -> Bool in
                 return city.object(forKey: "stateName") as? String == state
-            }
+            }.sorted(by: {$0.object(forKey: "cityName") as? String ?? "" < $1.object(forKey: "cityName") as? String ?? ""})
             let city = cityArray[indexPath.row]
             venueDetailVC.city = city
             navigationController?.pushViewController(venueDetailVC, animated: true)
@@ -153,6 +164,16 @@ extension RadioContactsTableViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
     
+}
+
+extension RadioContactsTableViewController: MusicianBookingPlusViewControllerDelegate {
+    func musicianBookingViewControllerDidCancel() {
+        self.tabBarController?.selectedIndex = 0
+    }
+    
+    func musicianBookingViewControllerDidPurchase() {
+        UserDefaults.standard.set(true, forKey: "purchased")
+    }
 }
 
 

@@ -15,6 +15,7 @@
 		432AE53C1EEE1604004A315D /* MusicianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE53B1EEE1604004A315D /* MusicianTests.swift */; };
 		432AE5471EEE1604004A315D /* MusicianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5461EEE1604004A315D /* MusicianUITests.swift */; };
 		4349363C1F107D710086C240 /* MusicianBookingPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349363B1F107D700086C240 /* MusicianBookingPlusViewController.swift */; };
+		434936411F20102C0086C240 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434936401F20102C0086C240 /* StoreKit.framework */; };
 		437D6ECD1EF096B000FD0A8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ECC1EF096B000FD0A8F /* ViewController.swift */; };
 		437D6ECF1EF0979300FD0A8F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ECE1EF0979300FD0A8F /* Artwork.swift */; };
 		437D6ED11EF0980300FD0A8F /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6ED01EF0980300FD0A8F /* VCMapView.swift */; };
@@ -76,6 +77,7 @@
 		432AE5461EEE1604004A315D /* MusicianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianUITests.swift; sourceTree = "<group>"; };
 		432AE5481EEE1604004A315D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4349363B1F107D700086C240 /* MusicianBookingPlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicianBookingPlusViewController.swift; sourceTree = "<group>"; };
+		434936401F20102C0086C240 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		437D6ECC1EF096B000FD0A8F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		437D6ECE1EF0979300FD0A8F /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		437D6ED01EF0980300FD0A8F /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EF3A5F8895307473FFE8241 /* Pods_Musician.framework in Frameworks */,
+				434936411F20102C0086C240 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +300,7 @@
 		F6978FCFDDDBD69514BC1C2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				434936401F20102C0086C240 /* StoreKit.framework */,
 				8B4D14653A1060E178B46240 /* Pods_Musician.framework */,
 				556AD58A6F5E29E172EF54B3 /* Pods_MusicianTests.framework */,
 				F7E66A49FD1C93688AB389FF /* Pods_MusicianUITests.framework */,
@@ -381,8 +385,13 @@
 				TargetAttributes = {
 					432AE5201EEE1603004A315D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4ADXY8287M;
+						DevelopmentTeam = 24E54K9DKU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					432AE5361EEE1604004A315D = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -767,10 +776,10 @@
 			baseConfigurationReference = A2FE3F5B3542A09B7AD94896 /* Pods-Musician.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4ADXY8287M;
+				DEVELOPMENT_TEAM = 24E54K9DKU;
 				INFOPLIST_FILE = Musician/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JohnDetjen.Musician;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finleyknight.indietour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -781,10 +790,10 @@
 			baseConfigurationReference = 44F2824FC8B4D53EACED2C43 /* Pods-Musician.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4ADXY8287M;
+				DEVELOPMENT_TEAM = 24E54K9DKU;
 				INFOPLIST_FILE = Musician/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JohnDetjen.Musician;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finleyknight.indietour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
