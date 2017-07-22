@@ -33,6 +33,10 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let venue = tour?.object(forKey: "venue") as? PFObject
+        self.title = venue?.object(forKey: "name") as? String
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

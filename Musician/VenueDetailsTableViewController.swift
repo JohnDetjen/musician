@@ -23,6 +23,7 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
         if let theVenues = PFUser.current()?.object(forKey: "venues") as? [PFObject] {
             userVenues = theVenues
         }
+        self.title = city?.object(forKey: "cityName") as? String
     }
     
     func loadData() {

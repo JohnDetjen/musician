@@ -17,8 +17,8 @@ class RadioContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadData()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
         
     }
     
@@ -42,7 +42,6 @@ class RadioContactsTableViewController: UITableViewController {
                             self.present(buyVC, animated: true, completion: nil)
                         }
                     })
-                    
                 }
             }
         }

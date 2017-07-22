@@ -21,6 +21,7 @@ class StationDetailsTableViewController: UITableViewController, MFMailComposeVie
         loadData()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160
+        self.title = city?.object(forKey: "cityName") as? String
                 
     }
     
@@ -98,7 +99,6 @@ class StationDetailsTableViewController: UITableViewController, MFMailComposeVie
             
         case 1:
             if let phoneNumber = venue.object(forKey: "phoneNumber") as? String {
-                
                 if let phoneNumberURL = URL(string: "tel://\(phoneNumber.replacingOccurrences(of: ".", with: ""))") {
                     UIApplication.shared.open(phoneNumberURL, options: [:], completionHandler: nil)
                 }

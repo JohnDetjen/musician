@@ -8,10 +8,13 @@
 
 import UIKit
 import StoreKit
+import SafariServices
 
 class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
+    let screenSize: CGRect = UIScreen.main.bounds
     @IBOutlet weak var musicianBookingPlus: UIButton!
     @IBOutlet weak var restoreButton: UIButton!
+    @IBOutlet weak var getPlusButtonHeight: NSLayoutConstraint!
     
     var delegate: MusicianBookingPlusViewControllerDelegate?
 
@@ -19,6 +22,9 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
         super.viewDidLoad()
         musicianBookingPlus.isEnabled = false
         restoreButton.isEnabled = false
+        musicianBookingPlus.layer.cornerRadius = 5
+        musicianBookingPlus.clipsToBounds = true
+        getPlusButtonHeight.constant = (screenSize.width / 8)
         
         if(SKPaymentQueue.canMakePayments()) {
             print("IAP is enable, loading")
@@ -38,6 +44,8 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
         // Dispose of any resources that can be recreated.
     }
     @IBAction func termsOfUsePressed(_ sender: Any) {
+        let svc = SFSafariViewController(url: ("www.joinmusician.com/termsofuse" as? URL)!, entersReaderIfAvailable: true)
+        self.present(svc, animated: true, completion: nil)
             }
 
     @IBAction func restorePurchasePressed(_ sender: Any) {
@@ -101,6 +109,13 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
         }
     }
     
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: {
+            self.delegate?.musicianBookingViewControllerDidCancel()
+        })
+    }
+    
+    
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         print("add payment")
         
@@ -129,6 +144,8 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             case .failed:
                 print("buy error")
                 queue.finishTransaction(trans)
+                
+                
                 
                 // USe this code for cancel button as well
                 self.dismiss(animated: true, completion: {

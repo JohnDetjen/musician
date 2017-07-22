@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
+
+        
         manageTour.layer.cornerRadius = 5
         manageTour.clipsToBounds = true
         manageTour.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor

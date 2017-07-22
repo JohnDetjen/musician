@@ -17,6 +17,7 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
     }
 
     override func didReceiveMemoryWarning() {

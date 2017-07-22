@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 10)!], for: .normal)
+
         // Override point for customization after application launch.
         
         let configuration = ParseClientConfiguration {
