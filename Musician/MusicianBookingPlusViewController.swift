@@ -110,8 +110,9 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
+        self.delegate?.musicianBookingViewControllerDidCancel()
+
         self.dismiss(animated: true, completion: {
-            self.delegate?.musicianBookingViewControllerDidCancel()
         })
     }
     
@@ -138,8 +139,8 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
                 }
                 queue.finishTransaction(trans)
                 UserDefaults.standard.set(true, forKey: "purchased")
+                self.delegate?.musicianBookingViewControllerDidPurchase()
                 self.dismiss(animated: true, completion: {
-                    self.delegate?.musicianBookingViewControllerDidPurchase()
                 })
             case .failed:
                 print("buy error")
@@ -148,8 +149,8 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
                 
                 
                 // USe this code for cancel button as well
+                self.delegate?.musicianBookingViewControllerDidCancel()
                 self.dismiss(animated: true, completion: {
-                    self.delegate?.musicianBookingViewControllerDidCancel()
                 })
                 break
             default:

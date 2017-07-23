@@ -19,7 +19,18 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
+                buyVC.delegate = self
+                self.present(buyVC, animated: true, completion: nil)
+            }
+        })
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -144,3 +155,14 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
         controller.dismiss(animated: true)
     }
 }
+
+extension BookingTemplatesTableViewController: MusicianBookingPlusViewControllerDelegate {
+    func musicianBookingViewControllerDidCancel() {
+        self.tabBarController?.selectedIndex = 0
+    }
+    
+    func musicianBookingViewControllerDidPurchase() {
+        UserDefaults.standard.set(true, forKey: "purchased")
+    }
+}
+

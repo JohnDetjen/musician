@@ -14,6 +14,7 @@ class RadioContactsTableViewController: UITableViewController {
     var cities = [PFObject]()
     var allCities = [PFObject]()
     var states = [String]()
+    var dataLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,17 @@ class RadioContactsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        if dataLoaded {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
+                    buyVC.delegate = self
+                    self.present(buyVC, animated: true, completion: nil)
+                }
+            })
+        }
     }
+    
+
     
     func loadData() {
         let query = PFQuery(className: "RadioStationCity")
@@ -36,9 +46,11 @@ class RadioContactsTableViewController: UITableViewController {
                 self.allCities = self.cities
                 self.filterStatesFromCities()
                 self.tableView.reloadData()
+                self.dataLoaded = true
                 if !UserDefaults.standard.bool(forKey: "purchased") {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                         if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
+                            buyVC.delegate = self
                             self.present(buyVC, animated: true, completion: nil)
                         }
                     })
