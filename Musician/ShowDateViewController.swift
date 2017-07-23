@@ -26,12 +26,14 @@ class ShowDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        venue = tour?.object(forKey: "venue") as? PFObject
         if let date = tour?.object(forKey: "date") as? Date {
             datePicker.date = date
         }
         if tour == nil {
             tour = PFObject(className: "Tour")
+        }
+        else {
+            venue = tour?.object(forKey: "venue") as? PFObject
         }
     }
     
