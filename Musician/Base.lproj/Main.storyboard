@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,10 +129,10 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahP-mg-mxu">
-                                    <rect key="frame" x="29.5" y="24.5" width="315.5" height="107"/>
+                                    <rect key="frame" x="29" y="24.5" width="316.5" height="107"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-iH-8hD">
-                                            <rect key="frame" x="170" y="12" width="130.5" height="84"/>
+                                            <rect key="frame" x="170" y="11" width="131.5" height="86"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
                                                     <string key="content">1. add new venue
@@ -141,14 +141,14 @@
 4. start radio </string>
                                                     <attributes>
                                                         <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content="campaign">
                                                     <attributes>
                                                         <color key="NSColor" white="0.40782000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -157,7 +157,7 @@
 5. start your tour!</string>
                                                     <attributes>
                                                         <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -220,14 +220,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZOt-wI-n1s">
-                                            <rect key="frame" x="55" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="55" y="12" width="33" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vzl-GV-crT">
-                                            <rect key="frame" x="327" y="16" width="33" height="15.5"/>
+                                            <rect key="frame" x="324.5" y="16" width="35.5" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                             <nil key="textColor"/>
@@ -715,7 +715,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w82-es-bMv">
-                                <rect key="frame" x="86.5" y="519" width="202" height="40"/>
+                                <rect key="frame" x="87" y="519" width="202" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nou-fh-TVf">
                                         <rect key="frame" x="5" y="14.5" width="130" height="12"/>
@@ -1851,7 +1851,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srx-iK-cni">
-                                <rect key="frame" x="0.0" y="194" width="375" height="145"/>
+                                <rect key="frame" x="0.0" y="196" width="375" height="145"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="musician name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-63-0Yj">
                                         <rect key="frame" x="55" y="18" width="300" height="19"/>
@@ -1935,7 +1935,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-yF-p9w">
-                                <rect key="frame" x="0.0" y="384" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="386" width="375" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mc7-1F-DR8"/>
@@ -1947,12 +1947,12 @@ Call station number, ask for station contact, and ask about receiving and playin
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4Q-xQ-r3z">
-                                <rect key="frame" x="66" y="114" width="243" height="50"/>
+                                <rect key="frame" x="66" y="114" width="243" height="52"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Use this information to auto fill your template emails.  This will help you quickly send booking emails out to venues.">
                                         <attributes>
                                             <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="12" name="Gilroy-Light"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -2378,6 +2378,9 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                     <constraint firstAttribute="width" secondItem="bML-67-nY9" secondAttribute="height" multiplier="1:1" id="jF0-et-qlG"/>
                                                 </constraints>
                                                 <state key="normal" image="BackButton"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="6iK-AU-18q" eventType="touchUpInside" id="ebA-j3-OMH"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQQ-Hm-i4T">
                                                 <rect key="frame" x="101" y="348" width="174" height="50"/>
@@ -2479,6 +2482,9 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                     <constraint firstAttribute="width" secondItem="Y8B-Q9-fhl" secondAttribute="height" multiplier="1:1" id="ZWT-nl-AyN"/>
                                                 </constraints>
                                                 <state key="normal" image="BackButton"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="y8F-Ss-dry" eventType="touchUpInside" id="wYD-pb-rSB"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-px-7LE">
                                                 <rect key="frame" x="20" y="70" width="335" height="475"/>
@@ -2589,7 +2595,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Zf-uHT">
-                                                <rect key="frame" x="50.5" y="553" width="274.5" height="50"/>
+                                                <rect key="frame" x="51" y="553" width="274.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-e4-mTo">
                                                         <rect key="frame" x="20" y="0.0" width="183.5" height="50"/>
@@ -2932,7 +2938,7 @@ Call station number, ask for station contact, and ask about receiving and playin
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xzi-Bm-Ijx"/>
-        <segue reference="PSs-WV-jes"/>
+        <segue reference="ujZ-uf-FGN"/>
+        <segue reference="AKA-0x-pmC"/>
     </inferredMetricsTieBreakers>
 </document>

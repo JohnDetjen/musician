@@ -74,6 +74,11 @@ class SignUpViewController: UIViewController {
     }
     
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     @IBAction func doneButtonPressed(_ sender: Any) {
         
         guard let username = textUsername.text, let password = textPassword.text else {
