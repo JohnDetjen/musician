@@ -146,8 +146,6 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
                 print("buy error")
                 queue.finishTransaction(trans)
                 
-                
-                
                 // USe this code for cancel button as well
                 self.delegate?.musicianBookingViewControllerDidCancel()
                 self.dismiss(animated: true, completion: {

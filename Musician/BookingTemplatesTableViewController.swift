@@ -22,12 +22,14 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
-                buyVC.delegate = self
-                self.present(buyVC, animated: true, completion: nil)
-            }
-        })
+        if !UserDefaults.standard.bool(forKey: "purchased") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
+                    buyVC.delegate = self
+                    self.present(buyVC, animated: true, completion: nil)
+                }
+            })
+        }
     }
     
     
