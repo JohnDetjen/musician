@@ -102,6 +102,21 @@ class VenueDetailsTableViewController: UITableViewController, MFMailComposeViewC
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text) != nil
+    }
+    
+    override func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return action == #selector(copy(_:))
+    }
+    
+    override func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+        if action == #selector(copy(_:)) {
+            let cell = tableView.cellForRow(at: indexPath)
+            let pasteboard = UIPasteboard.general
+            pasteboard.string = cell?.detailTextLabel?.text
+        }
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
