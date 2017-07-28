@@ -20,6 +20,7 @@ class ShowDateViewController: UIViewController {
     
     var tour: PFObject?
     var venue: PFObject?
+    var station: PFObject?
     
     let regionRadius: CLLocationDistance = 1000
     

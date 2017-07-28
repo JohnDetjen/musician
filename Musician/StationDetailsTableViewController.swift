@@ -121,6 +121,12 @@ class StationDetailsTableViewController: UITableViewController, MFMailComposeVie
                 tableView.deselectRow(at: indexPath, animated: true)
             }
             
+        case 3:
+            if let stationDetailVC = storyboard?.instantiateViewController(withIdentifier: "showDate") as? ShowDateViewController {
+                stationDetailVC.venue = venue
+                navigationController?.pushViewController(stationDetailVC, animated: true)
+            }
+            
         default:
             print("Panic!!")
         }

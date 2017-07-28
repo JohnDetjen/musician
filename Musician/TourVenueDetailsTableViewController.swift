@@ -69,8 +69,6 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
             dateLabel.text = dateFormatter.string(from: date)
             datePicker.date = date
         }
-
-        
     }
    
     
