@@ -101,6 +101,10 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             switch prodID {
             case "MusicianBookingPlus":
                 print("musician booking plus")
+                UserDefaults.standard.set(true, forKey: "purchased")
+                self.delegate?.musicianBookingViewControllerDidPurchase()
+                self.dismiss(animated: true, completion: {
+                })
                 
             default:
                 print("IAP not found")
@@ -126,7 +130,7 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             
             switch trans.transactionState {
             case .purchased:
-                print("buy ok, unlock IAP here")
+                /*print("buy ok, unlock IAP here")
                 print(p.productIdentifier)
                 
                 let prodID = p.productIdentifier
@@ -136,21 +140,25 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
                     
                 default:
                     print("IAP not found")
-                }
+                }*/
                 queue.finishTransaction(trans)
                 UserDefaults.standard.set(true, forKey: "purchased")
                 self.delegate?.musicianBookingViewControllerDidPurchase()
                 self.dismiss(animated: true, completion: {
                 })
-            case .failed:
+                break
+           /* case .failed:
                 print("buy error")
                 queue.finishTransaction(trans)
                 
                 // USe this code for cancel button as well
+                
                 self.delegate?.musicianBookingViewControllerDidCancel()
                 self.dismiss(animated: true, completion: {
                 })
-                break
+ 
+                break*/
+ 
             default:
                 print("Default")
                 

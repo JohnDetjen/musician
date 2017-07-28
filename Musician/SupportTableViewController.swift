@@ -19,7 +19,7 @@ class SupportTableViewController: UITableViewController, MFMailComposeViewContro
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !UserDefaults.standard.bool(forKey: "purchased") {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                 if let buyVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicianBookingPlus") as? MusicianBookingPlusViewController {
                     buyVC.delegate = self
                     self.present(buyVC, animated: true, completion: nil)

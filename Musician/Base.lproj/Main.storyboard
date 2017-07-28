@@ -220,14 +220,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZOt-wI-n1s">
-                                            <rect key="frame" x="55" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="55" y="12" width="33" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vzl-GV-crT">
-                                            <rect key="frame" x="327" y="16" width="33" height="15.5"/>
+                                            <rect key="frame" x="324.5" y="16" width="35.5" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="13"/>
                                             <nil key="textColor"/>
@@ -715,7 +715,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w82-es-bMv">
-                                <rect key="frame" x="86.5" y="519" width="202" height="40"/>
+                                <rect key="frame" x="87" y="519" width="202" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nou-fh-TVf">
                                         <rect key="frame" x="5" y="14.5" width="130" height="12"/>
@@ -1906,9 +1906,6 @@ Call station number, ask for station contact, and ask about receiving and playin
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="b2u-ZR-S0f" id="zoo-hy-5xf"/>
                             <outlet property="delegate" destination="b2u-ZR-S0f" id="nSO-6K-Qks"/>
@@ -2448,10 +2445,10 @@ Call station number, ask for station contact, and ask about receiving and playin
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wny-ih-DBo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUZ-pc-ujM">
-                                                <rect key="frame" x="20" y="70" width="335" height="270"/>
+                                                <rect key="frame" x="20" y="70" width="335" height="260"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yH-4M-iAt">
                                                         <rect key="frame" x="30" y="0.0" width="275" height="60"/>
@@ -2463,7 +2460,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoW-pD-001">
-                                                        <rect key="frame" x="15" y="200" width="305" height="50"/>
+                                                        <rect key="frame" x="15" y="190" width="305" height="50"/>
                                                         <color key="backgroundColor" red="0.18173268149999999" green="0.20972218640000001" blue="0.28442258879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="0QH-Vb-PEW"/>
@@ -2477,7 +2474,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FfN-HF-f06">
-                                                        <rect key="frame" x="15" y="135" width="305" height="40"/>
+                                                        <rect key="frame" x="15" y="125" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Lek-in-u9L"/>
                                                         </constraints>
@@ -2486,9 +2483,9 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iko-6K-GJO">
-                                                        <rect key="frame" x="15" y="75" width="305" height="50"/>
+                                                        <rect key="frame" x="15" y="75" width="305" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="29s-xx-e26"/>
+                                                            <constraint firstAttribute="height" constant="40" id="29s-xx-e26"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
@@ -2523,7 +2520,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQQ-Hm-i4T">
-                                                <rect key="frame" x="101" y="348" width="174" height="50"/>
+                                                <rect key="frame" x="101" y="338" width="174" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUQ-vI-M4w">
                                                         <rect key="frame" x="20" y="0.0" width="72" height="50"/>
@@ -2735,7 +2732,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Zf-uHT">
-                                                <rect key="frame" x="50.5" y="553" width="274.5" height="50"/>
+                                                <rect key="frame" x="51" y="553" width="274.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-e4-mTo">
                                                         <rect key="frame" x="20" y="0.0" width="183.5" height="50"/>

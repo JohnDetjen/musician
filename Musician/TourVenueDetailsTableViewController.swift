@@ -42,15 +42,6 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if bookingLabel.text == "Not Booked" {
-            self.statusImage.image = #imageLiteral(resourceName: "unbooked")
-        }
-        if bookingLabel.text ==  "Booked" {
-            self.statusImage.image = #imageLiteral(resourceName: "booked")
-        }
-        if bookingLabel.text == "Hold" {
-            self.statusImage.image = #imageLiteral(resourceName: "hold")
-        }
         
         let venue = tour?.object(forKey: "venue") as? PFObject
         contactLabel.text = venue?.object(forKey: "contactEmail") as? String
@@ -61,6 +52,16 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
             capacityLabel.text = "\(capacityInt)"
         }
         bookingLabel.text = tour?.object(forKey: "status") as? String ?? "Not Booked"
+        if bookingLabel.text == "Not Booked" {
+            self.statusImage.image = #imageLiteral(resourceName: "unbooked")
+        }
+        if bookingLabel.text ==  "Booked" {
+            self.statusImage.image = #imageLiteral(resourceName: "booked")
+        }
+        if bookingLabel.text == "Hold" {
+            self.statusImage.image = #imageLiteral(resourceName: "hold")
+        }
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         
