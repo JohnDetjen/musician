@@ -103,7 +103,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
                     let website = PFUser.current()?.object(forKey: "website") as! String
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([email])
-                    mail.setSubject("Hold Request: \(venue)")
+                    mail.setSubject("Hold Request: \(bandName)")
                     mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care. </br>Cheers.</br></br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {

@@ -23,12 +23,18 @@ class AddStationTableViewController: UITableViewController {
         super.viewDidLoad()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        self.stationName.becomeFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
+        
         if let stationName = stationName.text, let contactName = contactName.text, let phoneNumber = phoneNumber.text, let mailingAddress = mailingAddress.text, let cityName = cityName.text, let stateName = stateName.text {
             let station = PFObject(className: "RadioStation")
             

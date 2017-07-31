@@ -17,12 +17,13 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // rounded buttons
         signUpButton.layer.cornerRadius = 5
         signUpButton.clipsToBounds = true
         loginButton.layer.cornerRadius = 5
         loginButton.clipsToBounds = true
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,10 +33,10 @@ class WelcomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func privacyPolicyButtonPressed(_ sender: Any) {
-        
+        // musician and privacy link
         if let url = URL(string: "http://www.joinmusician.com/privacypolicy") {
             let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
             self.present(svc, animated: true, completion: nil)

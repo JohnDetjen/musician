@@ -36,19 +36,18 @@ class AddVenueTableViewController: UITableViewController {
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         
-        if let venueName = venueNameTextField.text, let contactEmail = contactEmail.text, let phoneNumber = phoneNumber.text, let website = website.text, let capacityNumber = Int(capacityNumber.text!), let cityName = cityName.text, let stateName = stateName.text {
-
-                    let venue = PFObject(className: "Venue")
-
-                    venue.setObject(venueName, forKey: "name")
-                    venue.setObject(contactEmail, forKey: "contactEmail")
-                    venue.setObject(phoneNumber, forKey: "phoneNumber")
-                    venue.setObject(website, forKey: "website")
-                    venue.setObject(capacityNumber, forKey: "capacity")
-                    venue.setObject(cityName, forKey: "cityName")
-                    venue.setObject(stateName, forKey: "stateName")
-                    
-                    venue.saveInBackground()
+        if let venueName = venueNameTextField.text, let contactEmail = contactEmail.text, let phoneNumber = phoneNumber.text, let website = website.text, let capacityNumber = capacityNumber.text, let cityName = cityName.text, let stateName = stateName.text {
+            let venue = PFObject(className: "Venue")
+            
+            venue.setObject(venueName, forKey: "name")
+            venue.setObject(contactEmail, forKey: "contactEmail")
+            venue.setObject(phoneNumber, forKey: "phoneNumber")
+            venue.setObject(website, forKey: "website")
+            venue.setObject(capacityNumber, forKey: "capacityInput")
+            venue.setObject(cityName, forKey: "cityName")
+            venue.setObject(stateName, forKey: "stateName")
+            
+            venue.saveInBackground()
         }
         
         let appearance = SCLAlertView.SCLAppearance(

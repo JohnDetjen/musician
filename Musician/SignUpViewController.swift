@@ -81,8 +81,8 @@ class SignUpViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         
-        guard let username = textUsername.text, let password = textPassword.text else {
-            self.alert(message: "Please enter an email and password", title: "Fail")
+        guard let username = textUsername.text, let password = textPassword.text, textUsername.text?.isEmpty == false, textPassword.text?.isEmpty == false else {
+            self.alert(message: "Please enter an email and password", title: "Error")
             return
         }
         
@@ -103,7 +103,6 @@ class SignUpViewController: UIViewController {
         
         // Defining the user object
         
-        
         // We won't set the email for this example;
         // Just for simplicity
         
@@ -111,15 +110,16 @@ class SignUpViewController: UIViewController {
         MBProgressHUD.showAdded(to: view, animated: true)
         user.signUpInBackground {
             (success, error) -> Void in
+            MBProgressHUD.hide(for: self.view, animated: true)
+
             if let error = error as NSError? {
                 let errorString = error.userInfo["error"] as? NSString
                 self.alert(message: errorString!, title: "Error")
                 
             } else {
-                self.alert(message: "Registered successfully", title: "Registering")
+                //self.alert(message: "Registered successfully", title: "Registering")
                 self.navigationController?.dismiss(animated: true, completion: nil)
             }
-            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
     

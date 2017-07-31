@@ -19,19 +19,21 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // rounded buttons
         loginButton.layer.cornerRadius = 5
         loginButton.clipsToBounds = true
         loginView.layer.cornerRadius = 5
         loginView.clipsToBounds = true
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-
-        view.addGestureRecognizer(tap)
         
+        // dismiss keyboard when tapping outside view
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         setupViewResizerOnKeyboardShown()
 
     }
 
-    
+    // alert
     func alert(message: NSString, title: NSString) {
         let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -39,7 +41,7 @@ class LogInViewController: UIViewController {
         
     }
  
-    
+    // open keyboard
     func setupViewResizerOnKeyboardShown() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShowForResizing),
@@ -73,7 +75,7 @@ class LogInViewController: UIViewController {
     }
 
 
-    
+    // login function
     @IBAction func login(_ sender: Any) {
         // Retrieving the info from the text fields
         if let username = textUsername.text,

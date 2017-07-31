@@ -103,7 +103,7 @@ class ContactsTableViewController: UITableViewController {
             let state = states[indexPath.section]
             let cityArray = cities.filter { (city) -> Bool in
                 return city.object(forKey: "stateName") as? String == state
-            }
+            }.sorted(by: {$0.object(forKey: "cityName") as? String ?? "" < $1.object(forKey: "cityName") as? String ?? ""})
             let city = cityArray[indexPath.row]
             venueDetailVC.city = city
             navigationController?.pushViewController(venueDetailVC, animated: true)

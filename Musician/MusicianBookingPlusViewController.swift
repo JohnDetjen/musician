@@ -100,12 +100,13 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             
             switch prodID {
             case "MusicianBookingPlus":
-                print("musician booking plus")
-                UserDefaults.standard.set(true, forKey: "purchased")
-                self.delegate?.musicianBookingViewControllerDidPurchase()
-                self.dismiss(animated: true, completion: {
-                })
-                
+                if transaction.transactionState == .purchased {
+                    print("musician booking plus")
+                    UserDefaults.standard.set(true, forKey: "purchased")
+                    self.delegate?.musicianBookingViewControllerDidPurchase()
+                    self.dismiss(animated: true, completion: {
+                    })
+                }
             default:
                 print("IAP not found")
                 

@@ -238,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				437D6ED21EF1CFE200FD0A8F /* ContactsTableViewController.swift */,
-				437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */,
 				437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */,
+				437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */,
 				43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */,
 			);
 			name = "Venues Tab";
