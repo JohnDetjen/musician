@@ -5,12 +5,14 @@ PODS:
     - Bolts/Tasks (~> 1.8)
   - SCLAlertView (0.7.0)
   - Sparrow/LaunchAnimation (1.1.0)
+  - SwiftyStoreKit (0.10.4)
 
 DEPENDENCIES:
   - MBProgressHUD
   - Parse
   - SCLAlertView
   - Sparrow/LaunchAnimation (from `https://github.com/IvanVorobei/Sparrow.git`)
+  - SwiftyStoreKit
 
 EXTERNAL SOURCES:
   Sparrow:
@@ -27,7 +29,8 @@ SPEC CHECKSUMS:
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   Sparrow: fcf807766c4288a978e32be8e492c5001e551838
+  SwiftyStoreKit: f38427d347c8ad0a0d250ae2b64f9f2fcde0569c
 
-PODFILE CHECKSUM: 72aea2f5bc9b315c72b3f5e5f17640588cc93967
+PODFILE CHECKSUM: be7140996f95b719e0685454b2ca33d996ba8ffa
 
 COCOAPODS: 1.2.1

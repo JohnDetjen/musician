@@ -9,6 +9,7 @@
 import UIKit
 import StoreKit
 import SafariServices
+import SwiftyStoreKit
 
 class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     let screenSize: CGRect = UIScreen.main.bounds
@@ -58,7 +59,8 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             let prodID = product.productIdentifier
             if(prodID == "MusicianBookingPlus") {
                 p = product
-                buyProduct()
+                //buyProduct()
+                purchase()
             }
         }
     }
@@ -167,6 +169,26 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             }
         }
     }
+    
+    
+    func purchase() {
+        SwiftyStoreKit.purchaseProduct("MusicianBookingPlus") { (result) in
+            switch result {
+            case .success(let product):
+                if product.needsFinishTransaction {
+                    SwiftyStoreKit.finishTransaction(product.transaction)
+                }
+                UserDefaults.standard.set(true, forKey: "purchased")
+                self.delegate?.musicianBookingViewControllerDidPurchase()
+                self.dismiss(animated: true, completion: {
+                })
+            default:
+                break;
+            }
+        }
+    }
+    
+    
     
     
 }

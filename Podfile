@@ -10,6 +10,7 @@ target 'Musician' do
   pod 'SCLAlertView'
   pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
   pod 'MBProgressHUD'
+  pod 'SwiftyStoreKit'
 
   target 'MusicianTests' do
     inherit! :search_paths
