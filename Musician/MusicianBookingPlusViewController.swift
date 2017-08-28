@@ -12,20 +12,163 @@ import SafariServices
 import SwiftyStoreKit
 
 class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
-    let screenSize: CGRect = UIScreen.main.bounds
+    var screenSize = CGRect.zero
     @IBOutlet weak var musicianBookingPlus: UIButton!
     @IBOutlet weak var restoreButton: UIButton!
     @IBOutlet weak var getPlusButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var getPlusButtonFromBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var getPlusViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var getPlusViewTrailing: NSLayoutConstraint!
+    @IBOutlet weak var getPlusButtonLeading: NSLayoutConstraint!
+    @IBOutlet weak var getPlusButtonTrailing: NSLayoutConstraint!
+    @IBOutlet weak var closeButtonWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var freeTrialLabel: UILabel!
+    @IBOutlet weak var byClickingViewTop: NSLayoutConstraint!
+    @IBOutlet weak var byClickingLabel: UILabel!
+    @IBOutlet weak var termsButton: UIButton!
+    @IBOutlet weak var restoreButtonTop: NSLayoutConstraint!
+    
+    @IBOutlet weak var restoreButtonBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var detailsTextLabel: UILabel!
+    @IBOutlet weak var andLabel: UILabel!
+    @IBOutlet weak var privacyButton: UIButton!
+    @IBOutlet weak var andLabelHeight: NSLayoutConstraint!
+    @IBOutlet weak var deatilTextLabelTop: NSLayoutConstraint!
     
     var delegate: MusicianBookingPlusViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenSize = UIScreen.main.bounds
         musicianBookingPlus.isEnabled = false
         restoreButton.isEnabled = false
         musicianBookingPlus.layer.cornerRadius = 5
         musicianBookingPlus.clipsToBounds = true
-        getPlusButtonHeight.constant = (screenSize.width / 8)
+        
+        //iPad Pro 12.9
+        if view.frame.width == 1024 {
+            getPlusButtonHeight.constant = 120
+            musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFontWeightThin)
+            restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightThin)
+            freeTrialLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+            byClickingLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+            detailsTextLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+            andLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+            andLabelHeight.constant = 18
+            termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightBold)
+            privacyButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightBold)
+            getPlusButtonFromBottom.constant = -39
+            getPlusViewLeading.constant = 100
+            getPlusViewTrailing.constant = 100
+            getPlusButtonLeading.constant = 30
+            getPlusButtonTrailing.constant = -30
+            closeButtonWidth.constant = 80
+            deatilTextLabelTop.constant = 7
+            restoreButtonTop.constant = 40
+            byClickingViewTop.constant = 100
+            
+            
+        }
+        
+        //iPad Pro 10.5
+        if view.frame.width == 834 {
+            getPlusButtonHeight.constant = 90
+            musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 46, weight: UIFontWeightThin)
+            restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 28, weight: UIFontWeightThin)
+            freeTrialLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
+            byClickingLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
+            detailsTextLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
+            andLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
+            andLabelHeight.constant = 16
+            termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightBold)
+            privacyButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightBold)
+            getPlusButtonFromBottom.constant = -35
+            getPlusViewLeading.constant = 90
+            getPlusViewTrailing.constant = 90
+            getPlusButtonLeading.constant = 30
+            getPlusButtonTrailing.constant = -30
+            closeButtonWidth.constant = 60
+            deatilTextLabelTop.constant = 5
+            restoreButtonTop.constant = 30
+            byClickingViewTop.constant = 90
+        }
+        
+        
+        // iphone 5
+        if view.frame.width == 320 {
+            getPlusButtonHeight.constant = 42
+            musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+            restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
+            freeTrialLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
+            byClickingLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
+            detailsTextLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
+            andLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
+            andLabelHeight.constant = 8
+            termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightBold)
+            privacyButton.titleLabel?.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightBold)
+            getPlusButtonFromBottom.constant = -18
+            getPlusViewLeading.constant = 13
+            getPlusViewTrailing.constant = 13
+            getPlusButtonLeading.constant = 10
+            getPlusButtonTrailing.constant = -10
+            closeButtonWidth.constant = 40
+            byClickingViewTop.constant = 30
+            deatilTextLabelTop.constant = -1
+            restoreButtonTop.constant = 18
+        }
+        
+
+        
+        // iphone 7 plus
+        if view.frame.width == 414 {
+            getPlusButtonHeight.constant = 60
+            musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightThin)
+            restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFontWeightThin)
+            freeTrialLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFontWeightThin)
+            byClickingLabel.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightThin)
+            termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightBold)
+            andLabelHeight.constant = 9
+            andLabel.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightThin)
+            privacyButton.titleLabel?.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightBold)
+            detailsTextLabel.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightThin)
+            getPlusButtonFromBottom.constant = -20
+            getPlusViewLeading.constant = 13
+            getPlusViewTrailing.constant = 13
+            getPlusButtonLeading.constant = 12
+            getPlusButtonTrailing.constant = -12
+            closeButtonWidth.constant = 45
+            byClickingViewTop.constant = 20
+            restoreButtonTop.constant = 22
+            deatilTextLabelTop.constant = 1
+            byClickingViewTop.constant = 50
+        }
+
+        // ipad air
+        if view.frame.width == 768 {
+            getPlusButtonHeight.constant = 90
+            musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 40, weight: UIFontWeightThin)
+            restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: UIFontWeightThin)
+            detailsTextLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
+            freeTrialLabel.font = UIFont.systemFont(ofSize: 14, weight: UIFontWeightThin)
+            byClickingLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
+            termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightBold)
+            andLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
+            andLabelHeight.constant = 15
+            privacyButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightBold)
+            getPlusButtonFromBottom.constant = -30
+            getPlusViewLeading.constant = 80
+            getPlusViewTrailing.constant = 80
+            getPlusButtonLeading.constant = 30
+            getPlusButtonTrailing.constant = -30
+            closeButtonWidth.constant = 60
+            deatilTextLabelTop.constant = 6
+            restoreButtonTop.constant = 30
+            byClickingViewTop.constant = 80
+
+        }
         
         if(SKPaymentQueue.canMakePayments()) {
             print("IAP is enable, loading")
@@ -45,9 +188,20 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
         // Dispose of any resources that can be recreated.
     }
     @IBAction func termsOfUsePressed(_ sender: Any) {
-        let svc = SFSafariViewController(url: ("www.joinmusician.com/termsofuse" as? URL)!, entersReaderIfAvailable: true)
-        self.present(svc, animated: true, completion: nil)
-            }
+        if let url = URL(string: "http://www.joinmusician.com/termsofuse") {
+            let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            self.present(svc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func privacyButtonPressed(_ sender: Any) {
+        if let url = URL(string: "http://www.joinmusician.com/privacypolicy") {
+            let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            self.present(svc, animated: true, completion: nil)
+        }
+    }
+    
+    
 
     @IBAction func restorePurchasePressed(_ sender: Any) {
         SKPaymentQueue.default().add(self)

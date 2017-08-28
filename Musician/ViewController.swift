@@ -13,7 +13,10 @@ import Parse
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var manageTour: UIButton!
+    @IBOutlet weak var mangeTourButtonWidth: NSLayoutConstraint!
     
+    @IBOutlet weak var manageTourTop: NSLayoutConstraint!
+    @IBOutlet weak var manageTourTrailing: NSLayoutConstraint!
     var tours = [PFObject]()
 
     let regionRadius: CLLocationDistance = 1000
@@ -31,6 +34,28 @@ class ViewController: UIViewController {
         manageTour.layer.masksToBounds = false
         manageTour.layer.cornerRadius = 4.0
         manageTour.layer.shadowRadius = 5
+        
+        //iPad Pro 12.9
+        if view.frame.width == 1024 {
+            mangeTourButtonWidth.constant = 70
+            manageTourTop.constant = 30
+            manageTourTrailing.constant = 30
+        }
+        
+        //iPad Pro 10.5
+        if view.frame.width == 834 {
+            mangeTourButtonWidth.constant = 65
+            manageTourTop.constant = 30
+            manageTourTrailing.constant = 30
+            
+        }
+        
+        if view.frame.width == 768 {
+            mangeTourButtonWidth.constant = 55
+            manageTourTop.constant = 20
+            manageTourTrailing.constant = 20
+            
+        }
 
         super.viewDidLoad()
         

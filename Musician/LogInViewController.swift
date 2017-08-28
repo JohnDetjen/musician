@@ -16,9 +16,95 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var logInLabel: UILabel!
+    @IBOutlet weak var newUserLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var logInButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var passwordTextFieldHeight: NSLayoutConstraint!
+    @IBOutlet weak var emailTextFieldHeight: NSLayoutConstraint!
+    @IBOutlet weak var backButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var logInViewTop: NSLayoutConstraint!
+    @IBOutlet weak var logInViewTrailing: NSLayoutConstraint!
+    @IBOutlet weak var logInViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var logInButtonBottom: NSLayoutConstraint!
+    @IBOutlet weak var backButtonTop: NSLayoutConstraint!
+    @IBOutlet weak var backButtonLeading: NSLayoutConstraint!
+    @IBOutlet weak var logInButtonTop: NSLayoutConstraint!
+    @IBOutlet weak var emailTextFieldBottom: NSLayoutConstraint!
+    @IBOutlet weak var logInLabelHeight: NSLayoutConstraint!
+    @IBOutlet weak var logInLabelBottom: NSLayoutConstraint!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //iPad Pro 12.9
+        if view.frame.width == 1024 {
+            loginButton.titleLabel?.font = UIFont(name: "Gilroy-Light", size: 40)
+            emailTextFieldHeight.constant = 90
+            passwordTextFieldHeight.constant = 90
+            logInLabel.font = UIFont(name: "Gilroy-ExtraBold", size: 60)
+            newUserLabel.font = UIFont(name: "Gilroy-Light", size: 30)
+            signUpButton.titleLabel?.font = UIFont(name: "Gilroy-ExtraBold", size: 30)
+            logInButtonHeight.constant = 90
+            textUsername.font = UIFont(name: "Gilroy-Light", size: 35)
+            textPassword.font = UIFont(name: "Gilroy-Light", size: 35)
+            logInViewTop.constant = 200
+            logInViewLeading.constant = 60
+            logInViewTrailing.constant = 60
+            emailTextFieldBottom.constant = 25
+            logInButtonTop.constant = 50
+            logInButtonBottom.constant = 40
+            logInLabelBottom.constant = 40
+            logInLabelHeight.constant = 100
+    
+        }
+        
+        //iPad Pro 10.5
+        if view.frame.width == 834 {
+            loginButton.titleLabel?.font = UIFont(name: "Gilroy-Light", size: 25)
+            emailTextFieldHeight.constant = 70
+            passwordTextFieldHeight.constant = 70
+            logInLabel.font = UIFont(name: "Gilroy-ExtraBold", size: 45)
+            newUserLabel.font = UIFont(name: "Gilroy-Light", size: 25)
+            signUpButton.titleLabel?.font = UIFont(name: "Gilroy-ExtraBold", size: 25)
+            logInButtonHeight.constant = 70
+            textUsername.font = UIFont(name: "Gilroy-Light", size: 25)
+            textPassword.font = UIFont(name: "Gilroy-Light", size: 25)
+            logInViewTop.constant = 140
+            logInViewLeading.constant = 60
+            logInViewTrailing.constant = 60
+            emailTextFieldBottom.constant = 25
+            logInButtonTop.constant = 50
+            logInButtonBottom.constant = 40
+            logInLabelBottom.constant = 40
+            logInLabelHeight.constant = 100
+            
+        }
+        
+        //iPad Air
+        if view.frame.width == 768 {
+            loginButton.titleLabel?.font = UIFont(name: "Gilroy-Light", size: 25)
+            emailTextFieldHeight.constant = 65
+            passwordTextFieldHeight.constant = 65
+            logInLabel.font = UIFont(name: "Gilroy-ExtraBold", size: 45)
+            newUserLabel.font = UIFont(name: "Gilroy-Light", size: 25)
+            signUpButton.titleLabel?.font = UIFont(name: "Gilroy-ExtraBold", size: 25)
+            logInButtonHeight.constant = 65
+            textUsername.font = UIFont(name: "Gilroy-Light", size: 25)
+            textPassword.font = UIFont(name: "Gilroy-Light", size: 25)
+            logInViewTop.constant = 140
+            logInViewLeading.constant = 60
+            logInViewTrailing.constant = 60
+            emailTextFieldBottom.constant = 25
+            logInButtonTop.constant = 50
+            logInButtonBottom.constant = 40
+            logInLabelBottom.constant = 40
+            logInLabelHeight.constant = 100
+            
+        }
+
+        
         
         // rounded buttons
         loginButton.layer.cornerRadius = 5

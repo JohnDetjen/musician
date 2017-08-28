@@ -705,58 +705,90 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-Ma-xTz">
-                                <rect key="frame" x="31" y="475" width="313" height="24"/>
-                                <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="10"/>
-                                <state key="normal" title="Click here to restore purchase">
-                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <rect key="frame" x="293" y="21" width="61" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="y27-Rh-PA3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Restore">
+                                    <color key="titleColor" red="0.36078431372549019" green="0.36862745098039218" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="restorePurchasePressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="Wn5-OR-pL9"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w82-es-bMv">
-                                <rect key="frame" x="87" y="519" width="202" height="40"/>
+                                <rect key="frame" x="89.5" y="556" width="196.5" height="15"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nou-fh-TVf">
-                                        <rect key="frame" x="5" y="14.5" width="130" height="12"/>
-                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="10"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="5" y="2" width="106" height="11"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="9"/>
+                                        <color key="textColor" red="0.36078431372549019" green="0.36862745098039218" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-Go-2M9">
-                                        <rect key="frame" x="140" y="7.5" width="57" height="25"/>
-                                        <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="10"/>
-                                        <state key="normal" title="terms of use">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej4-s3-LAK">
+                                        <rect key="frame" x="147" y="2.5" width="14.5" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="nJh-pv-XDr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="9"/>
+                                        <color key="textColor" red="0.36078431370000003" green="0.36862745099999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-Go-2M9">
+                                        <rect key="frame" x="114" y="2.5" width="30" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="yht-Yp-KxB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="9"/>
+                                        <state key="normal" title="terms">
+                                            <color key="titleColor" red="0.36078431372549019" green="0.36862745098039218" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="termsOfUsePressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="1LC-8E-dWA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwP-KJ-tIG">
+                                        <rect key="frame" x="164.5" y="2.5" width="32" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="N84-bT-DUo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="9"/>
+                                        <state key="normal" title="privacy">
+                                            <color key="titleColor" red="0.36078431370000003" green="0.36862745099999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="privacyButtonPressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="xas-5K-slf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="AxE-Hc-Mzy"/>
-                                    <constraint firstItem="PYD-Go-2M9" firstAttribute="leading" secondItem="nou-fh-TVf" secondAttribute="trailing" constant="5" id="SOi-m6-84R"/>
-                                    <constraint firstItem="PYD-Go-2M9" firstAttribute="centerY" secondItem="w82-es-bMv" secondAttribute="centerY" id="j4I-Dl-vNa"/>
+                                    <constraint firstAttribute="height" constant="15" id="AxE-Hc-Mzy"/>
+                                    <constraint firstItem="ej4-s3-LAK" firstAttribute="centerY" secondItem="w82-es-bMv" secondAttribute="centerY" id="Pu1-fF-YBF"/>
+                                    <constraint firstItem="PYD-Go-2M9" firstAttribute="leading" secondItem="nou-fh-TVf" secondAttribute="trailing" constant="3" id="SOi-m6-84R"/>
+                                    <constraint firstItem="NwP-KJ-tIG" firstAttribute="centerY" secondItem="PYD-Go-2M9" secondAttribute="centerY" id="cxb-o0-VE9"/>
+                                    <constraint firstItem="ej4-s3-LAK" firstAttribute="leading" secondItem="PYD-Go-2M9" secondAttribute="trailing" constant="3" id="fFp-UV-fmr"/>
                                     <constraint firstItem="nou-fh-TVf" firstAttribute="centerY" secondItem="w82-es-bMv" secondAttribute="centerY" id="qhG-kZ-YKH"/>
+                                    <constraint firstAttribute="trailing" secondItem="NwP-KJ-tIG" secondAttribute="trailing" id="rKC-ph-ISh"/>
+                                    <constraint firstItem="PYD-Go-2M9" firstAttribute="centerY" secondItem="w82-es-bMv" secondAttribute="centerY" id="shB-Ng-NXN"/>
                                     <constraint firstItem="nou-fh-TVf" firstAttribute="leading" secondItem="w82-es-bMv" secondAttribute="leading" constant="5" id="u5H-vx-SQ5"/>
-                                    <constraint firstAttribute="trailing" secondItem="PYD-Go-2M9" secondAttribute="trailing" constant="5" id="uzB-wu-uIc"/>
+                                    <constraint firstItem="NwP-KJ-tIG" firstAttribute="leading" secondItem="ej4-s3-LAK" secondAttribute="trailing" constant="3" id="yd0-K4-IhQ"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Musician Booking Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-G2-GPh">
-                                <rect key="frame" x="0.0" y="95" width="375" height="375"/>
+                                <rect key="frame" x="20" y="166" width="335" height="335"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jpc-G2-GPh" secondAttribute="height" multiplier="1:1" id="Zcl-qP-osN"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-sS-62R">
-                                <rect key="frame" x="36" y="400" width="303" height="50"/>
+                                <rect key="frame" x="30" y="431" width="315" height="50"/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.50588235294117645" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vfU-Hu-qp6"/>
+                                    <constraint firstAttribute="height" constant="50" id="GGE-Hb-edt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Get Plus for $19.99/mo">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Try Plus For Free">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -774,35 +806,75 @@
                                     <action selector="closeButtonPressed:" destination="I0W-cH-Dag" eventType="touchUpInside" id="kAu-It-0U5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t33-SM-WqM">
+                                <rect key="frame" x="31" y="571" width="313" height="51"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">If you choose to purchase Musician Booking Plus, a monthly payment of $19.99 will be charged to your iTunes account, and your account will be charged for renewal within 24-hours prior to the end of the current period. Auto-renewal may be turned off at any time by going to your settings in the iTunes Store after purchase.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.36078431372549019" green="0.36862745098039218" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="9" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2.7999999999999998" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Trial Period Lasts 3 Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-qe-kPy">
+                                <rect key="frame" x="128.5" y="484" width="119.5" height="10.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                <color key="textColor" red="0.2990927994" green="0.5785706639" blue="0.85495549439999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.086439311504364014" green="0.090317144989967346" blue="0.090320974588394165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="w82-es-bMv" firstAttribute="top" secondItem="VaG-Ma-xTz" secondAttribute="bottom" constant="20" id="2y6-wL-hDi"/>
+                            <constraint firstItem="dmR-sS-62R" firstAttribute="trailing" secondItem="Jpc-G2-GPh" secondAttribute="trailing" constant="-10" id="2qo-Yw-AQe"/>
                             <constraint firstItem="w82-es-bMv" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="3Ed-Pd-Za6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t33-SM-WqM" secondAttribute="trailing" constant="15" id="3pA-Qz-dLd"/>
+                            <constraint firstItem="t33-SM-WqM" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="4xX-Pb-XXR"/>
                             <constraint firstItem="Ftw-dZ-ugJ" firstAttribute="top" secondItem="rVM-EP-nEA" secondAttribute="top" constant="5" id="5Px-7j-KLG"/>
-                            <constraint firstItem="dmR-sS-62R" firstAttribute="bottom" secondItem="Jpc-G2-GPh" secondAttribute="bottom" constant="-20" id="Jw5-ZX-Pmf"/>
-                            <constraint firstAttribute="trailing" secondItem="Jpc-G2-GPh" secondAttribute="trailing" id="KAv-6q-jWa"/>
-                            <constraint firstItem="dmR-sS-62R" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leadingMargin" constant="20" id="KPb-9t-upE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dmR-sS-62R" secondAttribute="trailing" constant="20" id="MiX-hL-F3S"/>
-                            <constraint firstItem="Jpc-G2-GPh" firstAttribute="top" secondItem="W9T-gr-Yco" secondAttribute="bottom" constant="75" id="S0S-kd-iuz"/>
+                            <constraint firstItem="JB9-qe-kPy" firstAttribute="top" secondItem="dmR-sS-62R" secondAttribute="bottom" constant="3" id="Dgq-xG-MxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Jpc-G2-GPh" secondAttribute="trailing" constant="20" id="KAv-6q-jWa"/>
                             <constraint firstItem="Jpc-G2-GPh" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="SQB-YL-b71"/>
-                            <constraint firstItem="Jpc-G2-GPh" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leading" id="YyE-w3-rzq"/>
-                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="cy3-zN-IUK"/>
-                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="top" secondItem="Jpc-G2-GPh" secondAttribute="bottom" constant="5" id="h4L-DO-Lvo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VaG-Ma-xTz" secondAttribute="trailing" constant="15" id="iwb-CG-eYQ"/>
-                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leadingMargin" constant="15" id="qTp-iX-LcG"/>
+                            <constraint firstItem="Jpc-G2-GPh" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leading" constant="20" id="YyE-w3-rzq"/>
+                            <constraint firstItem="t33-SM-WqM" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leadingMargin" constant="15" id="adH-6b-04I"/>
+                            <constraint firstItem="dmR-sS-62R" firstAttribute="leading" secondItem="Jpc-G2-GPh" secondAttribute="leading" constant="10" id="fRn-o1-fiQ"/>
+                            <constraint firstItem="t33-SM-WqM" firstAttribute="top" secondItem="w82-es-bMv" secondAttribute="bottom" id="g2v-YG-huO"/>
+                            <constraint firstItem="Jpc-G2-GPh" firstAttribute="centerY" secondItem="rVM-EP-nEA" secondAttribute="centerY" id="gNh-ah-cvm"/>
+                            <constraint firstItem="dmR-sS-62R" firstAttribute="bottom" secondItem="Jpc-G2-GPh" secondAttribute="bottom" constant="-20" id="mrk-OT-YjU"/>
+                            <constraint firstAttribute="trailing" secondItem="VaG-Ma-xTz" secondAttribute="trailing" constant="21" id="nTf-M6-bfp"/>
+                            <constraint firstItem="VaG-Ma-xTz" firstAttribute="top" secondItem="rVM-EP-nEA" secondAttribute="top" constant="21" id="oMd-Ok-YP3"/>
+                            <constraint firstItem="JB9-qe-kPy" firstAttribute="centerX" secondItem="rVM-EP-nEA" secondAttribute="centerX" id="rv3-kX-jEe"/>
                             <constraint firstItem="Ftw-dZ-ugJ" firstAttribute="leading" secondItem="rVM-EP-nEA" secondAttribute="leading" constant="5" id="wI2-lk-G6H"/>
+                            <constraint firstItem="w82-es-bMv" firstAttribute="top" secondItem="Jpc-G2-GPh" secondAttribute="bottom" constant="55" id="x7q-1u-CXK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="getPlusButtonHeight" destination="vfU-Hu-qp6" id="Cu6-fv-hPc"/>
+                        <outlet property="andLabel" destination="ej4-s3-LAK" id="ADF-Uu-3Nw"/>
+                        <outlet property="andLabelHeight" destination="nJh-pv-XDr" id="25q-WF-tx8"/>
+                        <outlet property="byClickingLabel" destination="nou-fh-TVf" id="cAh-aK-hYH"/>
+                        <outlet property="byClickingViewTop" destination="x7q-1u-CXK" id="7Ta-sc-Rtv"/>
+                        <outlet property="closeButtonWidth" destination="V17-jM-lYv" id="wIS-O3-nNZ"/>
+                        <outlet property="deatilTextLabelTop" destination="g2v-YG-huO" id="6IA-83-9OR"/>
+                        <outlet property="detailsTextLabel" destination="t33-SM-WqM" id="xKP-Yt-34z"/>
+                        <outlet property="freeTrialLabel" destination="JB9-qe-kPy" id="Cqb-Da-bYy"/>
+                        <outlet property="getPlusButtonFromBottom" destination="mrk-OT-YjU" id="92E-bW-KfM"/>
+                        <outlet property="getPlusButtonHeight" destination="GGE-Hb-edt" id="cDt-zO-KG5"/>
+                        <outlet property="getPlusButtonLeading" destination="fRn-o1-fiQ" id="c30-Du-Ad0"/>
+                        <outlet property="getPlusButtonTrailing" destination="2qo-Yw-AQe" id="qCg-bw-gew"/>
+                        <outlet property="getPlusViewLeading" destination="YyE-w3-rzq" id="Abg-6Q-ie5"/>
+                        <outlet property="getPlusViewTrailing" destination="KAv-6q-jWa" id="r56-HY-PDF"/>
                         <outlet property="musicianBookingPlus" destination="dmR-sS-62R" id="dlL-4N-LDw"/>
+                        <outlet property="privacyButton" destination="NwP-KJ-tIG" id="DOC-Sn-eS2"/>
                         <outlet property="restoreButton" destination="VaG-Ma-xTz" id="UP9-Zg-ygv"/>
+                        <outlet property="restoreButtonTop" destination="oMd-Ok-YP3" id="LrX-W8-5nY"/>
+                        <outlet property="termsButton" destination="PYD-Go-2M9" id="h3q-GI-0Xd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="om8-ik-Vry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2354" y="1701"/>
+            <point key="canvasLocation" x="-2354.4000000000001" y="1700.5997001499252"/>
         </scene>
         <!--Radio Stations-->
         <scene sceneID="7rR-ca-Z0v">
@@ -1148,7 +1220,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddStationCell" textLabel="qfc-iH-XBJ" imageView="HSG-mY-rgM" style="IBUITableViewCellStyleDefault" id="jrY-9Q-hBe">
+                            <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddStationCell" textLabel="qfc-iH-XBJ" imageView="HSG-mY-rgM" style="IBUITableViewCellStyleDefault" id="jrY-9Q-hBe">
                                 <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jrY-9Q-hBe" id="U8V-bk-gKq">
@@ -1968,6 +2040,9 @@ Call station number, ask for station contact, and ask about receiving and playin
                     </navigationItem>
                     <connections>
                         <outlet property="manageTour" destination="7vY-te-epH" id="3w4-wF-0FM"/>
+                        <outlet property="manageTourTop" destination="5T1-Fd-zsh" id="i9A-r9-Sci"/>
+                        <outlet property="manageTourTrailing" destination="Uj4-iE-p3s" id="YoW-q0-sO4"/>
+                        <outlet property="mangeTourButtonWidth" destination="0rX-UD-nNW" id="r9W-Jd-kbs"/>
                         <outlet property="mapView" destination="KIM-N5-pDp" id="aO4-yj-nFZ"/>
                     </connections>
                 </viewController>
@@ -2421,13 +2496,29 @@ Call station number, ask for station contact, and ask about receiving and playin
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logInButtonHeight" destination="QVk-Dm-bGf" id="eIc-6u-zvS"/>
+                        <outlet property="logInButtonLeading" destination="oq1-In-jG3" id="xXg-tL-JkI"/>
+                        <outlet property="logInButtonTop" destination="COn-Sx-Ylm" id="Ev8-tx-0PV"/>
+                        <outlet property="logInButtonTrailing" destination="B03-RF-GhL" id="HAv-tI-qfx"/>
                         <outlet property="loginButton" destination="KCI-HW-Y9K" id="AGg-NN-qf1"/>
+                        <outlet property="musicianLabel" destination="a2h-XQ-fSz" id="YTI-BV-7Vr"/>
+                        <outlet property="musicianLabelHeight" destination="Ibe-sV-API" id="dc9-Fd-Tip"/>
+                        <outlet property="musicianLabelLeading" destination="XVo-I8-HNE" id="S8Q-iQ-Ta2"/>
+                        <outlet property="musicianLabelTop" destination="2sP-ck-jza" id="FUb-Qq-0IF"/>
+                        <outlet property="privacyBottom" destination="7kU-nn-rAe" id="WHU-Dt-50G"/>
+                        <outlet property="privacyButton" destination="pVT-At-rH3" id="jGq-V0-Kgh"/>
+                        <outlet property="privacyTop" destination="vDs-sb-iCz" id="gQk-XR-4h1"/>
                         <outlet property="signUpButton" destination="gj6-9s-a0D" id="kuh-Gh-l7W"/>
+                        <outlet property="signUpButtonHeight" destination="Pag-DL-2rP" id="bcF-Jf-IGq"/>
+                        <outlet property="signUpButtonLeading" destination="ftC-gh-Rne" id="QX5-5Y-OqK"/>
+                        <outlet property="signUpButtonTrailing" destination="HYj-TS-cYe" id="uIf-36-Knp"/>
+                        <outlet property="startTouringLabel" destination="fot-Ny-c79" id="edS-U9-suN"/>
+                        <outlet property="touringLabelTop" destination="ZRa-OH-3YW" id="z9H-rN-ZAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZE-xi-z1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4346.3999999999996" y="732.68365817091455"/>
+            <point key="canvasLocation" x="-4370" y="734"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Zm3-WS-2U4">
@@ -2558,9 +2649,9 @@ Call station number, ask for station contact, and ask about receiving and playin
                                             <constraint firstItem="CQQ-Hm-i4T" firstAttribute="top" secondItem="LUZ-pc-ujM" secondAttribute="bottom" constant="8" id="KXx-Ev-uIl"/>
                                             <constraint firstItem="LUZ-pc-ujM" firstAttribute="centerX" secondItem="wny-ih-DBo" secondAttribute="centerX" id="Qpt-lP-miR"/>
                                             <constraint firstItem="bML-67-nY9" firstAttribute="leading" secondItem="LUZ-pc-ujM" secondAttribute="leading" id="aD6-wA-eNu"/>
+                                            <constraint firstItem="bML-67-nY9" firstAttribute="top" secondItem="wny-ih-DBo" secondAttribute="top" constant="20" id="bCv-6f-Oxg"/>
                                             <constraint firstAttribute="trailing" secondItem="LUZ-pc-ujM" secondAttribute="trailing" constant="20" id="eXO-De-x56"/>
                                             <constraint firstItem="CQQ-Hm-i4T" firstAttribute="centerX" secondItem="wny-ih-DBo" secondAttribute="centerX" id="k7K-jh-Tvi"/>
-                                            <constraint firstItem="LUZ-pc-ujM" firstAttribute="top" secondItem="bML-67-nY9" secondAttribute="bottom" id="kU8-pt-F1p"/>
                                             <constraint firstAttribute="bottom" secondItem="CQQ-Hm-i4T" secondAttribute="bottom" constant="20" id="ugP-5L-Glz"/>
                                         </constraints>
                                     </view>
@@ -2583,16 +2674,33 @@ Call station number, ask for station contact, and ask about receiving and playin
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButtonHeight" destination="eXb-tZ-J8W" id="sDX-4g-XsX"/>
+                        <outlet property="backButtonLeading" destination="aD6-wA-eNu" id="hw5-aE-P6h"/>
+                        <outlet property="backButtonTop" destination="bCv-6f-Oxg" id="xcn-WP-09Q"/>
+                        <outlet property="emailTextFieldBottom" destination="MqV-NU-6vY" id="7bf-kf-EWx"/>
+                        <outlet property="emailTextFieldHeight" destination="29s-xx-e26" id="CR9-Pp-2Et"/>
+                        <outlet property="logInButtonBottom" destination="iKB-l9-UhH" id="0LJ-fd-b8Q"/>
+                        <outlet property="logInButtonHeight" destination="0QH-Vb-PEW" id="y8x-OQ-D7X"/>
+                        <outlet property="logInButtonTop" destination="XlU-aC-5Du" id="EKE-3t-a6m"/>
+                        <outlet property="logInLabel" destination="2yH-4M-iAt" id="9fk-Ls-XpJ"/>
+                        <outlet property="logInLabelBottom" destination="5sd-EW-xMs" id="gIO-Aa-Pge"/>
+                        <outlet property="logInLabelHeight" destination="691-as-J2o" id="bna-ql-SB5"/>
+                        <outlet property="logInViewLeading" destination="Dm2-Xh-O8O" id="lOa-yH-aRt"/>
+                        <outlet property="logInViewTop" destination="EHt-zc-fX4" id="2Ls-ae-nk5"/>
+                        <outlet property="logInViewTrailing" destination="eXO-De-x56" id="6gC-yB-Nds"/>
                         <outlet property="loginButton" destination="UoW-pD-001" id="2Da-Gx-E12"/>
                         <outlet property="loginView" destination="LUZ-pc-ujM" id="gOa-4j-SZL"/>
+                        <outlet property="newUserLabel" destination="SUQ-vI-M4w" id="TLi-nM-LtI"/>
+                        <outlet property="passwordTextFieldHeight" destination="Lek-in-u9L" id="bkd-je-eWx"/>
                         <outlet property="scrollViewBottomConstraint" destination="ifY-eD-47c" id="5hA-Aw-0l6"/>
+                        <outlet property="signUpButton" destination="smB-dP-FGF" id="aiu-ph-LyT"/>
                         <outlet property="textPassword" destination="FfN-HF-f06" id="sAV-S2-V5W"/>
                         <outlet property="textUsername" destination="Iko-6K-GJO" id="ae1-kF-fLD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDr-70-cfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3647" y="1488"/>
+            <point key="canvasLocation" x="-3610" y="1145"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="OIe-s3-BkK">
@@ -2610,7 +2718,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52X-Y6-5UX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="618.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-Q9-fhl">
                                                 <rect key="frame" x="20" y="25" width="45" height="45"/>
@@ -2624,7 +2732,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-px-7LE">
-                                                <rect key="frame" x="20" y="70" width="335" height="475"/>
+                                                <rect key="frame" x="20" y="70" width="335" height="470.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u93-Ie-TW4">
                                                         <rect key="frame" x="30" y="0.0" width="275" height="60"/>
@@ -2652,17 +2760,14 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please provide correct information below so we can populate your emails correctly." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-BF-jId">
-                                                        <rect key="frame" x="40" y="195" width="255" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="a2x-2D-WHq"/>
-                                                        </constraints>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please provide correct information below so we can populate your emails correctly." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-BF-jId">
+                                                        <rect key="frame" x="40" y="195" width="255" height="25.5"/>
                                                         <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="11"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="musician name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpj-w9-yaT">
-                                                        <rect key="frame" x="15" y="240" width="305" height="40"/>
+                                                        <rect key="frame" x="15" y="235.5" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Ol6-XS-m1Q"/>
                                                         </constraints>
@@ -2671,7 +2776,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="musician website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpb-JN-0yt">
-                                                        <rect key="frame" x="15" y="290" width="305" height="40"/>
+                                                        <rect key="frame" x="15" y="285.5" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="PZl-hr-Dbc"/>
                                                         </constraints>
@@ -2680,7 +2785,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="musician hometown" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rok-em-uhB">
-                                                        <rect key="frame" x="15" y="340" width="305" height="40"/>
+                                                        <rect key="frame" x="15" y="335.5" width="305" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Daf-PG-4dP"/>
                                                         </constraints>
@@ -2689,7 +2794,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-oT-eLg">
-                                                        <rect key="frame" x="15" y="405" width="305" height="50"/>
+                                                        <rect key="frame" x="15" y="400.5" width="305" height="50"/>
                                                         <color key="backgroundColor" red="0.1803921568627451" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="uBk-V1-lPS"/>
@@ -2710,7 +2815,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                     <constraint firstItem="xHo-BF-jId" firstAttribute="top" secondItem="3A3-Z3-pz6" secondAttribute="bottom" constant="30" id="BId-Eg-gQI"/>
                                                     <constraint firstAttribute="bottom" secondItem="ljj-oT-eLg" secondAttribute="bottom" constant="20" id="CNT-tX-eLD"/>
                                                     <constraint firstItem="wpj-w9-yaT" firstAttribute="leading" secondItem="EMa-px-7LE" secondAttribute="leading" constant="15" id="CNZ-Es-alg"/>
-                                                    <constraint firstItem="wpj-w9-yaT" firstAttribute="top" secondItem="xHo-BF-jId" secondAttribute="bottom" constant="5" id="CPL-0G-3Nr"/>
+                                                    <constraint firstItem="wpj-w9-yaT" firstAttribute="top" secondItem="xHo-BF-jId" secondAttribute="bottom" constant="15" id="CPL-0G-3Nr"/>
                                                     <constraint firstItem="rok-em-uhB" firstAttribute="leading" secondItem="EMa-px-7LE" secondAttribute="leading" constant="15" id="Fjg-9C-b9P"/>
                                                     <constraint firstItem="kpb-JN-0yt" firstAttribute="leading" secondItem="EMa-px-7LE" secondAttribute="leading" constant="15" id="Gm6-8a-aez"/>
                                                     <constraint firstItem="rok-em-uhB" firstAttribute="top" secondItem="kpb-JN-0yt" secondAttribute="bottom" constant="10" id="H3P-IR-21a"/>
@@ -2732,7 +2837,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Zf-uHT">
-                                                <rect key="frame" x="51" y="553" width="274.5" height="50"/>
+                                                <rect key="frame" x="51" y="548.5" width="274.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-e4-mTo">
                                                         <rect key="frame" x="20" y="0.0" width="183.5" height="50"/>
@@ -2772,7 +2877,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                             <constraint firstItem="EPZ-Zf-uHT" firstAttribute="top" secondItem="EMa-px-7LE" secondAttribute="bottom" constant="8" id="N5M-Jf-IQQ"/>
                                             <constraint firstItem="EMa-px-7LE" firstAttribute="centerX" secondItem="52X-Y6-5UX" secondAttribute="centerX" id="SR1-uk-4dv"/>
                                             <constraint firstItem="EMa-px-7LE" firstAttribute="leading" secondItem="52X-Y6-5UX" secondAttribute="leading" constant="20" id="afe-Wu-61w"/>
-                                            <constraint firstItem="EMa-px-7LE" firstAttribute="top" secondItem="Y8B-Q9-fhl" secondAttribute="bottom" id="e5v-RE-jJ8"/>
+                                            <constraint firstItem="Y8B-Q9-fhl" firstAttribute="top" secondItem="52X-Y6-5UX" secondAttribute="top" constant="25" id="mvs-FV-bAw"/>
                                             <constraint firstAttribute="trailing" secondItem="EMa-px-7LE" secondAttribute="trailing" constant="20" id="xhQ-pH-Vt5"/>
                                         </constraints>
                                     </view>
@@ -2795,14 +2900,39 @@ Call station number, ask for station contact, and ask about receiving and playin
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alreadyHaveTextLabel" destination="g1x-e4-mTo" id="dOO-rp-Igu"/>
                         <outlet property="doneButton" destination="ljj-oT-eLg" id="Q9V-Jr-1RE"/>
+                        <outlet property="doneButtonBottom" destination="CNT-tX-eLD" id="eKK-Vc-QHr"/>
+                        <outlet property="doneButtonHeight" destination="uBk-V1-lPS" id="ORU-tk-ESF"/>
+                        <outlet property="doneButtonTop" destination="IrQ-FR-qQU" id="oKB-rv-2HX"/>
+                        <outlet property="logInButton" destination="a23-1r-K8R" id="ZvA-Jk-5aQ"/>
+                        <outlet property="logInView" destination="EMa-px-7LE" id="j2W-g7-0HP"/>
+                        <outlet property="logInViewBottom" destination="N5M-Jf-IQQ" id="EYF-DQ-o9D"/>
+                        <outlet property="logInViewLeading" destination="afe-Wu-61w" id="ZJt-WI-V7q"/>
+                        <outlet property="logInViewTop" destination="5nC-Ji-Qdh" id="xht-kQ-dL6"/>
+                        <outlet property="logInViewTrailing" destination="xhQ-pH-Vt5" id="8RP-l5-n9A"/>
                         <outlet property="loginView" destination="EMa-px-7LE" id="Mod-H7-mRt"/>
                         <outlet property="scrollViewBottomConstraint" destination="UYe-MH-f7C" id="hyd-1J-GM4"/>
+                        <outlet property="signUpLabel" destination="u93-Ie-TW4" id="QoY-R2-Tq4"/>
+                        <outlet property="signUpLabelHeight" destination="S9G-qA-PUR" id="Vy0-Fo-Wbh"/>
                         <outlet property="textBandHometown" destination="rok-em-uhB" id="xwZ-wl-e0d"/>
+                        <outlet property="textBandHometownHeight" destination="Daf-PG-4dP" id="XVb-bJ-G1l"/>
                         <outlet property="textBandName" destination="wpj-w9-yaT" id="OTI-6I-ZCZ"/>
-                        <outlet property="textBandWebsite" destination="kpb-JN-0yt" id="DrA-iB-e6z"/>
+                        <outlet property="textBandNameHeight" destination="Ol6-XS-m1Q" id="z51-yQ-tx7"/>
+                        <outlet property="textBandWebsite" destination="kpb-JN-0yt" id="0En-U3-Ilx"/>
+                        <outlet property="textBandWebsiteHeight" destination="PZl-hr-Dbc" id="AaR-KA-0R0"/>
+                        <outlet property="textHometownTop" destination="H3P-IR-21a" id="btE-05-rmz"/>
+                        <outlet property="textInfoLabel" destination="xHo-BF-jId" id="SGF-PO-dhy"/>
+                        <outlet property="textInfoTop" destination="BId-Eg-gQI" id="u8N-bs-sDa"/>
+                        <outlet property="textNameTop" destination="CPL-0G-3Nr" id="hsm-vU-MuO"/>
                         <outlet property="textPassword" destination="3A3-Z3-pz6" id="QD8-ii-ZNc"/>
+                        <outlet property="textPasswordHeight" destination="L4F-Vc-7Fh" id="04g-8m-GhT"/>
+                        <outlet property="textPasswordTop" destination="VhJ-Yp-LnA" id="JTQ-Ex-hfm"/>
                         <outlet property="textUsername" destination="xAw-2c-dm4" id="m5g-up-lTJ"/>
+                        <outlet property="textUsernameHeight" destination="pvr-zM-X9m" id="Enw-de-RWm"/>
+                        <outlet property="textUsernameTop" destination="f1l-mH-uhG" id="cSu-Oy-Rh1"/>
+                        <outlet property="textViewBottom" destination="2mU-aQ-wZF" id="uwK-fZ-2ug"/>
+                        <outlet property="textWebsiteTop" destination="ssf-o6-5pi" id="Jr1-GF-25M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wh-J4-7pR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3057,7 +3187,7 @@ Call station number, ask for station contact, and ask about receiving and playin
         <image name="BackButton" width="50" height="50"/>
         <image name="Contacts Icon" width="25" height="25"/>
         <image name="Map Icon" width="25" height="25"/>
-        <image name="Musician Booking Plus" width="375" height="375"/>
+        <image name="Musician Booking Plus" width="325" height="325"/>
         <image name="Splash Screen" width="1364" height="943"/>
         <image name="Support Icon" width="25" height="25"/>
         <image name="Templates Icon" width="25" height="25"/>
@@ -3075,7 +3205,7 @@ Call station number, ask for station contact, and ask about receiving and playin
         <image name="websiteProfile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ujZ-uf-FGN"/>
-        <segue reference="AKA-0x-pmC"/>
+        <segue reference="PSs-WV-jes"/>
+        <segue reference="xzi-Bm-Ijx"/>
     </inferredMetricsTieBreakers>
 </document>

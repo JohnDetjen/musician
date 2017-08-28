@@ -19,6 +19,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadData()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
         
@@ -76,7 +77,7 @@ class ContactsTableViewController: UITableViewController {
             let state = states[indexPath.section]
             let cityArray = cities.filter { (city) -> Bool in
                 return city.object(forKey: "stateName") as? String == state
-            }.sorted(by: {$0.object(forKey: "cityName") as? String ?? "" < $1.object(forKey: "cityName") as? String ?? ""})
+                }.sorted(by: {$0.object(forKey: "cityName") as? String ?? "" < $1.object(forKey: "cityName") as? String ?? ""})
             if indexPath.row < cityArray.count {
                 let city = cityArray[indexPath.row]
                 // Configure the cell...
