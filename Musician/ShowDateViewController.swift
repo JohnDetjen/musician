@@ -27,6 +27,10 @@ class ShowDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        datePicker.setValue(UIColor(red: 35.0/255.0 , green:  85.0/255.0 , blue :  106.0/255.0 , alpha: 1.0), forKeyPath: "textColor")
+        datePicker.setValue(false, forKeyPath: "highlightsToday")
+        
         if let date = tour?.object(forKey: "date") as? Date {
             datePicker.date = date
         }
@@ -36,6 +40,7 @@ class ShowDateViewController: UIViewController {
         else {
             venue = tour?.object(forKey: "venue") as? PFObject
         }
+        mapView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +66,7 @@ class ShowDateViewController: UIViewController {
         self.mapView.addAnnotation(artWork)
         self.mapView.showAnnotations([artWork], animated: true)
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

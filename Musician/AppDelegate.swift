@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initialize(with: configuration)
         
+        SPLaunchAnimation.asTwitter(onWindow: self.window!)
+        
         return true
     }
 

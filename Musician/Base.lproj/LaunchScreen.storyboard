@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,21 +19,21 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="z6K-co-Tpr">
-                                <rect key="frame" x="0.0" y="204" width="375" height="259"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="z6K-co-Tpr">
+                                <rect key="frame" x="167" y="328" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="z6K-co-Tpr" secondAttribute="height" multiplier="375:259" id="7da-yW-D9L"/>
+                                    <constraint firstAttribute="width" secondItem="z6K-co-Tpr" secondAttribute="height" multiplier="1:1" id="7da-yW-D9L"/>
+                                    <constraint firstAttribute="width" constant="80" id="c9L-Zu-Kyk"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803921568626" green="0.078431372549019607" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="z6K-co-Tpr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="0aN-oy-mlm"/>
-                            <constraint firstAttribute="trailing" secondItem="z6K-co-Tpr" secondAttribute="trailing" id="4vD-XT-CL7"/>
                             <constraint firstItem="z6K-co-Tpr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JgG-4x-9tm"/>
+                            <constraint firstItem="z6K-co-Tpr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TS7-rn-MDy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,6 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Splash Screen" width="1364" height="943"/>
+        <image name="SplashIcon" width="256" height="256"/>
     </resources>
 </document>

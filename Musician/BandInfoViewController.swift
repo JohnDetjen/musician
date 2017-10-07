@@ -21,7 +21,7 @@ class BandInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Pupulate
+        // Populate
         bandNameTextField.text = PFUser.current()?.object(forKey: "bandName") as? String
         bandWebsiteTextField.text = PFUser.current()?.object(forKey: "website") as? String
         bandHometownTextField.text = PFUser.current()?.object(forKey: "hometown") as? String

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0392F2CF15D8CD0968DAF6F5 /* Pods_MusicianUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E66A49FD1C93688AB389FF /* Pods_MusicianUITests.framework */; };
+		43235F661F88103D005C5ED6 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */; };
 		432AE5251EEE1603004A315D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5241EEE1603004A315D /* AppDelegate.swift */; };
 		432AE52C1EEE1603004A315D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52A1EEE1603004A315D /* Main.storyboard */; };
 		432AE52E1EEE1604004A315D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52D1EEE1603004A315D /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		43CB92101F0E98C9000A2502 /* SampleOneSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB920F1F0E98C9000A2502 /* SampleOneSheetViewController.swift */; };
 		43CB92121F0E9D2F000A2502 /* SamplePackagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB92111F0E9D2F000A2502 /* SamplePackagingViewController.swift */; };
 		43CB92141F0E9FE7000A2502 /* StepByStepPreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB92131F0E9FE7000A2502 /* StepByStepPreparationViewController.swift */; };
+		43DA1B0B1F82D5D100C0E889 /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DA1B0A1F82D5D000C0E889 /* CalendarTableViewController.swift */; };
 		4EF3A5F8895307473FFE8241 /* Pods_Musician.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4D14653A1060E178B46240 /* Pods_Musician.framework */; };
 		9DDEE0B3A0820387025C46D5 /* Pods_MusicianTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556AD58A6F5E29E172EF54B3 /* Pods_MusicianTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		2BD255091B88741137ADC0B2 /* Pods-MusicianTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianTests/Pods-MusicianTests.release.xcconfig"; sourceTree = "<group>"; };
+		43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		432AE5211EEE1603004A315D /* Musician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432AE5241EEE1603004A315D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432AE52B1EEE1603004A315D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		43CB920F1F0E98C9000A2502 /* SampleOneSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleOneSheetViewController.swift; sourceTree = "<group>"; };
 		43CB92111F0E9D2F000A2502 /* SamplePackagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePackagingViewController.swift; sourceTree = "<group>"; };
 		43CB92131F0E9FE7000A2502 /* StepByStepPreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepByStepPreparationViewController.swift; sourceTree = "<group>"; };
+		43DA1B0A1F82D5D000C0E889 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
 		44F2824FC8B4D53EACED2C43 /* Pods-Musician.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musician.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musician/Pods-Musician.release.xcconfig"; sourceTree = "<group>"; };
 		556AD58A6F5E29E172EF54B3 /* Pods_MusicianTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicianTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAC581EC3F6BFBC42332772 /* Pods-MusicianUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianUITests/Pods-MusicianUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			children = (
 				432AE5241EEE1603004A315D /* AppDelegate.swift */,
 				432AE52A1EEE1603004A315D /* Main.storyboard */,
+				43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */,
+				43DA1B0A1F82D5D000C0E889 /* CalendarTableViewController.swift */,
 				432AE52F1EEE1604004A315D /* LaunchScreen.storyboard */,
 				432AE52D1EEE1603004A315D /* Assets.xcassets */,
 				43F5CA391F0EE8C200DEE157 /* Log In */,
@@ -542,7 +548,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ED9F59F81E906AFB922A41EC /* [CP] Check Pods Manifest.lock */ = {
@@ -557,7 +563,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EFA611EACC85A9B655512BDE /* [CP] Embed Pods Frameworks */ = {
@@ -587,7 +593,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -608,6 +614,7 @@
 				43CB920A1F03E88F000A2502 /* TourVenueDetailsTableViewController.swift in Sources */,
 				437D6ED11EF0980300FD0A8F /* VCMapView.swift in Sources */,
 				437D6ECD1EF096B000FD0A8F /* ViewController.swift in Sources */,
+				43235F661F88103D005C5ED6 /* TaskTableViewCell.swift in Sources */,
 				437D6EE11EF9DEC500FD0A8F /* StationDetailsTableViewController.swift in Sources */,
 				43CB920C1F047675000A2502 /* BandInfoViewController.swift in Sources */,
 				43CB92141F0E9FE7000A2502 /* StepByStepPreparationViewController.swift in Sources */,
@@ -616,6 +623,7 @@
 				437D6ED31EF1CFE200FD0A8F /* ContactsTableViewController.swift in Sources */,
 				437D6EE71EFC1DBA00FD0A8F /* SignUpViewController.swift in Sources */,
 				43CB92061F004430000A2502 /* SupportTableViewController.swift in Sources */,
+				43DA1B0B1F82D5D100C0E889 /* CalendarTableViewController.swift in Sources */,
 				437D6EE51EFAF01300FD0A8F /* ManageTourTableViewController.swift in Sources */,
 				43CB92101F0E98C9000A2502 /* SampleOneSheetViewController.swift in Sources */,
 				43CB92121F0E9D2F000A2502 /* SamplePackagingViewController.swift in Sources */,

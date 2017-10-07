@@ -62,7 +62,7 @@ class ManageTourTableViewController: UITableViewController {
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddVenueCell", for: indexPath)
-            cell.textLabel?.text = "Add New Venue"
+            cell.textLabel?.text = "Add venue to tour"
             cell.textLabel?.textAlignment = .center
             return cell
             

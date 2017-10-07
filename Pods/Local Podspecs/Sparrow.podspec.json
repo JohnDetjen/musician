@@ -40,6 +40,14 @@
 
             ]
           }
+        },
+        {
+          "name": "RateApp",
+          "dependencies": {
+            "Sparrow/Core": [
+
+            ]
+          }
         }
       ]
     }

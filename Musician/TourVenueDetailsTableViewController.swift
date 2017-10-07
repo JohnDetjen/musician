@@ -137,7 +137,7 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         
         if indexPath.row == 0 && indexPath.section == 0 {
 
-            let alert = UIAlertController(title: "Booking Status" as String, message: "Select Your Booking Status" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alert = UIAlertController(title: "Booking Status" as String, message: "Update Your Booking Status" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
             let notBookedAction = UIAlertAction(title: "Not Booked", style: .default, handler: { (action) in
                 self.bookingLabel.text = action.title
                 self.tour?.setObject("Not Booked", forKey: "status")
@@ -159,11 +159,15 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
                 self.tour?.saveInBackground()
                 tableView.deselectRow(at: indexPath, animated: true)
             })
+            
+            let cell = tableView.cellForRow(at: indexPath)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alert.addAction(notBookedAction)
             alert.addAction(holdAction)
             alert.addAction(bookedAction)
             alert.addAction(cancelAction)
+            alert.popoverPresentationController?.sourceView = cell
+            alert.popoverPresentationController?.sourceRect = cell!.bounds
             tableView.deselectRow(at: indexPath, animated: true)
             
             

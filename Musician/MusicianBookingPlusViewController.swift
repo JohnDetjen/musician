@@ -53,7 +53,7 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             getPlusButtonHeight.constant = 120
             musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFontWeightThin)
             restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightThin)
-            freeTrialLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+//            freeTrialLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
             byClickingLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
             detailsTextLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
             andLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
@@ -78,7 +78,7 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             getPlusButtonHeight.constant = 90
             musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 46, weight: UIFontWeightThin)
             restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 28, weight: UIFontWeightThin)
-            freeTrialLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
+//            freeTrialLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
             byClickingLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
             detailsTextLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
             andLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
@@ -102,14 +102,14 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             getPlusButtonHeight.constant = 42
             musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
             restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
-            freeTrialLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
+//            freeTrialLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
             byClickingLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
             detailsTextLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
             andLabel.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightThin)
             andLabelHeight.constant = 8
             termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightBold)
             privacyButton.titleLabel?.font = UIFont.systemFont(ofSize: 8, weight: UIFontWeightBold)
-            getPlusButtonFromBottom.constant = -18
+            getPlusButtonFromBottom.constant = -13
             getPlusViewLeading.constant = 13
             getPlusViewTrailing.constant = 13
             getPlusButtonLeading.constant = 10
@@ -127,7 +127,7 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             getPlusButtonHeight.constant = 60
             musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightThin)
             restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFontWeightThin)
-            freeTrialLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFontWeightThin)
+//            freeTrialLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFontWeightThin)
             byClickingLabel.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightThin)
             termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 9, weight: UIFontWeightBold)
             andLabelHeight.constant = 9
@@ -152,7 +152,7 @@ class MusicianBookingPlusViewController: UIViewController, SKProductsRequestDele
             musicianBookingPlus.titleLabel?.font = UIFont.systemFont(ofSize: 40, weight: UIFontWeightThin)
             restoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: UIFontWeightThin)
             detailsTextLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
-            freeTrialLabel.font = UIFont.systemFont(ofSize: 14, weight: UIFontWeightThin)
+//            freeTrialLabel.font = UIFont.systemFont(ofSize: 14, weight: UIFontWeightThin)
             byClickingLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
             termsButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightBold)
             andLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightThin)
