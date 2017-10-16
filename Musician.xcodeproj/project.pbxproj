@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0392F2CF15D8CD0968DAF6F5 /* Pods_MusicianUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E66A49FD1C93688AB389FF /* Pods_MusicianUITests.framework */; };
 		43235F661F88103D005C5ED6 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */; };
+		43235F681F89B460005C5ED6 /* ManageTourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235F671F89B460005C5ED6 /* ManageTourTableViewCell.swift */; };
 		432AE5251EEE1603004A315D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AE5241EEE1603004A315D /* AppDelegate.swift */; };
 		432AE52C1EEE1603004A315D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52A1EEE1603004A315D /* Main.storyboard */; };
 		432AE52E1EEE1604004A315D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432AE52D1EEE1603004A315D /* Assets.xcassets */; };
@@ -31,6 +32,8 @@
 		437D6EE51EFAF01300FD0A8F /* ManageTourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */; };
 		437D6EE71EFC1DBA00FD0A8F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */; };
 		437D6EE91EFC234D00FD0A8F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */; };
+		438A58091F95103000184CAC /* UserListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A58081F95103000184CAC /* UserListTableViewController.swift */; };
+		438A580B1F95224800184CAC /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A580A1F95224800184CAC /* UserListTableViewCell.swift */; };
 		43CB92001EFD7C1D000A2502 /* ShowDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */; };
 		43CB92031EFDAF46000A2502 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43CB92011EFD9535000A2502 /* Gilroy-Light.otf */; };
 		43CB92041EFDAF4E000A2502 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */; };
@@ -67,6 +70,7 @@
 /* Begin PBXFileReference section */
 		2BD255091B88741137ADC0B2 /* Pods-MusicianTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicianTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicianTests/Pods-MusicianTests.release.xcconfig"; sourceTree = "<group>"; };
 		43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		43235F671F89B460005C5ED6 /* ManageTourTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTourTableViewCell.swift; sourceTree = "<group>"; };
 		432AE5211EEE1603004A315D /* Musician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432AE5241EEE1603004A315D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432AE52B1EEE1603004A315D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTourTableViewController.swift; sourceTree = "<group>"; };
 		437D6EE61EFC1DBA00FD0A8F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		437D6EE81EFC234D00FD0A8F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		438A58081F95103000184CAC /* UserListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewController.swift; sourceTree = "<group>"; };
+		438A580A1F95224800184CAC /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDateViewController.swift; sourceTree = "<group>"; };
 		43CB92011EFD9535000A2502 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
 		43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -173,8 +179,8 @@
 			children = (
 				432AE5241EEE1603004A315D /* AppDelegate.swift */,
 				432AE52A1EEE1603004A315D /* Main.storyboard */,
-				43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */,
-				43DA1B0A1F82D5D000C0E889 /* CalendarTableViewController.swift */,
+				438A580A1F95224800184CAC /* UserListTableViewCell.swift */,
+				438A58081F95103000184CAC /* UserListTableViewController.swift */,
 				432AE52F1EEE1604004A315D /* LaunchScreen.storyboard */,
 				432AE52D1EEE1603004A315D /* Assets.xcassets */,
 				43F5CA391F0EE8C200DEE157 /* Log In */,
@@ -185,7 +191,6 @@
 				43F5CA3D1F0EE98500DEE157 /* Templates Tab */,
 				43F5CA3E1F0EE9D700DEE157 /* Support Tab */,
 				4349363D1F107D840086C240 /* In App Purchase */,
-				437D6ED41EF1EDC800FD0A8F /* City.swift */,
 				43CB92011EFD9535000A2502 /* Gilroy-Light.otf */,
 				43CB92021EFD953F000A2502 /* Gilroy-ExtraBold.otf */,
 				432AE5321EEE1604004A315D /* Info.plist */,
@@ -226,6 +231,8 @@
 				43CB920B1F047675000A2502 /* BandInfoViewController.swift */,
 				437D6ECE1EF0979300FD0A8F /* Artwork.swift */,
 				437D6ED01EF0980300FD0A8F /* VCMapView.swift */,
+				43DA1B0A1F82D5D000C0E889 /* CalendarTableViewController.swift */,
+				43235F651F88103C005C5ED6 /* TaskTableViewCell.swift */,
 			);
 			name = "Home Tab";
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 				437D6ED81EF597FB00FD0A8F /* VenueDetailsTableViewController.swift */,
 				437D6ED61EF381AB00FD0A8F /* AddVenueTableViewController.swift */,
 				43CB91FF1EFD7C1D000A2502 /* ShowDateViewController.swift */,
+				437D6ED41EF1EDC800FD0A8F /* City.swift */,
 			);
 			name = "Venues Tab";
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 			children = (
 				437D6EE41EFAF01300FD0A8F /* ManageTourTableViewController.swift */,
 				43CB92091F03E88F000A2502 /* TourVenueDetailsTableViewController.swift */,
+				43235F671F89B460005C5ED6 /* ManageTourTableViewCell.swift */,
 			);
 			name = "Manage Tour";
 			sourceTree = "<group>";
@@ -613,8 +622,10 @@
 				437D6ED71EF381AB00FD0A8F /* AddVenueTableViewController.swift in Sources */,
 				43CB920A1F03E88F000A2502 /* TourVenueDetailsTableViewController.swift in Sources */,
 				437D6ED11EF0980300FD0A8F /* VCMapView.swift in Sources */,
+				438A580B1F95224800184CAC /* UserListTableViewCell.swift in Sources */,
 				437D6ECD1EF096B000FD0A8F /* ViewController.swift in Sources */,
 				43235F661F88103D005C5ED6 /* TaskTableViewCell.swift in Sources */,
+				438A58091F95103000184CAC /* UserListTableViewController.swift in Sources */,
 				437D6EE11EF9DEC500FD0A8F /* StationDetailsTableViewController.swift in Sources */,
 				43CB920C1F047675000A2502 /* BandInfoViewController.swift in Sources */,
 				43CB92141F0E9FE7000A2502 /* StepByStepPreparationViewController.swift in Sources */,
@@ -629,6 +640,7 @@
 				43CB92121F0E9D2F000A2502 /* SamplePackagingViewController.swift in Sources */,
 				437D6ECF1EF0979300FD0A8F /* Artwork.swift in Sources */,
 				432AE5251EEE1603004A315D /* AppDelegate.swift in Sources */,
+				43235F681F89B460005C5ED6 /* ManageTourTableViewCell.swift in Sources */,
 				437D6EDB1EF720F500FD0A8F /* BookingTemplatesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

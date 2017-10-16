@@ -68,31 +68,39 @@ class ManageTourTableViewController: UITableViewController {
             
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "managetourcell", for: indexPath) as! ManageTourTableViewCell
         let individualTour = tours[indexPath.row - 1]
         
         if let showStatus = individualTour.object(forKey: "status") as? String {
             if individualTour.object(forKey: "status") as? String == "Booked" {
-                cell.imageView?.image = #imageLiteral(resourceName: "booked")
+                cell.bookingStatus.image = #imageLiteral(resourceName: "booked")
             }
             if individualTour.object(forKey: "status") as? String == "Hold" {
-                cell.imageView?.image = #imageLiteral(resourceName: "hold")
+                cell.bookingStatus.image = #imageLiteral(resourceName: "hold")
+            }
+            if individualTour.object(forKey: "status") as? String == "Not Booked" {
+                cell.bookingStatus.image = #imageLiteral(resourceName: "unbooked")
             }
         }
         
         if let showDate = individualTour.object(forKey: "date") as? Date {
             let dateFormatMachine = DateFormatter()
             dateFormatMachine.dateFormat = "MM/dd/yy"
-            cell.detailTextLabel?.text = dateFormatMachine.string(from: showDate)
+            cell.date.text = dateFormatMachine.string(from: showDate)
             // theVenue is a PFObject of class Venue
             if let theVenue = individualTour.object(forKey: "venue") as? PFObject {
                 if let venueName = theVenue.object(forKey: "name") as? String {
-                    cell.textLabel?.text = venueName
+                    cell.venueNameLabel.text = venueName
+                }
+                if let venueLocation = theVenue.object(forKey: "cityName") as? String {
+                    cell.venueLocation.text = venueLocation
                 }
             }
         }
         return cell
     }
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
@@ -111,4 +119,59 @@ class ManageTourTableViewController: UITableViewController {
         }
         
     }
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        if indexPath.row == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "AddVenueCell", for: indexPath)
+//            cell.textLabel?.text = "Add venue to tour"
+//            cell.textLabel?.textAlignment = .center
+//            return cell
+//            
+//        }
+//        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        let individualTour = tours[indexPath.row - 1]
+//        
+//        if let showStatus = individualTour.object(forKey: "status") as? String {
+//            if individualTour.object(forKey: "status") as? String == "Booked" {
+//                cell.imageView?.image = #imageLiteral(resourceName: "booked")
+//            }
+//            if individualTour.object(forKey: "status") as? String == "Hold" {
+//                cell.imageView?.image = #imageLiteral(resourceName: "hold")
+//            }
+//        }
+//        
+//        if let showDate = individualTour.object(forKey: "date") as? Date {
+//            let dateFormatMachine = DateFormatter()
+//            dateFormatMachine.dateFormat = "MM/dd/yy"
+//            cell.detailTextLabel?.text = dateFormatMachine.string(from: showDate)
+//            // theVenue is a PFObject of class Venue
+//            if let theVenue = individualTour.object(forKey: "venue") as? PFObject {
+//                if let venueName = theVenue.object(forKey: "name") as? String {
+//                    cell.textLabel?.text = venueName
+//                }
+//            }
+//        }
+//        return cell
+//    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        if indexPath.row == 0 {
+//            if let venueDetailVC = storyboard?.instantiateViewController(withIdentifier: "venueContacts") as? ContactsTableViewController {
+//                navigationController?.pushViewController(venueDetailVC, animated: true)
+//            }
+//        }
+//            
+//        else {
+//            let tour = tours[indexPath.row - 1]
+//            if let detailVC = storyboard?.instantiateViewController(withIdentifier: "tourVenueDetail") as? TourVenueDetailsTableViewController {
+//                detailVC.tour = tour
+//                navigationController?.pushViewController(detailVC, animated: true)
+//            }
+//            
+//        }
+//        
+//    }
+
 }

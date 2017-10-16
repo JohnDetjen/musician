@@ -11,7 +11,6 @@ import Parse
 
 class CalendarTableViewController: UITableViewController {
     var tasks = [PFObject]()
-    var orderNumber = [PFObject]()
     
 
     override func viewDidLoad() {
@@ -31,7 +30,6 @@ class CalendarTableViewController: UITableViewController {
         query.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
                 self.tasks = theObjects
-                self.orderNumber = theObjects
                 self.tableView.reloadData()
             }
         }
@@ -56,7 +54,6 @@ class CalendarTableViewController: UITableViewController {
             }
         }
         cell.taskLabel.text = task.object(forKey: "Task") as? String
-//        cell.detailTextLabel?.text = task.object(forKey: "orderNumber") as? String
         return cell
     }
     
