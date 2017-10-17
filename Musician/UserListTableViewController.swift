@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import SafariServices
 
 class UserListTableViewController: UITableViewController {
     
@@ -16,6 +17,9 @@ class UserListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
         
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
         
@@ -26,7 +30,6 @@ class UserListTableViewController: UITableViewController {
     
     func loadData() {
         let query = PFUser.query()
-//        let query = PFQuery(className: "DailyTasks")
         query?.limit = 1000
         query?.findObjectsInBackground { (objects, error) in
             if let theObjects = objects {
@@ -35,20 +38,40 @@ class UserListTableViewController: UITableViewController {
             }
         }
     }
+    
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserListTableViewCell
         let user = users[indexPath.row]
         
         cell.bandNameLabel.text = user.object(forKey: "bandName") as? String
-
-
+        cell.hometownLabel.text = user.object(forKey: "hometown") as? String
+        cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
+        
         return cell
     }
+    
+    func spotifyButtonPressed (_ sender: Any) {
+        
+        let spotifyButton = sender as? UIButton
+        
 
+//        let user = tableView.cellForRow(at: indexPath)
+//        
+//        if var website = user.object(forKey: "spotify") as? String {
+//            if !(website.contains("http://") || website.contains("https://")) {
+//                website = "http://" + website
+//            }
+//            if let url = URL(string: website) {
+//                let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+//                self.present(svc, animated: true, completion: nil)
+//            }
+//        }
+        
+    }
 }

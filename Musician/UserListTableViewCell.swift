@@ -11,6 +11,8 @@ import UIKit
 class UserListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bandNameLabel: UILabel!
+    @IBOutlet weak var hometownLabel: UILabel!
+    @IBOutlet weak var spotifyButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

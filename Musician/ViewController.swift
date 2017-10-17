@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var checklistWidth: NSLayoutConstraint!
     
+    @IBOutlet weak var connect: UIButton!
     @IBOutlet weak var addVenueTrailing: NSLayoutConstraint!
     @IBOutlet weak var addVenueTop: NSLayoutConstraint!
     @IBOutlet weak var checklistTrailing: NSLayoutConstraint!
@@ -60,6 +61,15 @@ class ViewController: UIViewController {
         checklistButton.layer.masksToBounds = false
         checklistButton.layer.cornerRadius = 4.0
         checklistButton.layer.shadowRadius = 5
+        
+        connect.layer.cornerRadius = 5
+        connect.clipsToBounds = true
+        connect.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        connect.layer.shadowOpacity = 1.0
+        connect.layer.shadowRadius = 0.0
+        connect.layer.masksToBounds = false
+        connect.layer.cornerRadius = 4.0
+        connect.layer.shadowRadius = 5
         
         
         
