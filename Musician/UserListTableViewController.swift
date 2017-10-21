@@ -49,7 +49,7 @@ class UserListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserListTableViewCell
         let user = users[indexPath.row]
         cell.delegate = self
-        cell.user = user
+        cell.user = user as? PFUser
         cell.bandNameLabel.text = user.object(forKey: "bandName") as? String
         cell.hometownLabel.text = user.object(forKey: "hometown") as? String
         //cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
@@ -81,7 +81,7 @@ extension UserListTableViewController: UserListTableViewCellDelegate {
     
     // Open spotify link goes here
     func userListTableViewCell(cell: UserListTableViewCell, didPressSpotifyButton: UIButton) {
-        if let website = cell.user?.object(forKey: "spotify") as? String {
+        if var website = cell.user?.object(forKey: "spotify") as? String {
             if !(website.contains("http://") || website.contains("https://")) {
                 website = "http://" + website
             }
