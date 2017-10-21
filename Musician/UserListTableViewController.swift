@@ -52,7 +52,7 @@ class UserListTableViewController: UITableViewController {
         cell.user = user
         cell.bandNameLabel.text = user.object(forKey: "bandName") as? String
         cell.hometownLabel.text = user.object(forKey: "hometown") as? String
-        cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
+        //cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
         
         return cell
     }
