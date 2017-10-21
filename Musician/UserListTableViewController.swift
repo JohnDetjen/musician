@@ -48,7 +48,8 @@ class UserListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserListTableViewCell
         let user = users[indexPath.row]
-        
+        cell.delegate = self
+        cell.user = user
         cell.bandNameLabel.text = user.object(forKey: "bandName") as? String
         cell.hometownLabel.text = user.object(forKey: "hometown") as? String
         cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
@@ -56,22 +57,38 @@ class UserListTableViewController: UITableViewController {
         return cell
     }
     
-    func spotifyButtonPressed (_ sender: Any) {
-        
-        let spotifyButton = sender as? UIButton
-        
+//    func spotifyButtonPressed (_ sender: Any) {
+//
+//        let spotifyButton = sender as? UIButton
+//
+//
+////        let user = tableView.cellForRow(at: indexPath)
+////
+////        if var website = user.object(forKey: "spotify") as? String {
+////            if !(website.contains("http://") || website.contains("https://")) {
+////                website = "http://" + website
+////            }
+////            if let url = URL(string: website) {
+////                let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+////                self.present(svc, animated: true, completion: nil)
+////            }
+////        }
+//
+//    }
+}
 
-//        let user = tableView.cellForRow(at: indexPath)
-//        
-//        if var website = user.object(forKey: "spotify") as? String {
-//            if !(website.contains("http://") || website.contains("https://")) {
-//                website = "http://" + website
-//            }
-//            if let url = URL(string: website) {
-//                let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
-//                self.present(svc, animated: true, completion: nil)
-//            }
-//        }
-        
+extension UserListTableViewController: UserListTableViewCellDelegate {
+    
+    // Open spotify link goes here
+    func userListTableViewCell(cell: UserListTableViewCell, didPressSpotifyButton: UIButton) {
+        if let website = cell.user?.object(forKey: "spotify") as? String {
+            if !(website.contains("http://") || website.contains("https://")) {
+                website = "http://" + website
+            }
+            if let url = URL(string: website) {
+                let svc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+                self.present(svc, animated: true, completion: nil)
+            }
+        }
     }
 }
