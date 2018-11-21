@@ -63,7 +63,7 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
                     mail.setSubject("Hold Request: \(bandName)")
-                    mail.setMessageBody("Checking back for \(bandName).</br>\(website)</br></br>We would like to place a hold if you have availability this upcoming month. A 2nd or 3rd hold would work as well.</br></br>Thanks.</br>\(bandName)", isHTML: true)
+                    mail.setMessageBody("Checking back for \(bandName).</br>\(website)</br></br>We would like to place a hold if you have availability next month. A 2nd or 3rd hold would work as well.</br></br>Thanks.</br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                     present(mail, animated: true, completion: nil)
                 } else {
@@ -77,7 +77,7 @@ class BookingTemplatesTableViewController: UITableViewController, MFMailComposeV
                     mail.mailComposeDelegate = self
                     mail.setToRecipients([""])
                     mail.setSubject("Hold Request: \(bandName)")
-                    mail.setMessageBody("Checking back for \(bandName).</br>\(website)</br></br>Please let me know if there is availabilty this month.</br></br>A 2nd or 3rd hold would work as well.</br></br>Thanks.</br>\(bandName)", isHTML: true)
+                    mail.setMessageBody("Checking back for \(bandName).</br>\(website)</br></br>Please let me know if there is availabilty next month.</br></br>A 2nd or 3rd hold would work as well.</br></br>Thanks.</br>\(bandName)", isHTML: true)
                     present(mail, animated: true, completion: nil)
                 } else {
                     print("Cannot send mail")

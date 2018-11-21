@@ -9,17 +9,21 @@
 import UIKit
 import Parse
 import SafariServices
+import MapKit
 
 class UserListTableViewController: UITableViewController {
     
     var users = [PFObject]()
+    var imageFiles = [PFFile]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+        
         
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Gilroy-Light", size: 18)!]
         
@@ -38,8 +42,6 @@ class UserListTableViewController: UITableViewController {
             }
         }
     }
-    
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
@@ -52,8 +54,9 @@ class UserListTableViewController: UITableViewController {
         cell.user = user as? PFUser
         cell.bandNameLabel.text = user.object(forKey: "bandName") as? String
         cell.hometownLabel.text = user.object(forKey: "hometown") as? String
-        //cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
+        cell.websiteLabel.text = user.object(forKey: "website") as? String
         
+        //cell.spotifyButton.addTarget(self, action: #selector(self.spotifyButtonPressed(_:)), for: .touchUpInside)
         return cell
     }
     

@@ -8,12 +8,19 @@
 
 import UIKit
 import Parse
+import MapKit
 
 class UserListTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var bandImage: UIImageView!
     @IBOutlet weak var bandNameLabel: UILabel!
     @IBOutlet weak var hometownLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var spotifyButton: UIButton!
+    @IBOutlet weak var rowNumber: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+    
     var delegate: UserListTableViewCellDelegate?
     var user: PFUser?
     

@@ -94,24 +94,129 @@ class TourVenueDetailsTableViewController: UITableViewController, MFMailComposeV
         let venue = tour?.object(forKey: "venue") as? PFObject
         
         if indexPath.row == 0 && indexPath.section == 1 {
-            if let email = venue?.object(forKey: "contactEmail") as? String {
-                if MFMailComposeViewController.canSendMail() {
-                    let mail = MFMailComposeViewController()
-                    let venue = venue?.object(forKey: "name") as! String
-                    let bandName = PFUser.current()?.object(forKey: "bandName") as! String
-                    let hometown = PFUser.current()?.object(forKey: "hometown") as! String
-                    let website = PFUser.current()?.object(forKey: "website") as! String
-                    mail.mailComposeDelegate = self
-                    mail.setToRecipients([email])
-                    mail.setSubject("Hold Request: \(bandName)")
-                    mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care. </br>Cheers.</br></br>\(bandName)", isHTML: true)
-                    present(mail, animated: true, completion: nil)
-                } else {
-                    print("Cannot send mail")
-                }
-            }
+            let alert = UIAlertController(title: "Send Email" as String, message: "Choose Email Template" as String, preferredStyle: UIAlertControllerStyle.actionSheet)
             
+            let newEmailAction = UIAlertAction(title: "Blank Email", style: .default, handler: { (action) in
+                if let email = venue?.object(forKey: "contactEmail") as? String {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        let venue = venue?.object(forKey: "name") as! String
+                        let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                        let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                        let website = PFUser.current()?.object(forKey: "website") as! String
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email])
+                        mail.setSubject("")
+                        mail.setMessageBody("", isHTML: true)
+                        self.present(mail, animated: true, completion: nil)
+                    } else {
+                        print("Cannot send mail")
+                    }
+                }
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            let notBookedAction = UIAlertAction(title: "First Booking Request", style: .default, handler: { (action) in
+                if let email = venue?.object(forKey: "contactEmail") as? String {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        let venue = venue?.object(forKey: "name") as! String
+                        let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                        let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                        let website = PFUser.current()?.object(forKey: "website") as! String
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email])
+                        mail.setSubject("Hold Request: \(bandName)")
+                        mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold with \(venue) if you have availability this upcoming month.</br></br>We will work all local press, radio, and blogs to support our turnout.</br></br>Thank you and take care.</br></br>\(bandName)", isHTML: true)
+                        self.present(mail, animated: true, completion: nil)
+                    } else {
+                        print("Cannot send mail")
+                    }
+                }
+
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            let holdAction = UIAlertAction(title: "Second Booking Request", style: .default, handler: { (action) in
+                if let email = venue?.object(forKey: "contactEmail") as? String {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        let venue = venue?.object(forKey: "name") as! String
+                        let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                        let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                        let website = PFUser.current()?.object(forKey: "website") as! String
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email])
+                        mail.setSubject("Hold Request: \(bandName)")
+                        mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 20 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care. </br>Cheers.</br></br>\(bandName)", isHTML: true)
+                        self.present(mail, animated: true, completion: nil)
+                    } else {
+                        print("Cannot send mail")
+                    }
+                }
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            let bookedAction = UIAlertAction(title: "Third Booking Request", style: .default, handler: { (action) in
+                if let email = venue?.object(forKey: "contactEmail") as? String {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        let venue = venue?.object(forKey: "name") as! String
+                        let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                        let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                        let website = PFUser.current()?.object(forKey: "website") as! String
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email])
+                        mail.setSubject("Hold Request: \(bandName)")
+                        mail.setMessageBody("I manage \(bandName). </br>\(website). </br></br> We have a 15 date tour starting from \(hometown).  </br></br>We would like to place a hold if you have availability this upcoming month. </br></br>Thank you and take care. </br>Cheers.</br></br>\(bandName)", isHTML: true)
+                        self.present(mail, animated: true, completion: nil)
+                    } else {
+                        print("Cannot send mail")
+                    }
+                }
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            let confirmationAction = UIAlertAction(title: "Confirmation", style: .default, handler: { (action) in
+                if let email = venue?.object(forKey: "contactEmail") as? String {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        let venue = venue?.object(forKey: "name") as! String
+                        let bandName = PFUser.current()?.object(forKey: "bandName") as! String
+                        let hometown = PFUser.current()?.object(forKey: "hometown") as! String
+                        let website = PFUser.current()?.object(forKey: "website") as! String
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email])
+                        mail.setSubject("Confirmed: \(bandName)")
+                        mail.setMessageBody("That works great.</br></br>Let me know what you have in mind for ticket price, support, door time, and bill payout.</br></br>Is there any additional info you need at the moment? </br></br>Thank you.</br>\(bandName)", isHTML: true)
+                        self.present(mail, animated: true, completion: nil)
+                    } else {
+                        print("Cannot send mail")
+                    }
+                }
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alert.addAction(notBookedAction)
+            alert.addAction(holdAction)
+            alert.addAction(newEmailAction)
+            alert.addAction(bookedAction)
+            alert.addAction(cancelAction)
+            alert.addAction(confirmationAction)
+            alert.popoverPresentationController?.sourceView = cell
+            alert.popoverPresentationController?.sourceRect = cell!.bounds
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            
+//            bookedAction.setValue(UIImage(named: "booked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), forKey: "image")
+//            notBookedAction.setValue(UIImage(named: "unbooked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), forKey: "image")
+//            holdAction.setValue(UIImage(named: "hold")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), forKey: "image")
+            
+            self.present(alert, animated: true, completion: nil)
         }
+        
         
         if indexPath.row == 1 && indexPath.section == 1 {
             if let phoneNumber = venue?.object(forKey: "phoneNumber") as? String {
