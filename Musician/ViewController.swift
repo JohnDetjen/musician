@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var manageTour: UIButton!
     @IBOutlet weak var mangeTourButtonWidth: NSLayoutConstraint!
     @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var bookingPlusButton: UIButton!
     @IBOutlet weak var checklistWidth: NSLayoutConstraint!
     
     @IBOutlet weak var connect: UIButton!
@@ -44,10 +43,6 @@ class ViewController: UIViewController {
         manageTour.layer.masksToBounds = false
         manageTour.layer.cornerRadius = 4.0
         manageTour.layer.shadowRadius = 5
-        
-        
-        bookingPlusButton.layer.cornerRadius = 4.0
-        bookingPlusButton.layer.shadowRadius = 5
         
         addButton.layer.cornerRadius = 5
         addButton.clipsToBounds = true

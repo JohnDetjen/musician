@@ -576,8 +576,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.086274509803921567" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -2055,7 +2056,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                     <segue destination="Iu3-oc-ju1" kind="show" id="0zg-Xo-2iD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXY-u7-SwE">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXY-u7-SwE">
                                 <rect key="frame" x="202.5" y="548" width="152.5" height="50"/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2076,18 +2077,7 @@ Call station number, ask for station contact, and ask about receiving and playin
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr7-fY-dwt">
-                                <rect key="frame" x="202.5" y="548" width="152.5" height="50"/>
-                                <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ydk-L2-xMY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="17"/>
-                                <state key="normal" title="Booking Plus">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84x-Bd-XR2">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84x-Bd-XR2">
                                 <rect key="frame" x="20" y="548" width="152.5" height="50"/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2115,15 +2105,12 @@ Call station number, ask for station contact, and ask about receiving and playin
                             <constraint firstAttribute="trailing" secondItem="aXY-u7-SwE" secondAttribute="trailing" constant="20" id="cAF-m8-SPd"/>
                             <constraint firstItem="PMD-Iz-Tp1" firstAttribute="top" secondItem="ptH-7p-ANr" secondAttribute="bottom" constant="15" id="ew3-WK-Wyq"/>
                             <constraint firstItem="FeZ-zk-iGa" firstAttribute="leading" secondItem="84x-Bd-XR2" secondAttribute="trailing" constant="10" id="h2d-O9-WkE"/>
-                            <constraint firstItem="gr7-fY-dwt" firstAttribute="leading" secondItem="FeZ-zk-iGa" secondAttribute="trailing" constant="10" id="lS1-gn-UeE"/>
                             <constraint firstItem="7vY-te-epH" firstAttribute="leading" secondItem="fEX-y0-woi" secondAttribute="leading" constant="10" id="pI6-ED-tsz"/>
                             <constraint firstItem="aXY-u7-SwE" firstAttribute="leading" secondItem="FeZ-zk-iGa" secondAttribute="trailing" constant="10" id="q7a-On-5vB"/>
                             <constraint firstAttribute="trailing" secondItem="KIM-N5-pDp" secondAttribute="trailing" id="qSN-wZ-h5p"/>
                             <constraint firstItem="m0U-am-mNw" firstAttribute="top" secondItem="7vY-te-epH" secondAttribute="bottom" constant="20" id="r4I-t6-Egt"/>
-                            <constraint firstAttribute="trailing" secondItem="gr7-fY-dwt" secondAttribute="trailing" constant="20" id="sFd-oW-fLb"/>
                             <constraint firstItem="m0U-am-mNw" firstAttribute="leading" secondItem="fEX-y0-woi" secondAttribute="leading" constant="10" id="tL9-g6-B02"/>
                             <constraint firstItem="84x-Bd-XR2" firstAttribute="leading" secondItem="fEX-y0-woi" secondAttribute="leading" constant="20" id="uJm-ZE-DDV"/>
-                            <constraint firstItem="vtj-n0-9Gb" firstAttribute="top" secondItem="gr7-fY-dwt" secondAttribute="bottom" constant="20" id="yrx-B1-lM1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Musician" id="Kyo-bf-oZi">
@@ -2136,7 +2123,6 @@ Call station number, ask for station contact, and ask about receiving and playin
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="84x-Bd-XR2" id="Pei-Ce-DkN"/>
-                        <outlet property="bookingPlusButton" destination="gr7-fY-dwt" id="LQc-97-keF"/>
                         <outlet property="checklistButton" destination="m0U-am-mNw" id="V5t-Q1-biv"/>
                         <outlet property="checklistTop" destination="r4I-t6-Egt" id="r7l-Gc-et5"/>
                         <outlet property="checklistWidth" destination="Tn8-8X-uWf" id="uk7-2C-bad"/>
@@ -3206,34 +3192,20 @@ Call station number, ask for station contact, and ask about receiving and playin
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-lY-9ce">
-                                            <rect key="frame" x="76" y="11.5" width="44" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="musicianTwo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-lY-9ce">
+                                            <rect key="frame" x="36" y="11.5" width="102" height="21"/>
                                             <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="17"/>
                                             <color key="textColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy2-ko-2in">
-                                            <rect key="frame" x="76" y="34.5" width="36" height="16.5"/>
+                                            <rect key="frame" x="36" y="34.5" width="36" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy" pointSize="14"/>
                                             <color key="textColor" red="0.24313725489999999" green="0.27450980390000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUser" translatesAutoresizingMaskIntoConstraints="NO" id="ZCq-pK-Mxh">
-                                            <rect key="frame" x="8" y="8" width="60" height="60"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="ZCq-pK-Mxh" secondAttribute="height" multiplier="1:1" id="aHJ-so-ed5"/>
-                                                <constraint firstAttribute="height" constant="60" id="eIl-C7-JXt"/>
-                                            </constraints>
-                                        </imageView>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7JW-av-O9g">
-                                            <rect key="frame" x="300" y="12" width="60" height="60"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="7JW-av-O9g" secondAttribute="height" multiplier="1:1" id="FMI-rK-l3F"/>
-                                                <constraint firstAttribute="height" constant="60" id="LgH-uF-cDg"/>
-                                            </constraints>
-                                        </mapView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-Wk-oLj">
-                                            <rect key="frame" x="76" y="53" width="36" height="21"/>
+                                            <rect key="frame" x="36" y="53" width="36" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="aef-u4-88p"/>
                                             </constraints>
@@ -3241,38 +3213,21 @@ Call station number, ask for station contact, and ask about receiving and playin
                                             <color key="textColor" red="0.24313725490196078" green="0.27450980392156865" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUser" translatesAutoresizingMaskIntoConstraints="NO" id="PPX-yv-YQw">
-                                            <rect key="frame" x="8" y="8" width="60" height="60"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="60" id="JFu-Jr-Vp7"/>
-                                                <constraint firstAttribute="width" secondItem="PPX-yv-YQw" secondAttribute="height" multiplier="1:1" id="ojd-bg-Cwx"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="7JW-av-O9g" firstAttribute="trailing" secondItem="MrW-N5-zy3" secondAttribute="trailingMargin" constant="1" id="2GF-oF-fDn"/>
-                                        <constraint firstItem="uy2-ko-2in" firstAttribute="leading" secondItem="ZCq-pK-Mxh" secondAttribute="trailing" constant="8" id="7Nq-Tv-ldM"/>
                                         <constraint firstItem="lOc-Wk-oLj" firstAttribute="top" secondItem="uy2-ko-2in" secondAttribute="bottom" constant="2" id="7aQ-5q-esU"/>
-                                        <constraint firstItem="PPX-yv-YQw" firstAttribute="leading" secondItem="MrW-N5-zy3" secondAttribute="leading" constant="8" id="8rZ-2o-RcB"/>
-                                        <constraint firstItem="ZCq-pK-Mxh" firstAttribute="leading" secondItem="MrW-N5-zy3" secondAttribute="leading" constant="8" id="D3q-qU-6Cc"/>
-                                        <constraint firstItem="7JW-av-O9g" firstAttribute="top" secondItem="MrW-N5-zy3" secondAttribute="topMargin" constant="1" id="JLL-2I-K4N"/>
                                         <constraint firstItem="WOt-lY-9ce" firstAttribute="top" secondItem="MrW-N5-zy3" secondAttribute="topMargin" constant="0.5" id="KNo-pa-y12"/>
                                         <constraint firstItem="uy2-ko-2in" firstAttribute="top" secondItem="WOt-lY-9ce" secondAttribute="bottom" constant="2" id="N1o-gZ-K0n"/>
+                                        <constraint firstItem="WOt-lY-9ce" firstAttribute="leading" secondItem="MrW-N5-zy3" secondAttribute="leadingMargin" constant="20" id="UJ3-gF-J89"/>
                                         <constraint firstItem="uy2-ko-2in" firstAttribute="leading" secondItem="lOc-Wk-oLj" secondAttribute="leading" id="Yo9-q1-8pL"/>
                                         <constraint firstItem="uy2-ko-2in" firstAttribute="leading" secondItem="WOt-lY-9ce" secondAttribute="leading" id="gab-gM-GC8"/>
-                                        <constraint firstItem="ZCq-pK-Mxh" firstAttribute="top" secondItem="MrW-N5-zy3" secondAttribute="top" constant="8" id="j8k-9P-fqi"/>
-                                        <constraint firstItem="PPX-yv-YQw" firstAttribute="width" secondItem="PPX-yv-YQw" secondAttribute="height" multiplier="1:1" id="ls9-J8-jZx"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="lOc-Wk-oLj" secondAttribute="bottom" constant="45" id="p5a-Kj-F8z"/>
-                                        <constraint firstItem="WOt-lY-9ce" firstAttribute="leading" secondItem="ZCq-pK-Mxh" secondAttribute="trailing" constant="8" id="wfb-DI-id4"/>
-                                        <constraint firstItem="PPX-yv-YQw" firstAttribute="top" secondItem="MrW-N5-zy3" secondAttribute="top" constant="8" id="yL4-3a-vyp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
-                                    <outlet property="bandImage" destination="PPX-yv-YQw" id="kdP-Z0-ia6"/>
                                     <outlet property="bandNameLabel" destination="WOt-lY-9ce" id="Mn0-C6-j11"/>
                                     <outlet property="hometownLabel" destination="uy2-ko-2in" id="J7j-JQ-J0V"/>
-                                    <outlet property="mapView" destination="7JW-av-O9g" id="NO2-cB-DJ7"/>
                                     <outlet property="websiteLabel" destination="lOc-Wk-oLj" id="9eT-oT-ZBZ"/>
                                 </connections>
                             </tableViewCell>
@@ -3532,7 +3487,6 @@ Call station number, ask for station contact, and ask about receiving and playin
         <image name="closeButton" width="105" height="105"/>
         <image name="connect" width="295" height="245"/>
         <image name="connectButton" width="100" height="100"/>
-        <image name="defaultUser" width="1080" height="1080"/>
         <image name="hometownProfile" width="25" height="25"/>
         <image name="infoProfile" width="25" height="25"/>
         <image name="manageTourIcon" width="100" height="100"/>
